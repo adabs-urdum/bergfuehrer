@@ -1,0 +1,83 @@
+$FontFamilyMain: "Open Sans", sans-serif;
+
+// Font Size set in <html>
+$BaseRemSize: 18;
+$RemSizeFactor: 1 / 16 * $BaseRemSize;
+
+// Width of Screendesign
+$ScreendesignWidth: 1980;
+$BreakpointMaxRelation: 1;
+
+// Widths
+$WidthWide: 1600px;
+$WidthNarrow: 1200px;
+
+// Full viewportwidth divided by screendesign max width
+// Width of Screendesigns
+$ScreendesignWidthMAX: $ScreendesignWidth * $BreakpointMaxRelation;
+$ScreendesignWidthL: 1440;
+$ScreendesignWidthM: 1024;
+$ScreendesignWidthS: 768;
+$ScreendesignWidthXS: 375;
+$BreakpointLRelation: 1 / $ScreendesignWidthL * $ScreendesignWidth;
+$BreakpointMRelation: 1 / $ScreendesignWidthM * $ScreendesignWidth;
+$BreakpointSRelation: 1 / $ScreendesignWidthS * $ScreendesignWidth;
+$BreakpointXSRelation: 1 / $ScreendesignWidthXS * $ScreendesignWidth;
+
+// Full viewportwidth divided by screendesign max width
+$BS: 100vw / $ScreendesignWidth;
+$MaxBS: $BreakpointMaxRelation * 1px;
+$LBS: $BS * $BreakpointLRelation;
+$MBS: $BS * $BreakpointMRelation;
+$SBS: $BS * $BreakpointSRelation;
+$XSBS: $BS * $BreakpointXSRelation;
+
+// Define used breakpoints
+$Breakpoints: "MAX", "L", "M", "S", "XS";
+
+// Screendesign max width and larger
+$BreakpointMAX: screen and
+  (
+    min-width: $ScreendesignWidthMAX + 0px,
+  );
+
+// MacBook Pro (Retina, 15-inch, Mid 2015) screen width
+$BreakpointL: screen and
+  (
+    max-width: $ScreendesignWidthL + 0px,
+  );
+
+// 1. Gen iPad minmax Max
+$BreakpointM: screen and
+  (
+    max-width: $ScreendesignWidthM + 0px,
+  );
+
+// 1. Gen iPad minmax Min
+$BreakpointS: screen and
+  (
+    max-width: $ScreendesignWidthS + 0px,
+  );
+
+// General mobile
+$BreakpointXS: screen and
+  (
+    max-width: $ScreendesignWidthXS + 0px,
+  );
+
+// iPad Resolution (Used to fix bugs in iOS Safari)
+$BreakpointIPadVertical: screen and
+    (
+      width: 768px,
+    ),
+  screen and
+    (
+      height: 1024px,
+    );
+
+// Colors
+$White: #eeeeee;
+$Black: #111111;
+$Grey: #dddddd;
+$ColorLight: #ffb700;
+$ColorLightDark: #c68e00;

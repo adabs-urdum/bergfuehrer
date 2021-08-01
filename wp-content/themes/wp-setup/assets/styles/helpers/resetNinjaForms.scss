@@ -1,0 +1,55 @@
+.contact,
+.contactform,
+.contactForm {
+  .nf-form-content {
+    padding: 0;
+    max-width: none;
+    @import "../components/button.scss";
+
+    .ninja-forms-field {
+      padding: 0;
+    }
+
+    textarea.ninja-forms-field {
+      display: block;
+    }
+
+    .ninja-forms-field[type="button"] {
+      padding: $BS * 18 $BS * 50 $BS * 18;
+      border-radius: inherit;
+
+      &:active {
+        outline: none;
+      }
+    }
+
+    .label-above {
+      .nf-field-label {
+        margin: 0;
+      }
+    }
+
+    .nf-error.field-wrap .nf-field-element:after,
+    .nf-pass.field-wrap .nf-field-element:after {
+      top: 50%;
+      // right: 0;
+      bottom: auto;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      line-height: 100%;
+    }
+
+    label {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    input.ninja-forms-field {
+      height: auto;
+    }
+  }
+
+  .nf-field-container {
+    margin: 0;
+  }
+}

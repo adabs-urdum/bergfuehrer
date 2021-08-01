@@ -1,0 +1,32 @@
+// Styles
+// name mixin after scss component
+@mixin text($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .text {
+    padding: $BS * 80 0 0;
+
+    &__wrapper {
+      max-width: $WidthNarrow;
+      margin: 0 auto;
+      padding: 0 0 $BS * 80;
+    }
+
+    &__titleLeftWrapper {
+      max-width: $WidthWide;
+      margin: 0 auto;
+      padding: 0 0 $BS * 40;
+    }
+  }
+}
+
+// Add text
+@include text();
+
+// Add basic text with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include text(#{$Breakpoint});
+  }
+}

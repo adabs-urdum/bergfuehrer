@@ -1,0 +1,18 @@
+// Styles
+// name mixin after scss component
+@mixin component($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .component {}
+}
+
+// Add component
+@include component();
+
+// Add basic component with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include component(#{$Breakpoint});
+  }
+}

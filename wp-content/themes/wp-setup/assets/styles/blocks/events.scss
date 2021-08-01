@@ -1,0 +1,66 @@
+// Styles
+// name mixin after scss events
+@mixin events($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .events {
+    &__event {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      background-color: $Grey;
+      margin-bottom: $BS * 64;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &__imageWrapper {
+      width: 40%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        transition: transform 0.2s ease-out;
+
+        @supports (object-fit: cover) {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+    }
+
+    &__textWrapper {
+      width: 60%;
+      padding: $BS * 32 $BS * 64 $BS * 32;
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: $BS * 8;
+      }
+
+      h4 {
+        margin-bottom: $BS * 8;
+      }
+    }
+  }
+}
+
+// Add events
+@include events();
+
+// Add basic events with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include events(#{$Breakpoint});
+  }
+}

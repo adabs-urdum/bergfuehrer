@@ -1,0 +1,50 @@
+// Styles
+// name mixin after scss component
+@mixin imageTextCombo($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .imageTextCombo {
+    &__wrapper {
+      display: flex;
+
+      &--left {
+        flex-direction: row;
+      }
+      &--right {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__half {
+      width: 50%;
+    }
+
+    &__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: $BS * 20;
+    }
+
+    &__image {
+      width: 100%;
+      display: block;
+
+      @supports (object-fit: cover) {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// Add imageTextCombo
+@include imageTextCombo();
+
+// Add basic imageTextCombo with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include imageTextCombo(#{$Breakpoint});
+  }
+}

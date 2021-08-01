@@ -1,0 +1,221 @@
+// Styles
+// name mixin after scss component
+@mixin styles($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: $FontFamilyMain;
+    font-weight: 300;
+    // only set font-size here, if really needed
+    // font-size: 16px;
+    line-height: 143%;
+    color: $Black;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @include bsFontSize($BS, $BaseRemSize);
+    line-height: 143%;
+    // max-width: $ScreendesignWidthMAX + 0px;
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 120%;
+    font-weight: 700;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
+    @include bsFontSize($BS, 42);
+  }
+
+  h2 {
+    @include bsFontSize($BS, 36);
+  }
+
+  h3 {
+    @include bsFontSize($BS, 30);
+  }
+
+  h4 {
+    @include bsFontSize($BS, 24);
+  }
+
+  h5,
+  h6 {
+    @include bsFontSize($BS, 18);
+  }
+
+  input,
+  button {
+    font-family: $FontFamilyMain;
+  }
+
+  p {
+    padding: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul,
+  li {
+    padding: 0;
+    list-style: none;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    // position: relative;
+    padding-left: $BS * 20;
+
+    &:before {
+      content: "\2022";
+      margin-left: $BS * -20;
+      margin-right: $BS * 10;
+      font-size: 110%;
+      line-height: 50%;
+    }
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      border-bottom: $BS $Black solid;
+    }
+
+    &:hover {
+    }
+
+    &:active {
+    }
+  }
+
+  code {
+    display: block;
+    background-color: $Black;
+    color: $White;
+    border-radius: $BS * 2;
+    padding: $BS * 14 $BS * 16 $BS * 16;
+    margin: $BS * 16 0;
+  }
+
+  button {
+    cursor: pointer;
+    color: inherit;
+    font-family: inherit;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-align: inherit;
+  }
+
+  img,
+  canvas {
+    display: block;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  .mobile_only {
+    display: none;
+  }
+
+  .desktop_only {
+    display: block;
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($Black, 0.5);
+    z-index: 10001;
+    padding: $BS * 64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: fadeIn 0.2s ease-out;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+// Add styles
+@include styles();
+
+// Add basic styles with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include styles(#{$Breakpoint});
+  }
+}
+
+// Add custom styles with breakpoints
+@include breakPointS() {
+  .mobile_only {
+    display: block;
+  }
+
+  .desktop_only {
+    display: none;
+  }
+}

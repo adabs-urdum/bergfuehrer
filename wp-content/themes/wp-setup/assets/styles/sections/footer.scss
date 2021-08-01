@@ -1,0 +1,55 @@
+// Styles
+// name mixin after scss footer
+@mixin footer($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .footer {
+    background: $Grey;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: $BS * 32;
+    }
+
+    &__logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    &__logoWrapper {
+      max-width: $BS * 128;
+      max-height: $BS * 128;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__logoLink {
+      &:after {
+        display: none;
+      }
+    }
+
+    &__logo {
+      max-width: 100%;
+    }
+
+    &__address {
+      font-style: normal;
+    }
+  }
+}
+
+// Add footer
+@include footer();
+
+// Add basic footer with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include footer(#{$Breakpoint});
+  }
+}

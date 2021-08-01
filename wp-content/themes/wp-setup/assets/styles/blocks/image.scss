@@ -1,0 +1,23 @@
+// Styles
+// name mixin after scss component
+@mixin image($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .image {
+    &__image {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+// Add image
+@include image();
+
+// Add basic image with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include image(#{$Breakpoint});
+  }
+}

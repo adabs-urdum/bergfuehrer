@@ -1,0 +1,84 @@
+@mixin bsFontSize($BS, $value) {
+  font-size: calc(
+    1rem * #{$RemSizeFactor} + #{$BS} * #{$value} - #{$BaseRemSize} * 1px
+  );
+  line-height: 137%;
+
+  @supports (font-size: max(1rem, 1rem)) {
+    font-size: m#{a}x(
+        1rem,
+        calc(
+          1rem * #{$RemSizeFactor} + #{$BS} * #{$value} - #{$BaseRemSize} * 1px
+        )
+      );
+    line-height: 137%;
+  }
+}
+
+@mixin breakpoint($type) {
+  @if $type== "Max" {
+    @include breakPointMAX() {
+      @content;
+    }
+  }
+
+  @elseif $type=='MAX' {
+    @include breakPointMAX() {
+      @content;
+    }
+  }
+
+  @elseif $type=='L' {
+    @include breakPointL() {
+      @content;
+    }
+  }
+
+  @elseif $type=='M' {
+    @include breakPointM() {
+      @content;
+    }
+  }
+
+  @elseif $type=='S' {
+    @include breakPointS() {
+      @content;
+    }
+  }
+
+  @elseif $type=='XS' {
+    @include breakPointXS() {
+      @content;
+    }
+  }
+}
+
+@mixin breakPointMAX() {
+  @media #{$BreakpointMAX} {
+    @content;
+  }
+}
+
+@mixin breakPointL() {
+  @media #{$BreakpointL} {
+    @content;
+  }
+}
+
+@mixin breakPointM() {
+  @media #{$BreakpointM} {
+    @content;
+  }
+}
+
+@mixin breakPointS() {
+  @media #{$BreakpointS} {
+    @content;
+  }
+}
+
+@mixin breakPointXS() {
+  @media #{$BreakpointXS} {
+    @content;
+  }
+}

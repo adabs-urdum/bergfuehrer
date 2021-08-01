@@ -1,0 +1,38 @@
+// Styles
+// name mixin after scss component
+@mixin button($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .button {
+    display: inline-block;
+    font-weight: 700;
+    background: transparent;
+    color: $Black;
+    border: solid 1px $Black;
+    padding: $BS * 4 $BS * 16 $BS * 6;
+    transition: background 0.3s ease-out;
+    text-decoration: none;
+    margin-right: $BS * 16;
+    margin-bottom: $BS * 16;
+
+    &:hover {
+      background: $White;
+      color: $Black;
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+// Add button
+@include button();
+
+// Add basic button with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include button(#{$Breakpoint});
+  }
+}

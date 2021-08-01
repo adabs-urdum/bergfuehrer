@@ -1,0 +1,20 @@
+@import "variables";
+@import "mixins";
+@import "functions";
+
+@import "./general.scss";
+
+@import "./components/button.scss";
+
+html {
+  background: none;
+}
+
+body#tinymce.mce-content-body {
+  font-family: $FontFamilyMain;
+
+  @include styles();
+  @include button();
+
+  max-width: none;
+}

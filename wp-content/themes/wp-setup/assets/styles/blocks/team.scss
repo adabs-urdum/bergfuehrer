@@ -1,0 +1,56 @@
+// Styles
+// name mixin after scss team
+@mixin team($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .team {
+    &__members {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: $BS * -32;
+      margin-right: $BS * -32;
+      margin-top: $BS * -32;
+    }
+
+    &__member {
+      width: calc(100% / 3 - #{$BS} * 64);
+      margin: $BS * 32;
+    }
+
+    &__imageWrapper {
+      position: relative;
+      margin-bottom: $BS * 16;
+
+      canvas {
+        width: 100%;
+      }
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+
+        @supports (object-fit: cover) {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+    }
+
+    &__name {
+      margin-bottom: $BS * 16;
+    }
+  }
+}
+
+// Add team
+@include team();
+
+// Add basic team with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include team(#{$Breakpoint});
+  }
+}

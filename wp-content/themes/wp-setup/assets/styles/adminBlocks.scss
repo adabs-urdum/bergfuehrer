@@ -1,0 +1,9 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "functions";
+@import "blocks";
+
+.wp-core-ui .wp-block {
+  @import "./components/button";
+}

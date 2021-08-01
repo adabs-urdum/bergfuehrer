@@ -1,0 +1,100 @@
+// Styles
+// name mixin after scss tour
+@mixin tour($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .tour {
+    .tour__details {
+      background-color: $Grey;
+      padding: $BS * 32 $BS * 128;
+    }
+
+    .tour__infos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: $BS * 128 0;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__infoText {
+      text-align: center;
+    }
+
+    &__infoImage {
+      width: $BS * 128;
+    }
+
+    &__galleryImages {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__galleryImage {
+      cursor: pointer;
+      height: $BS * 256;
+      margin: $BS * 16;
+    }
+
+    &__bookingWrapper {
+      display: flex;
+    }
+
+    &__dates,
+    &__booking {
+      width: 50%;
+      padding: $BS * 64;
+
+      .button {
+        display: block;
+        text-align: center;
+        @include bsFontSize($BS, 42);
+        padding: $BS * 16;
+      }
+    }
+
+    &__dates {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__date {
+      margin-bottom: $BS * 8;
+
+      label {
+        display: block;
+        background-color: $Grey;
+        @include bsFontSize($BS, 22);
+        padding: $BS * 8;
+        background-color: $ColorLight;
+        cursor: pointer;
+      }
+
+      input {
+        display: none;
+
+        &:checked {
+          & + label {
+            background-color: $ColorLightDark;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Add tour
+@include tour();
+
+// Add basic tour with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include tour(#{$Breakpoint});
+  }
+}
