@@ -7,9 +7,9 @@
   .button {
     display: inline-block;
     font-weight: 700;
-    background: transparent;
+    background: $ColorLight;
     color: $Black;
-    border: solid 1px $Black;
+    border: solid 1px $ColorLight;
     padding: $BS * 4 $BS * 16 $BS * 6;
     transition: background 0.3s ease-out;
     text-decoration: none;
@@ -17,12 +17,21 @@
     margin-bottom: $BS * 16;
 
     &:hover {
-      background: $White;
+      background: $ColorDark;
       color: $Black;
     }
 
     &:after {
       content: none;
+    }
+
+    &--secondary {
+      background-color: transparent;
+      border-color: $Black;
+
+      &:hover {
+        background-color: $Grey;
+      }
     }
   }
 }

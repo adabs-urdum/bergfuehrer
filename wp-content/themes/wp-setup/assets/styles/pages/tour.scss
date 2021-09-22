@@ -68,12 +68,20 @@
       margin-bottom: $BS * 8;
 
       label {
-        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         background-color: $Grey;
         @include bsFontSize($BS, 22);
         padding: $BS * 8;
-        background-color: $ColorLight;
+        background-color: $Grey;
         cursor: pointer;
+        transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+        &:hover {
+          background-color: $ColorLight;
+          color: $Black;
+        }
       }
 
       input {
@@ -81,10 +89,19 @@
 
         &:checked {
           & + label {
-            background-color: $ColorLightDark;
+            background-color: $ColorLight;
+            color: $Black;
           }
         }
       }
+    }
+
+    &__lists {
+      display: flex;
+    }
+
+    &__materiallist {
+      margin-right: $BS * 32;
     }
   }
 }

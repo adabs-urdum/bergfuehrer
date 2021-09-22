@@ -1,9 +1,12 @@
 "use strict";
 
 import "babel-polyfill";
+import BookingForm from "./components/BookingForm";
+import EventFilter from "./components/EventFilter";
 // import Swiper from "swiper";
 import GACE from "./components/googleAnalyticsCustomEvents";
 import Lightbox from "./components/Lightbox";
+import SingleTour from "./components/SingleTour";
 
 Array.prototype.shuffle = function () {
   return this.sort(function () {
@@ -34,4 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
       gallery: gallery,
     });
   });
+
+  if (document.querySelector("body").classList.contains("single-tour")) {
+    new SingleTour();
+  }
+
+  const events = document.querySelector("section.events");
+  if (events) {
+    new EventFilter();
+  }
+
+  const bookingform = document.querySelector("section.bookingform");
+  if (bookingform) {
+    new BookingForm();
+  }
 });

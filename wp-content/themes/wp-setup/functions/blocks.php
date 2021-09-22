@@ -112,6 +112,18 @@ function my_acf_block_types() {
             'align'             => 'center',
             'keywords'          => [],
         ]);
+
+        acf_register_block_type([
+            'name'              => 'bookingform',
+            'title'             => __('Buchungsformular'),
+            'description'       => __('Buchungsformular'),
+            'render_template'   => 'blocks/bookingform.php',
+            'category'          => 'contentelements',
+            'icon'              => 'format-gallery',
+            'mode'              => 'preview',
+            'align'             => 'center',
+            'keywords'          => [],
+        ]);
     }
 }
 add_action('acf/init', 'my_acf_block_types');
@@ -123,6 +135,7 @@ function allowed_block_types( $allowed_block_types, $post ) {
         'acf/team',
         'acf/events',
         'acf/form',
+        'acf/bookingform',
     ];
 }
 add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );

@@ -187,8 +187,12 @@ class rsssl_letsencrypt_handler {
     public function check_domain(){
 	    $details = parse_url(site_url());
 	    $path = isset($details['path']) ? $details['path'] : '';
-
-	    if (is_multisite() && get_current_blog_id() !== get_main_site_id() ) {
+        if ( strpos(site_url(), 'localhost')!==false ) {
+	        rsssl_progress_remove( 'system-status' );
+	        $action  = 'stop';
+	        $status  = 'error';
+	        $message = __( "It is not possible to install Let's Encrypt on a localhost environment.", "really-simple-ssl" );
+        } else if (is_multisite() && get_current_blog_id() !== get_main_site_id() ) {
 		    rsssl_progress_remove('system-status');
 		    $action = 'stop';
 		    $status = 'error';
@@ -198,16 +202,6 @@ class rsssl_letsencrypt_handler {
 		    $action = 'stop';
 		    $status = 'error';
 		    $message = __("It is not possible to install Let's Encrypt on a subfolder configuration.", "really-simple-ssl" ).rsssl_read_more('https://really-simple-ssl.com/install-ssl-on-subfolders');
-	    } else if ( strlen($path)>0 ) {
-		    rsssl_progress_remove('system-status');
-		    $action = 'stop';
-		    $status = 'error';
-		    $message = __("It is not possible to install Let's Encrypt on a subfolder configuration.", "really-simple-ssl" );
-	    } else if ( strpos(site_url(), 'localhost')!==false ) {
-		    rsssl_progress_remove('system-status');
-		    $action = 'stop';
-		    $status = 'error';
-		    $message = __("It is not possible to install Let's Encrypt on a localhost environment.", "really-simple-ssl" );
 	    } else {
 		    $action = 'continue';
 		    $status = 'success';
@@ -283,7 +277,7 @@ class rsssl_letsencrypt_handler {
 			    $status = 'success';
 			    $message = sprintf(__("Your certificate will expire on %s.", "really-simple-ssl" ).' '.__("Continue to renew.", "really-simple-ssl" ), $expiry_date);   ;
 		    } else {
-			    $action = 'stop';
+			    $action = 'continue';
 			    $status = 'error';
 			    $message = __("You already have a valid SSL certificate.", "really-simple-ssl" );
 		    }
@@ -1169,6 +1163,10 @@ class rsssl_letsencrypt_handler {
 	public function directory_has_writing_permissions( $directory ){
 		set_error_handler(array($this, 'custom_error_handling'));
 		$test_file = fopen( $directory . "/really-simple-ssl-permissions-check.txt", "w" );
+		if ( !$test_file ) {
+			return false;
+		}
+
 		fwrite($test_file, 'file to test writing permissions for Really Simple SSL');
 		fclose( $test_file );
 		restore_error_handler();
@@ -1328,21 +1326,38 @@ class rsssl_letsencrypt_handler {
 
 	/**
 	 * Clear the keys directory, used in reset function
+	 * @since 5.0
 	 */
-	public function clear_keys_directory(){
+
+	public function clear_keys_directory() {
+
 		if (!current_user_can('manage_options')) {
 			return;
 		}
-		$path = $this->key_directory();
-		if ( file_exists( $path ) && $handle = opendir( $path ) ) {
-			while ( false !== ( $file = readdir( $handle ) ) ) {
-				if ( strpos($file, 'account_live_')!==false || strpos($file, 'account_staging_')!==false ){
-					unlink($path.'/'.$file);
+
+		$dir = $this->key_directory();
+		$this->delete_files_directories_recursively( $dir );
+
+	}
+
+	/**
+	 * @param $dir
+	 * Delete files and directories recursively. Used to clear the order from keys directory
+	 * @since 5.0.11
+	 */
+
+	private function delete_files_directories_recursively( $dir ) {
+
+		if ( strpos( $dir, 'ssl/keys' ) !== false ) {
+			foreach ( glob( $dir . '/*' ) as $file ) {
+				if ( is_dir( $file ) ) {
+					$this->delete_files_directories_recursively( $file );
+				} else {
+					unlink( $file );
 				}
 			}
-			closedir( $handle );
+			rmdir( $dir );
 		}
-
 	}
 
 	public function maybe_create_htaccess_directories(){
@@ -1572,19 +1587,15 @@ class rsssl_letsencrypt_handler {
 
 	/**
 	 * Generic SSL cert installation function
-	 * @param $server
-	 * @param $type
 	 *
 	 * @return RSSSL_RESPONSE
 	 */
-	public function cron_renew_installation($server, $type) {
-		//autodetect if empty
-		if (!$server) {
-			$install_method = get_option('rsssl_le_certificate_installed_by_rsssl');
-			$data = explode($install_method, ':');
-			$server = isset($data[0]) ? $data[0] : false;
-			$type = isset($data[1]) ? $data[1] : false;
-		}
+	public function cron_renew_installation() {
+		$install_method = get_option('rsssl_le_certificate_installed_by_rsssl');
+		$data = explode(':', $install_method );
+
+		$server = isset($data[0]) ? $data[0] : false;
+		$type = isset($data[1]) ? $data[1] : false;
 
 		$attempt_count = intval(get_transient('rsssl_le_install_attempt_count'));
 		$attempt_count++;

@@ -9,7 +9,37 @@
     $infos = get_field('infos', $pageID);
     $events = get_field('events', $pageID);
     $images = get_field('images', $pageID);
+    $technique = get_field('technique', $pageID);
+    $fitness = get_field('fitness', $pageID);
+    $difficultyMax = 3;
+    $materiallist = get_field('materiallist', $pageID);
+    $program = get_field('program', $pageID);
+    $altitude = get_field('altitude', $pageID);
+    $duration = get_field('duration', $pageID);
+    $price = get_field('price', $pageID);
+    $place = get_term(get_field('place', $pageID))->name;
     // $infos = get_the_terms($pageID, 'Info');
+    $bookingPermalink = get_permalink(163);
+
+    $conducts = get_posts([
+      'post_type' => 'conduct',
+      'numberposts' => -1,
+      'meta_key' => 'conductDate',
+      'orderby' => 'meta_value',
+      'order' => 'ASC',
+    ]);
+
+    $conducts = array_values(array_filter($conducts, function($conduct) use ($pageID){
+      $id = $conduct->ID;
+      $date = strtotime(get_field('conductDate', $id));
+      $now = time();
+      $tour = get_field('tour', $id)->ID;
+
+      if($date > $now && $tour == $pageID){
+        return 1;
+      }
+    }));
+
   ?>
 
   <section class="text">
@@ -26,6 +56,65 @@
 
     <div class="text__wrapper tour__details">
       <?= $detailText ?>
+
+      <p>Ort: <?= $place ?></p>
+      <p>Höhenmeter: <?= $altitude ?> Meter</p>
+      <p>Dauer: <?= $duration ?></p>
+      <p>Kosten: <?= $price ?>.– pro Person</p>
+
+      <div class="events__difficultyWrapper">
+        <div class="events__techniqueWrapper">
+          <span>Technik</span>
+          <span>
+            <span class="events__icons">
+              <?php for ($i=0; $i < $difficultyMax; $i++): ?>
+                <?php
+                  $class = $i + 1 - $technique < 1 ? 'full full--' . ($i + 1 - $technique) * 10 : 'empty';
+                ?>
+                <span class="events__icon <?= $class ?>"></span>
+              <?php endfor; ?>
+            </span>
+          </span>
+        </div>
+        <div class="events__fitnessWrapper">
+          <span>Kondition</span>
+          <span>
+            <span class="events__icons">
+              <?php for ($i=0; $i < $difficultyMax; $i++): ?>
+                <?php
+                  $class = $i + 1 - $fitness < 1 ? 'full full--' . ($i + 1 - $fitness) * 10 : 'empty';
+                ?>
+                <span class="events__icon <?= $class ?>"></span>
+              <?php endfor; ?>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="tour__lists">
+        <div class="tour__materiallist">
+          <h3>Materialliste</h3>
+          <ul class="tour__materials">
+            <?php foreach($materiallist as $material): ?>
+              <?php
+                $material = $material['material'];
+              ?>
+              <li class="tour__material"><?= $material ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <div class="tour__programlist">
+          <h3>Programm</h3>
+          <ul class="tour__program">
+            <?php foreach($program as $programPoint): ?>
+              <?php
+                $programPoint = $programPoint['programpoint'];
+              ?>
+              <li class="tour__programPoint"><?= $programPoint ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="text__wrapper tour__infos">
@@ -52,22 +141,34 @@
 
     <div class="text__wrapper tour__bookingWrapper">
       <div class="tour__dates">
-        <?php foreach($events as $key => $event): ?>
+        <?php foreach($conducts as $conduct): ?>
           <?php
-            $date = $event['date'];
-            $guide = $event['guide'];
+            $id = $conduct->ID;
+            $maxRegistrations = get_field('maxRegistrations', $id);
+            $registrations = get_field('registrations', $id);
+            $registrations = is_array($registrations) ? array_sum(array_map(function($registration){
+              return $registration['people'];
+            }, $registrations)) : 0;
+
+            if($maxRegistrations - $registrations < 1){
+              continue;
+            }
+
+            $date = strtotime(get_field('conductDate', $id));
+            $dateString = date('d.m.Y', $date);
           ?>
           <div class="tour__date">
-            <input type="radio" name="tour" id="tour<?= $key ?>">
-            <label for="tour<?= $key ?>" class="tour__date">
-              <?= $date ?>
+            <input type="radio" name="tour" id="tour<?= $id ?>" value="<?= $id ?>" <?php if($id==$_GET['id']): ?>checked="checked"<?php endif; ?>>
+            <label for="tour<?= $id ?>" class="tour__date">
+              <span><?= $dateString ?></span>
+              <span>Noch <?= $maxRegistrations - $registrations ?> freie Plätze</span>
             </label>
           </div>
         <?php endforeach; ?>
       </div>
       <div class="tour__booking">
-        <a href="" class="button">Buchen</a>
-        <a href="<?= get_permalink(13) ?>" class="button button--secondary">Kontakt</a>
+        <a id="bookingButton" href="<?= $bookingPermalink ?>?tour=<?= $pageID ?>" data-tour="<?= $pageID ?>" data-url="<?= $bookingPermalink ?>" target="_self" class="button">Buchen</a>
+        <a href="<?= get_permalink(13) ?>" target="_self" class="button button--secondary">Kontakt</a>
       </div>
     </div>
   </section>

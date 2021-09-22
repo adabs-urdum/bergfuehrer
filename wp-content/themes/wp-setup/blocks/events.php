@@ -1,125 +1,168 @@
 <?php
-  $filter = get_field('filter');
+  $activeType = get_field('filter');
 
-  $args = [
-    'post_type' => 'tour',
+  $conducts = get_posts([
+    'post_type' => 'conduct',
     'numberposts' => -1,
-    'meta_key' => 'name',
+    'meta_key' => 'conductDate',
     'orderby' => 'meta_value',
-    'order' => 'DESC'
-  ];
-  $allEvents = get_posts($args);
-  $events = $allEvents;
-  if(is_int($filter)){
-    $args['tax_query'] = [
-      [
-        'taxonomy' => 'Typ',
-        'field'    => 'term_id',
-        'terms'    => [$filter],
-      ],
-    ];
-    $events = get_posts($args);
-  }
+    'order' => 'ASC',
+  ]);
 
-  $eventsOrdered = [];
-  $places = [];
-  $types = [];
   $altitudes = [];
-  foreach($allEvents as $event){
-    $eventId = $event->ID;
-    $places[] = get_field('place', $eventId);
-    $types[] = get_field('type', $eventId);
-    $altitudes[] = get_field('altitude', $eventId);
-  }
-  foreach($events as $event){
-    $eventId = $event->ID;
-    $dates = get_field('events', $eventId);
-    foreach($dates as $date){
-      $eventsOrdered[] = [
-        $eventId, $date['date']
-      ];
+  $prices = [];
+  $dates = [];
+
+  foreach($conducts as $conduct){
+    $id = $conduct->ID;
+    $date = get_field('conductDate', $id);
+    $datetime = strtotime($date);
+    $tourID = get_field('tour', $id)->ID;
+    $place = get_field('place', $tourID);
+    $altitude = get_field('altitude', $tourID);
+    $price = get_field('price', $tourID);
+
+    $type = get_field('type', $tourID);
+    if($datetime >= strtotime(date('d.m.Y'))){
+      if(!in_array($altitude, $altitudes)){
+        $altitudes[] = $altitude;
+      }
+
+      if(!in_array($price, $prices)){
+        $prices[] = $price;
+      }
+
+      if(!array_key_exists($datetime, $dates)){
+        $dates[$datetime] = $date;
+      }
     }
   }
-  usort($eventsOrdered, function($a, $b){
-    return strtotime($a[1]) - strtotime($b[1]);
-  });
 
-  $places = array_map(function($placeId){
-    $term = get_term($placeId);
-    return [$placeId, $term->name];
-  }, array_unique($places));
-  sort($places);
+  $places = [];
+  foreach(get_terms([
+    'taxonomy' => 'Ortschaft',
+    'hide_empty' => false,
+  ]) as $place){
+    $places[$place->term_id] = $place->name;
+  }
+  asort($places);
 
-  $types = array_map(function($type){
-    $term = get_term($type);
-    return [$type, $term->name];
-  }, array_unique($types));
-  sort($types);
+  $types = [];
+  foreach(get_terms([
+    'taxonomy' => 'Typ',
+    'hide_empty' => false,
+  ]) as $type){
+    $types[$type->term_id] = $type->name;
+  }
+  asort($types);
 
-  sort(array_unique($altitudes));
+  asort($prices);
+  asort($altitudes);
 
 ?>
+
 <section class="text events">
   <div class="text__wrapper events__wrapper">
-    <div class="events__filters">
+    <div class="events__filters" data-type="<?= $activeType ?>">
       <div class="events__filter">
+        <input class="events__trigger" type="checkbox" id="placeTrigger" name="filterTrigger">
         <label for="placeTrigger" class="events__label">Ort</label>
-        <input class="events__trigger" type="checkbox" id="placeTrigger" name="placeTrigger">
-        <ul class="events__choices">
-          <?php foreach($places as $place): ?>
-            <input type="radio" value="<?= $place[1] ?>" id="place<?= $place[0] ?>" name="place">
-            <label class="events__choice" for="place<?= $place[0] ?>"><?= $place[1] ?></label>
-          <?php endforeach; ?>
-        </ul>
+        <div class="events__lower">
+          <ul class="events__choices">
+            <?php foreach($places as $placeID => $place): ?>
+              <li>
+                <input type="checkbox" value="<?= $placeID ?>" id="place<?= $placeID ?>" name="place">
+                <label class="events__choice" for="place<?= $placeID ?>">
+                  <span><?= $place ?></span>
+                </label>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
       </div>
       <div class="events__filter">
+        <input class="events__trigger" type="checkbox" id="typeTrigger" name="filterTrigger">
         <label for="typeTrigger" class="events__label">Sportart</label>
-        <input class="events__trigger" type="checkbox" id="typeTrigger" name="typeTrigger">
-        <ul class="events__choices">
-          <?php foreach($types as $type): ?>
-            <input type="radio" value="<?= $type[1] ?>" id="place<?= $type[0] ?>" name="place">
-            <label class="events__choice" for="place<?= $type[0] ?>"><?= $type[1] ?></label>
-          <?php endforeach; ?>
-        </ul>
+        <div class="events__lower">
+          <ul class="events__choices">
+            <?php foreach($types as $typeID => $type): ?>
+              <?php
+                $checked = $typeID == $activeType ? 'checked="checked"' : '';
+              ?>
+              <li>
+                <input type="checkbox" value="<?= $typeID ?>" id="type<?= $typeID ?>" name="type" <?= $checked ?>>
+                <label class="events__choice" for="type<?= $typeID ?>">
+                  <span><?= $type ?></span>
+                </label>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
       </div>
       <div class="events__filter">
+        <input class="events__trigger" type="checkbox" id="altitudeTrigger" name="filterTrigger">
         <label for="altitudeTrigger" class="events__label">Höhenmeter</label>
-        <input class="events__trigger" type="checkbox" id="altitudeTrigger" name="altitudeTrigger">
-        <div class="events__raange">
-          <input type="number" value="<?= $altitudes[0] ?>" min="<?= $altitudes[0] ?>" max="<?= $altitudes[1] ?>">
-          <input type="number" value="<?= $altitudes[1] ?>" min="<?= $altitudes[0] ?>" max="<?= $altitudes[1] ?>">
+        <div class="events__lower">
+          <div class="events__rangeContainer">
+            <?php
+              $altitudeMin = $altitudes[0];
+              $altitudeMax = array_reverse($altitudes)[0];
+            ?>
+            <div class="events__rangeNumbers">
+              <input type="number" class="min" name="altMin" value="<?= $altitudeMin ?>" min="<?= $altitudeMin ?>" max="<?= $altitudeMax ?>">
+              <input type="number" class="max" name="altMax" value="<?= $altitudeMax ?>" min="<?= $altitudeMin ?>" max="<?= $altitudeMax ?>">
+            </div>
+            <div class="events__rangeSlider"></div>
+          </div>
+        </div>
+      </div>
+      <div class="events__filter">
+        <input class="events__trigger" type="checkbox" id="priceTrigger" name="filterTrigger">
+        <label for="priceTrigger" class="events__label">Preis</label>
+        <div class="events__lower">
+          <div class="events__rangeContainer">
+            <?php
+              $priceMin = $prices[0];
+              $priceMax = array_reverse($prices)[0];
+            ?>
+            <div class="events__rangeNumbers">
+              <input type="number" class="min" name="priceMin" value="<?= $priceMin ?>" min="<?= $priceMin ?>" max="<?= $priceMax ?>">
+              <input type="number" class="max" name="priceMax" value="<?= $priceMax ?>" min="<?= $priceMin ?>" max="<?= $priceMax ?>">
+            </div>
+            <div class="events__rangeSlider">
+              <div class="events__rangeBullet events__rangeBullet--min"></div>
+              <div class="events__rangeBullet events__rangeBullet--max"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="events__filter">
+        <input class="events__trigger" type="checkbox" id="dateTrigger" name="filterTrigger">
+        <label for="dateTrigger" class="events__label">Datum</label>
+        <div class="events__lower">
+          <div class="--events__rangeContainer">
+            <?php
+              $dateMinTime = array_key_first($dates);
+              $dateMin = $dates[$dateMinTime];
+              $dateMaxTime = array_key_last($dates);
+              $dateMax = $dates[$dateMaxTime];
+            ?>
+            <div class="events__rangeNumbers">
+              <input type="text" name="dateMin" data-time="<?= $dateMinTime ?>" value="<?= $dateMin ?>">
+              <input type="text" name="dateMax" data-time="<?= $dateMaxTime ?>" value="<?= $dateMax ?>">
+            </div>
+            <div class="events__rangeSlider">
+              <div class="events__rangeBullet events__rangeBullet--min"></div>
+              <div class="events__rangeBullet events__rangeBullet--max"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="events__loaderWrapper">
+      <div class="events__loader"><div></div><div></div><div></div><div></div></div>
+    </div>
     <ul class="events__events">
-      <?php foreach($eventsOrdered as $event): ?>
-        <?php
-          $eventId = $event[0];
-          $eventUrl = get_the_permalink($eventId);
-          $title = get_the_title($eventId);
-          $date = $event[1];
-          $teaser = get_field('teaser', $eventId);
-          $place = get_field('place', $eventId);
-          $teaserText = $teaser['teaserText'];
-          $img = $teaser['teaaserImage'];
-          $caption = $img['caption'];
-          $src = $img['sizes']['L'];
-          $alt = $img['alt'] ? $img['alt'] : $img['name'];
-          $imgTitle = $img['title'] ? $img['title'] : $img['name'];
-          $srcset = wp_get_attachment_image_srcset($img['ID']);
-        ?>
-        <a href="<?= $eventUrl ?>" class="events__event" target="_self">
-          <div class="events__textWrapper">
-            <h4><?= $date ?></h4>
-            <h3><?= $title ?> – <?= get_term($place)->name ?></h3>
-            <p class="events__teaserText"><?= $teaserText ?></p>
-            <span class="button">Details</span>
-          </div>
-          <div class="events__imageWrapper">
-            <img class="events__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
-          </div>
-        </a>
-      <?php endforeach; ?>
     </ul>
   </div>
 </section>
