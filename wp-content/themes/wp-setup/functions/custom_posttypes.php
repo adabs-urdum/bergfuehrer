@@ -207,38 +207,12 @@ function registerEmployeeCategory() {
 
 }
 add_action( 'init', 'registerEmployeeCategory', 0 );
-//----------------------------------------------------------
-
-// Adding ACF Field Event Date to WP admin column
-//----------------------------------------------------------
-// function add_acf_columns ( $columns ) {
-//   return array_merge ( $columns, array (
-//     'from' => __('Datum von'),
-//     'to' => __('bis'),
-//   ) );
-// }
-// add_filter ( 'manage_event_posts_columns', 'add_acf_columns' );
-// /*
-//  * Add columns to event post list
-//  */
-//  function event_custom_column ( $column, $post_id ) {
-//    switch ( $column ) {
-//      case 'from':
-//        echo date('d.m.Y H:i', strtotime(get_post_meta( $post_id, 'from', true )));
-//        break;
-//      case 'to':
-//         if(get_post_meta( $post_id, 'to', true )){
-//           echo date('d.m.Y H:i', strtotime(get_post_meta( $post_id, 'to', true )));
-//         }
-//        break;
-//    }
-//  }
-//  add_action ( 'manage_event_posts_custom_column', 'event_custom_column', 10, 2 );
-//----------------------------------------------------------
 
 
-// Save Name + Lastname as Post Title of PostType Employee
-//----------------------------------------------------------
+/**
+ *	Save Name + Lastname as Post Title of PostType Employee
+ *
+ */
 function save_post_handler( $post_id ) {
 
     if ( get_post_type( $post_id ) == 'team' ) {
@@ -271,8 +245,7 @@ add_action( 'acf/save_post', 'save_post_handler' , 20 );
  *	ACF Admin Columns
  *
  */
-
- function add_acf_columns ( $columns ) {
+function add_acf_columns_conduct ( $columns ) {
    return array_merge( $columns, array (
      'conductDate' => __ ( 'Durchführung' ),
      'guide' => __ ( 'Bergführer' ),
@@ -280,7 +253,14 @@ add_action( 'acf/save_post', 'save_post_handler' , 20 );
      'registrations' => __ ( 'Anmeldungen' ),
    ) );
  }
- add_filter ( 'manage_conduct_posts_columns', 'add_acf_columns' );
+ add_filter ( 'manage_conduct_posts_columns', 'add_acf_columns_conduct' );
+
+function add_acf_columns_tour ( $columns ) {
+   return array_merge( $columns, array (
+     'type' => __ ( 'Sportart' ),
+   ) );
+ }
+ add_filter ( 'manage_tour_posts_columns', 'add_acf_columns_tour' );
 
  /*
  * Add columns to Conduct CPT
@@ -314,9 +294,21 @@ add_action( 'acf/save_post', 'save_post_handler' , 20 );
 add_action ( 'manage_conduct_posts_custom_column', 'conduct_custom_column', 10, 2 );
 
  /*
- * Add Sortable columns
+ * Add columns to tour CPT
  */
+ function tour_custom_column ( $column, $post_id ) {
+   switch ( $column ) {
+     case 'type':
+        $type = get_field('type', $post_id);
+        echo get_term($type)->name;
+        break;
+   }
+}
+add_action ( 'manage_tour_posts_custom_column', 'tour_custom_column', 10, 2 );
 
+ /*
+ * Add Sortable columns too cpt conduct
+ */
 function my_column_register_sortable( $columns ) {
 	$columns['conductDate'] = 'conductDate';
 	$columns['guide'] = 'guide';
@@ -325,5 +317,34 @@ function my_column_register_sortable( $columns ) {
 	return $columns;
 }
 add_filter('manage_edit-conduct_sortable_columns', 'my_column_register_sortable' );
+
+ /*
+ * Add Sortable columns too cpt conduct
+ */
+function my_column_register_sortable_tour( $columns ) {
+	$columns['type'] = 'type';
+	return $columns;
+}
+add_filter('manage_edit-tour_sortable_columns', 'my_column_register_sortable_tour' );
+
+/*
+ * Orderby acf date field
+ */
+function my_column_orderby( $query ) {
+	if( ! is_admin() )
+		return;
+
+	$orderby = $query->get( 'orderby');
+
+	if( $orderby == 'conductDate' ) {
+		$query->set('meta_key','conductDate');
+		$query->set('orderby','meta_value_num');
+	}
+	else if( $orderby == 'type' ) {
+		$query->set('orderby','name');
+    $query->set('orderby','meta_value');
+	}
+}
+add_action( 'pre_get_posts', 'my_column_orderby' );
 
 ?>
