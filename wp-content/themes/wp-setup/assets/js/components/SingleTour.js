@@ -5,9 +5,9 @@ class SingleTour {
     this.tours = [...document.querySelectorAll('[name="tour"]')];
     this.bookingButton = document.querySelector("#bookingButton");
 
-    // this.addEventListeners();
+    this.addEventListeners();
 
-    // this.onChangeTour();
+    this.onChangeTour();
   }
 
   addEventListeners = () => {
@@ -16,15 +16,17 @@ class SingleTour {
     });
   };
 
-  onChangeTour = () => {
-    const conduct = this.tours.find((tour) => {
-      return tour.checked == true;
-    }).value;
-    const tour = this.bookingButton.dataset.tour;
+  onChangeTour = (e) => {
+    const input = e.currentTarget;
+    const wcId = input.value;
+    // const conduct = this.tours.find((tour) => {
+    //   return tour.checked == true;
+    // }).value;
+    // const tour = this.bookingButton.dataset.tour;
     const url = this.bookingButton.dataset.url.slice(0, -1);
-    const href = `${url}?event=${tour}&date=${conduct}`;
+    // const href = `${url}?event=${tour}&date=${conduct}`;
+    const href = `${url}?add-to-cart=${wcId}`;
     this.bookingButton.href = href;
-    console.log(this.bookingButton.href);
   };
 }
 

@@ -177,6 +177,7 @@
             $id = $conduct->ID;
             $maxRegistrations = get_field('maxRegistrations', $id);
             $registrations = get_field('registrations', $id);
+            $wcProductId = get_field('woocommerce_product', $id)->ID;
             $registrations = is_array($registrations) ? array_sum(array_map(function($registration){
               return $registration['people'];
             }, $registrations)) : 0;
@@ -189,7 +190,7 @@
             $dateString = date('d.m.Y', $date);
           ?>
           <div class="tour__date">
-            <input type="radio" name="tour" id="tour<?= $id ?>" value="<?= $id ?>" <?php if($id==$_GET['id']): ?>checked="checked"<?php endif; ?>>
+            <input type="radio" name="tour" id="tour<?= $id ?>" data-wcid="<?= $wcProductId ?>" value="<?= $wcProductId ?>" <?php if($id==$_GET['id']): ?>checked="checked"<?php endif; ?>>
             <label for="tour<?= $id ?>" class="tour__date">
               <span><?= $dateString ?></span>
               <span>Noch <?= $maxRegistrations - $registrations ?> freie Plätze</span>
