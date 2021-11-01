@@ -230,11 +230,36 @@ function save_post_handler( $post_id ) {
         wp_update_post( $data );
     }
     else if ( get_post_type( $post_id ) == 'conduct' ) {
-        $tour = get_the_title(get_field('tour', $post_id));
+        $tourObj = get_field('tour', $post_id);
+        $tour = get_the_title($tourObj);
         $date = get_field('conductDate', $post_id);
         $data['ID'] = $post_id;
-        $data['post_title'] = $tour . ' - ' . $date;
+        $title =  $tour . ' - ' . $date;
+        $data['post_title'] = $title;
         $data['post_name']  = sanitize_title( $tour . ' - ' . $date );
+        $price = floatval(get_field('prices', $tourObj)[0]['price']);
+
+        $wcProductId = get_field('woocommerce_product', $post_id);
+        if(!$wcProductId){
+          /**
+            * Create Woocommerce Product here
+          */
+          $args = [
+              'post_title' => $title, // The product's Title
+              'post_type' => 'product',
+              'post_status' => 'publish' // This could also be $data['status'];
+          ];
+          $wcProductId = wp_insert_post($args);
+
+        }
+        $wcProduct = new WC_Product($wcProductId);
+        update_field('woocommerce_product', $wcProductId, $post_id);
+        update_field('conduct', $post_id, $wcProductId);
+        update_field('tour', $tourObj, $wcProductId);
+
+        $wcProduct->set_regular_price($price);
+        $wcProduct->save();
+
         wp_update_post( $data );
     }
 

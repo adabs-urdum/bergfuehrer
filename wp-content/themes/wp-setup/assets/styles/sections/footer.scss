@@ -7,11 +7,15 @@
   .footer {
     background: $Grey;
 
+    &.text {
+      padding: $BS * 64 $BS * 32;
+    }
+
     &__wrapper {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      padding: $BS * 32;
+      padding: 0 !important;
     }
 
     &__logos {
@@ -51,5 +55,63 @@
 @each $Breakpoint in $Breakpoints {
   @include breakpoint(#{$Breakpoint}) {
     @include footer(#{$Breakpoint});
+  }
+}
+
+@include breakPointM() {
+  $BS: getBaseSize("M");
+
+  .footer {
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      & > * {
+        width: 50%;
+        margin-bottom: $BS * 64;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__logos {
+      justify-content: flex-end;
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: center;
+
+      a {
+        margin: 0 $BS * 8;
+      }
+    }
+  }
+}
+
+@include breakPointS() {
+  $BS: getBaseSize("S");
+
+  .footer {
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      & > * {
+        width: 100%;
+        margin-bottom: $BS * 64;
+        justify-content: center;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__address {
+      text-align: center;
+    }
   }
 }

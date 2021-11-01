@@ -1,0 +1,29 @@
+// Styles
+// name mixin after scss form
+@mixin form($type: "") {
+  // get Basesize in correct relation to design width
+  $BS: getBaseSize($type);
+
+  .form {
+    .nf-form-content {
+      padding: 0;
+      max-width: none;
+
+      input:not([type="button"]),
+      textarea {
+        padding: $BS * 8;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// Add form
+@include form();
+
+// Add basic form with breakpoints
+@each $Breakpoint in $Breakpoints {
+  @include breakpoint(#{$Breakpoint}) {
+    @include form(#{$Breakpoint});
+  }
+}

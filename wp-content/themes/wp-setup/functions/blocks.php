@@ -124,6 +124,30 @@ function my_acf_block_types() {
             'align'             => 'center',
             'keywords'          => [],
         ]);
+
+        acf_register_block_type([
+            'name'              => 'checkout',
+            'title'             => __('Kasse'),
+            'description'       => __('Kasse'),
+            'render_template'   => 'blocks/checkout.php',
+            'category'          => 'contentelements',
+            'icon'              => 'format-gallery',
+            'mode'              => 'preview',
+            'align'             => 'center',
+            'keywords'          => [],
+        ]);
+
+        acf_register_block_type([
+            'name'              => 'cart',
+            'title'             => __('Warenkorb'),
+            'description'       => __('Warenkorb'),
+            'render_template'   => 'blocks/cart.php',
+            'category'          => 'contentelements',
+            'icon'              => 'format-gallery',
+            'mode'              => 'preview',
+            'align'             => 'center',
+            'keywords'          => [],
+        ]);
     }
 }
 add_action('acf/init', 'my_acf_block_types');
@@ -136,6 +160,8 @@ function allowed_block_types( $allowed_block_types, $post ) {
         'acf/events',
         'acf/form',
         'acf/bookingform',
+        'acf/checkout',
+        'acf/cart',
     ];
 }
 add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );

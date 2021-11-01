@@ -55,10 +55,10 @@ ga('create', 'UA-2092620-46', 'auto');
       <input class="header__mobileNavCheckbox" type="checkbox" id="mobileNavCheckbox">
       <label class="header__mobileNavLabel" for="mobileNavCheckbox">
         <canvas class="header__mobileNavCanvas" width="20" height="14"></canvas>
-        <svg class="header__mobileNavSVG" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line y1="1.25" x2="20" y2="1.25" stroke="#575756" stroke-width="1.5"/>
-          <line y1="7.25" x2="20" y2="7.25" stroke="#575756" stroke-width="1.5"/>
-          <line y1="13.25" x2="20" y2="13.25" stroke="#575756" stroke-width="1.5"/>
+        <svg class="header__mobileNavSVG" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 2.25H17" stroke="#575756"/>
+          <path d="M0 8.25H17" stroke="#575756"/>
+          <path d="M0 14.25H17" stroke="#575756"/>
         </svg>
       </label>
       <nav class="header__nav">
@@ -71,6 +71,15 @@ ga('create', 'UA-2092620-46', 'auto');
             'echo'              => true, // (bool) Whether to echo the menu or return it. Default true.
           ]);
         ?>
+        <div>
+          <label class="header__mobileNavLabel" for="mobileNavCheckbox">
+            <canvas class="header__mobileNavCanvas" width="20" height="14"></canvas>
+            <svg class="header__mobileNavSVG" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.928955 1L18 18.071" stroke="#575756"/>
+              <path d="M0.928955 18.0711L18 1.00003" stroke="#575756"/>
+            </svg>
+          </label>
+        </div>
       </nav>
     </div>
   </div>

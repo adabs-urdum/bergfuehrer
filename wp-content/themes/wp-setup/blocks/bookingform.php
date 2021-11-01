@@ -18,7 +18,7 @@
   }
 ?>
 
-<section class="bookingform">
+<section class="bookingform form">
   <div class="text__wrapper">
     <?php if($getParamsMatch): ?>
       <h1>Buchungsformular</h1>
@@ -28,7 +28,7 @@
         <p>CHF <?= $price ?> pro Person</p>
       </div>
       <div>
-        <form action="" id="bookingform">
+        <form method="POST" action="<?= wc_get_checkout_url() ?>" id="bookingform">
           <label for="name">
             <span>Vorname</span>
             <input type="text" id="name" name="name">

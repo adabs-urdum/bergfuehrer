@@ -4,7 +4,9 @@
   // get Basesize in correct relation to design width
   $BS: getBaseSize($type);
 
-  .button {
+  .button,
+  .form .nf-form-content input[type="button"],
+  .form .nf-form-content input[type="submit"] {
     display: inline-block;
     font-weight: 700;
     background: $ColorLight;

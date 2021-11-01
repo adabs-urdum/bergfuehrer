@@ -5,9 +5,9 @@ class SingleTour {
     this.tours = [...document.querySelectorAll('[name="tour"]')];
     this.bookingButton = document.querySelector("#bookingButton");
 
-    this.addEventListeners();
+    // this.addEventListeners();
 
-    this.onChangeTour();
+    // this.onChangeTour();
   }
 
   addEventListeners = () => {

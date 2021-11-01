@@ -32,8 +32,12 @@ class EventFilter {
       altMax: "",
       priceMin: "",
       priceMax: "",
-      dateMin: "",
-      dateMax: "",
+      fitnessMin: "",
+      fitnessMax: "",
+      techniqueMin: "",
+      techniqueMax: "",
+      // dateMin: "",
+      // dateMax: "",
     };
 
     this.addEventListeners();
@@ -186,15 +190,35 @@ class EventFilter {
     }).value;
     this.data.priceMax = priceMax;
 
-    let dateMin = this.inputs.find((input) => {
-      return input.name == "dateMin";
+    const fitnessMin = this.inputs.find((input) => {
+      return input.name == "fitnessMin";
     }).value;
-    this.data.dateMin = dateMin;
+    this.data.fitnessMin = fitnessMin;
 
-    const dateMax = this.inputs.find((input) => {
-      return input.name == "dateMax";
+    const fitnessMax = this.inputs.find((input) => {
+      return input.name == "fitnessMax";
     }).value;
-    this.data.dateMax = dateMax;
+    this.data.fitnessMax = fitnessMax;
+
+    const techniqueMin = this.inputs.find((input) => {
+      return input.name == "techniqueMin";
+    }).value;
+    this.data.techniqueMin = techniqueMin;
+
+    const techniqueMax = this.inputs.find((input) => {
+      return input.name == "techniqueMax";
+    }).value;
+    this.data.techniqueMax = techniqueMax;
+
+    // let dateMin = this.inputs.find((input) => {
+    //   return input.name == "dateMin";
+    // }).value;
+    // this.data.dateMin = dateMin;
+
+    // const dateMax = this.inputs.find((input) => {
+    //   return input.name == "dateMax";
+    // }).value;
+    // this.data.dateMax = dateMax;
 
     this.getConducts();
   };

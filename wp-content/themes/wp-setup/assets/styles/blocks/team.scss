@@ -54,3 +54,25 @@
     @include team(#{$Breakpoint});
   }
 }
+
+@include breakPointS() {
+  $BS: getBaseSize("S");
+
+  .team {
+    &__member {
+      width: calc(100% / 2 - #{$BS} * 64);
+      margin: $BS * 32;
+    }
+  }
+}
+
+@include breakPointXS() {
+  $BS: getBaseSize("XS");
+
+  .team {
+    &__member {
+      width: calc(100% - #{$BS} * 64);
+      margin: $BS * 32;
+    }
+  }
+}

@@ -10,13 +10,6 @@
       padding: $BS * 32 $BS * 128;
     }
 
-    .tour__infos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: $BS * 128 0;
-    }
-
     &__info {
       display: flex;
       flex-direction: column;
@@ -100,8 +93,22 @@
       display: flex;
     }
 
+    &__materiallist,
+    &__programlist {
+      flex-basis: 100%;
+    }
+
     &__materiallist {
       margin-right: $BS * 32;
+    }
+  }
+
+  .text:not(.qty) {
+    .tour__infos.text__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: $BS * 64 $BS * 128;
     }
   }
 }
@@ -113,5 +120,68 @@
 @each $Breakpoint in $Breakpoints {
   @include breakpoint(#{$Breakpoint}) {
     @include tour(#{$Breakpoint});
+  }
+}
+
+@include breakPointS() {
+  $BS: getBaseSize("S");
+
+  .tour {
+    .tour__details {
+      padding: $BS * 64 $BS * 32;
+    }
+
+    .tour__infos {
+      padding: $BS * 32;
+    }
+
+    &__lists {
+      flex-direction: column;
+    }
+
+    &__materiallist {
+      margin-right: 0;
+      margin-bottom: $BS * 32;
+    }
+
+    &__info {
+      margin: $BS * 32;
+    }
+
+    &__details {
+      padding-left: $BS * 32;
+      padding-right: $BS * 32;
+    }
+
+    &__bookingWrapper {
+      flex-direction: column;
+    }
+
+    &__dates {
+      width: 100%;
+      padding: $BS * 32 0;
+    }
+
+    &__booking {
+      width: 100%;
+      padding: $BS * 32 0;
+
+      a {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include breakPointXS() {
+  $BS: getBaseSize("XS");
+
+  .tour {
+    &__galleryImage {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }

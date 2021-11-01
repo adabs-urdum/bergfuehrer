@@ -161,11 +161,11 @@
   }
 
   .mobile_only {
-    display: none;
+    display: none !important;
   }
 
   .desktop_only {
-    display: block;
+    display: block !important;
   }
 
   #overlay {
@@ -174,7 +174,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: transparentize($Black, 0.5);
+    background-color: transparentize($White, 0.2);
     z-index: 10001;
     padding: $BS * 64;
     display: flex;
@@ -212,10 +212,14 @@
 // Add custom styles with breakpoints
 @include breakPointS() {
   .mobile_only {
-    display: block;
+    display: block !important;
   }
 
   .desktop_only {
-    display: none;
+    display: none !important;
+  }
+
+  #overlay {
+    padding: $BS * 32;
   }
 }

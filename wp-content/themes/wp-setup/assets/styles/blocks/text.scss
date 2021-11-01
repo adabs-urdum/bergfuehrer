@@ -4,19 +4,21 @@
   // get Basesize in correct relation to design width
   $BS: getBaseSize($type);
 
-  .text {
-    padding: $BS * 80 0 0;
+  .text:not(.qty) {
+    padding: $BS * 80 $BS * 32;
 
-    &__wrapper {
-      max-width: $WidthNarrow;
-      margin: 0 auto;
-      padding: 0 0 $BS * 80;
-    }
+    .text {
+      &__wrapper {
+        max-width: $WidthNarrow;
+        margin: 0 auto;
+        padding: 0;
+      }
 
-    &__titleLeftWrapper {
-      max-width: $WidthWide;
-      margin: 0 auto;
-      padding: 0 0 $BS * 40;
+      &__titleLeftWrapper {
+        max-width: $WidthWide;
+        margin: 0 auto;
+        padding: 0 0 $BS * 40 $BS * 32;
+      }
     }
   }
 }
@@ -28,5 +30,17 @@
 @each $Breakpoint in $Breakpoints {
   @include breakpoint(#{$Breakpoint}) {
     @include text(#{$Breakpoint});
+  }
+}
+
+@include breakPointS() {
+  $BS: getBaseSize("S");
+
+  .text:not(.qty) {
+    .text {
+      &__titleLeftWrapper {
+        padding-left: 0;
+      }
+    }
   }
 }

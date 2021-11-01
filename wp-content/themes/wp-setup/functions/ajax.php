@@ -15,10 +15,14 @@ function getconducts(WP_REST_Request $request) {
     $activePlaces = false;
   }
 
-  $altMin = $data->altMin;
-  $altMax = $data->altMax;
-  $priceMin = $data->priceMin;
-  $priceMax = $data->priceMax;
+  $altFilterMin = $data->altMin;
+  $altFilterMax = $data->altMax;
+  $priceFilterMin = $data->priceMin;
+  $priceFilterMax = $data->priceMax;
+  $fitnessMin = $data->fitnessMin;
+  $fitnessMax = $data->fitnessMax;
+  $techniqueMin = $data->techniqueMin;
+  $techniqueMax = $data->techniqueMax;
   $dateMin = strtotime($data->dateMin);
   $dateMax = strtotime($data->dateMax);
 
@@ -42,10 +46,12 @@ function getconducts(WP_REST_Request $request) {
     $datetime = strtotime($date);
     $tourID = get_field('tour', $id)->ID;
     $place = get_field('place', $tourID);
-    $altitude = get_field('altitude', $tourID);
+    $altitudes = get_field('altitudes', $tourID);
     $price = get_field('price', $tourID);
+    $prices = get_field('prices', $tourID);
 
     $type = get_field('type', $tourID);
+    $guide = get_field('guide', $id);
     if($datetime >= strtotime(date('d.m.Y'))){
       $orderedConducts[] = [
         'id' => $id,
@@ -53,12 +59,13 @@ function getconducts(WP_REST_Request $request) {
         'type' => $type,
         'date' => $date,
         'datetime' => $datetime,
-        'guide' => get_field('guide', $id)->ID,
+        'guide' => $guide ? $guide->ID : '',
         'maxRegistrations' => get_field('maxRegistrations', $id),
         'registrations' => $registrations,
         'place' => $place,
         'price' => $price,
-        'altitude' => $altitude,
+        'prices' => $prices,
+        'altitudes' => $altitudes,
       ];
     }
   }
@@ -77,8 +84,12 @@ function getconducts(WP_REST_Request $request) {
     $place = get_field('place', $eventId);
     $technique = floatval(get_field('technique', $eventId));
     $fitness = floatval(get_field('fitness', $eventId));
-    $altitude = $conduct['altitude'];
-    $price = $conduct['price'];
+    $altitudes = $conduct['altitudes'];
+    $altMin = $altitudes['min'];
+    $altMax = $altitudes['max'];
+    $prices = $conduct['prices'];
+    $priceMin = $prices[0]['price'];
+    $priceMax = $prices[count($prices) - 1]['price'];
     $difficultyMax = 3;
     $teaserText = $teaser['teaserText'];
     $img = $teaser['teaaserImage'];
@@ -88,23 +99,39 @@ function getconducts(WP_REST_Request $request) {
     $imgTitle = $img['title'] ? $img['title'] : $img['name'];
     $srcset = wp_get_attachment_image_srcset($img['ID']);
 
+write_log($title);
+write_log($altitudes);
 
     if($activeTypes && !in_array($conduct['type'], $activeTypes)){
+write_log(1);
       continue;
     }
     else if($activePlaces && !in_array($conduct['place'], $activePlaces)){
+write_log(2);
       continue;
     }
-    else if($altitude < $altMin || $altitude > $altMax){
+    else if($altMin < $altFilterMin || $altMax > $altFilterMax){
+write_log(3);
       continue;
     }
-    else if($price < $priceMin || $price > $priceMax){
+    else if($priceMin < $priceFilterMin || $priceMax > $priceFilterMax){
+write_log(4);
       continue;
     }
-    else if($datetime < $dateMin || $datetime > $dateMax){
+    else if($fitness < $fitnessMin || $fitness > $fitnessMax){
+write_log(5);
       continue;
     }
+    else if($technique < $techniqueMin || $technique > $techniqueMax){
+write_log(6);
+      continue;
+    }
+//     else if($datetime < $dateMin || $datetime > $dateMax){
+// write_log(7);
+//       continue;
+//     }
     else if($conduct['maxRegistrations'] - $conduct['registrations'] < 1){
+write_log(8);
       continue;
     }
 
@@ -144,6 +171,7 @@ function getconducts(WP_REST_Request $request) {
                 </span>
               </div>
             </div>
+            <div class="events__price">Ab CHF ' . $priceMin . '</div>
             <span class="button">Details</span>
           </div>
           <div class="events__imageWrapper">
@@ -159,6 +187,7 @@ function getconducts(WP_REST_Request $request) {
   }
 
   return [
+    'conducts' => $conducts,
     'data' => $data,
     'markup' => $markup
   ];
@@ -201,6 +230,7 @@ function setbooking(WP_REST_Request $request) {
   return [
     'data' => $data,
     'success' => $success,
+    'productId' => $productId,
   ];
 }
 add_action('rest_api_init', function ($server) {
