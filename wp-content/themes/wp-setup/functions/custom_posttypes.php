@@ -150,7 +150,7 @@ function registerEmployeeCategory() {
     'menu_name' => __( 'Sportarten' ),
   ];
 
-  register_taxonomy('Typ',['tour', 'conduct'], [
+  register_taxonomy('Typ',['tour'], [
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,
@@ -173,11 +173,11 @@ function registerEmployeeCategory() {
     'menu_name' => __( 'Orte' ),
   ];
 
-  register_taxonomy('Ortschaft',['tour', 'conduct'], [
+  register_taxonomy('Ortschaft',['conduct'], [
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,
-    'show_admin_column' => true,
+    'show_admin_column' => false,
     'query_var' => true,
     'rewrite' => ['slug' => 'place'],
   ]);
@@ -237,7 +237,8 @@ function save_post_handler( $post_id ) {
         $title =  $tour . ' - ' . $date;
         $data['post_title'] = $title;
         $data['post_name']  = sanitize_title( $tour . ' - ' . $date );
-        $price = floatval(get_field('prices', $tourObj)[0]['price']);
+        // $price = floatval(get_field('prices', $tourObj)[0]['price']);
+        $price = floatval(get_field('price', $tourObj));
 
         $wcProductId = get_field('woocommerce_product', $post_id);
         if(!$wcProductId){
@@ -273,6 +274,7 @@ add_action( 'acf/save_post', 'save_post_handler' , 20 );
 function add_acf_columns_conduct ( $columns ) {
    return array_merge( $columns, array (
      'conductDate' => __ ( 'Durchführung' ),
+     'place' => __ ( 'Ort' ),
      'guide' => __ ( 'Bergführer' ),
      'tour' => __ ( 'Tour' ),
      'registrations' => __ ( 'Anmeldungen' ),
@@ -294,6 +296,9 @@ function add_acf_columns_tour ( $columns ) {
    switch ( $column ) {
      case 'conductDate':
         echo get_field('conductDate', $post_id);
+        break;
+     case 'place':
+        echo get_term(get_field('place', $post_id))->name;
         break;
      case 'guide':
         echo get_the_title(get_field('guide', $post_id));
@@ -336,6 +341,7 @@ add_action ( 'manage_tour_posts_custom_column', 'tour_custom_column', 10, 2 );
  */
 function my_column_register_sortable( $columns ) {
 	$columns['conductDate'] = 'conductDate';
+	$columns['place'] = 'place';
 	$columns['guide'] = 'guide';
 	$columns['tour'] = 'tour';
   $columns['registrations'] = 'registrations';
@@ -364,6 +370,10 @@ function my_column_orderby( $query ) {
 	if( $orderby == 'conductDate' ) {
 		$query->set('meta_key','conductDate');
 		$query->set('orderby','meta_value_num');
+	}
+	else if( $orderby == 'place' ) {
+		$query->set('orderby','place');
+    $query->set('orderby','meta_value');
 	}
 	else if( $orderby == 'type' ) {
 		$query->set('orderby','name');

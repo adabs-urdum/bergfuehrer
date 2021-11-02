@@ -288,6 +288,10 @@
       line-height: 100%;
       cursor: pointer;
       width: 100%;
+
+      span {
+        white-space: nowrap;
+      }
     }
 
     &__rangeContainer {

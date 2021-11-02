@@ -30,6 +30,7 @@ class SingleTour {
     // const href = `${url}?event=${tour}&date=${conduct}`;
     const href = `${url}?add-to-cart=${wcId}`;
     this.bookingButton.href = href;
+    this.bookingButton.classList.remove("disabled");
   };
 }
 

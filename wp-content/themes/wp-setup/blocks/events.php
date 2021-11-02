@@ -162,7 +162,7 @@
           </div>
         </div>
         <div class="events__filter">
-          <input class="events__trigger" type="checkbox" id="fitnessTrigger" name="fitnessTrigger">
+          <input class="events__trigger" type="checkbox" id="fitnessTrigger" name="filterTrigger">
           <label for="fitnessTrigger" class="events__label">Kondition</label>
           <div class="events__lower">
             <div class="events__rangeContainer">
@@ -183,7 +183,7 @@
           </div>
         </div>
         <div class="events__filter">
-          <input class="events__trigger" type="checkbox" id="techniqueTrigger" name="techniqueTrigger">
+          <input class="events__trigger" type="checkbox" id="techniqueTrigger" name="filterTrigger">
           <label for="techniqueTrigger" class="events__label">Technik</label>
           <div class="events__lower">
             <div class="events__rangeContainer">

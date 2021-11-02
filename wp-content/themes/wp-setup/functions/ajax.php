@@ -45,7 +45,8 @@ function getconducts(WP_REST_Request $request) {
     $date = get_field('conductDate', $id);
     $datetime = strtotime($date);
     $tourID = get_field('tour', $id)->ID;
-    $place = get_field('place', $tourID);
+    // $place = get_field('place', $tourID);
+    $place = get_field('place', $id);
     $altitudes = get_field('altitudes', $tourID);
     $price = get_field('price', $tourID);
     $prices = get_field('prices', $tourID);
@@ -81,15 +82,16 @@ function getconducts(WP_REST_Request $request) {
     $date = $conduct['date'];
     $datetime = $conduct['datetime'];
     $teaser = get_field('teaser', $eventId);
-    $place = get_field('place', $eventId);
+    $place = $conduct['place'];
     $technique = floatval(get_field('technique', $eventId));
     $fitness = floatval(get_field('fitness', $eventId));
     $altitudes = $conduct['altitudes'];
     $altMin = $altitudes['min'];
     $altMax = $altitudes['max'];
-    $prices = $conduct['prices'];
-    $priceMin = $prices[0]['price'];
-    $priceMax = $prices[count($prices) - 1]['price'];
+    $price = $conduct['price'];
+    // $prices = $conduct['prices'];
+    // $priceMin = $prices[0]['price'];
+    // $priceMax = $prices[count($prices) - 1]['price'];
     $difficultyMax = 3;
     $teaserText = $teaser['teaserText'];
     $img = $teaser['teaaserImage'];
@@ -99,9 +101,6 @@ function getconducts(WP_REST_Request $request) {
     $imgTitle = $img['title'] ? $img['title'] : $img['name'];
     $srcset = wp_get_attachment_image_srcset($img['ID']);
 
-write_log($title);
-write_log($altitudes);
-
     if($activeTypes && !in_array($conduct['type'], $activeTypes)){
 write_log(1);
       continue;
@@ -110,11 +109,11 @@ write_log(1);
 write_log(2);
       continue;
     }
-    else if($altMin < $altFilterMin || $altMax > $altFilterMax){
+    else if($altMin > $altFilterMax || $altMax < $altFilterMin){
 write_log(3);
       continue;
     }
-    else if($priceMin < $priceFilterMin || $priceMax > $priceFilterMax){
+    else if($price < $priceFilterMin || $price > $priceFilterMax){
 write_log(4);
       continue;
     }

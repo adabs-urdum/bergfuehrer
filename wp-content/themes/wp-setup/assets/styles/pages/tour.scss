@@ -65,7 +65,7 @@
       .button {
         display: block;
         text-align: center;
-        @include bsFontSize($BS, 42);
+        @include bsFontSize($BS, 32);
         padding: $BS * 16;
       }
     }
@@ -127,6 +127,14 @@
       flex-wrap: wrap;
       justify-content: space-around;
       padding: $BS * 64 $BS * 128;
+    }
+  }
+
+  #bookingButton {
+    &.disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+      opacity: 0.5;
     }
   }
 }

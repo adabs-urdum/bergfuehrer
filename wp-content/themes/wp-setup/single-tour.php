@@ -20,11 +20,11 @@
     $altitudeMax = $altitudes['max'];
     $duration = get_field('duration', $pageID);
     $price = get_field('price', $pageID);
-    $prices = get_field('prices', $pageID);
-    $pricesOrdered = [];
-    foreach($prices as $price){
-      $pricesOrdered[$price['anzahl']] = $price['price'];
-    }
+    // $prices = get_field('prices', $pageID);
+    // $pricesOrdered = [];
+    // foreach($prices as $price){
+    //   $pricesOrdered[$price['anzahl']] = $price['price'];
+    // }
     $type = get_term(get_field('type', $pageID))->name;
     $place = get_term(get_field('place', $pageID))->name;
     $bookingPermalink = get_permalink(163);
@@ -47,6 +47,16 @@
         return 1;
       }
     }));
+
+    $places = [];
+    foreach($conducts as $conduct){
+      $conductId = $conduct->ID;
+      $placeID = get_field('place', $conductId);
+      $placeName = get_term($placeID)->name;
+      if(!in_array($placeName, $places)){
+        $places[] = $placeName;
+      }
+    }
 
   ?>
 
@@ -113,17 +123,18 @@
         <?= $detailText ?>
       </div>
 
-      <p class="events__additionalInfo"><h3 class="events__">Ort</h3> <?= $place ?></p>
-      <p class="events__additionalInfo"><h3>Höhenmeter</h3> <?= $altitudeMin ?> bis <?= $altitudeMax ?> Meter</p>
-      <p class="events__additionalInfo"><h3>Dauer</h3> <?= $duration ?></p>
-      <div class="events__prices events__additionalInfo">
+      <div class="events__additionalInfo"><h3 class="events__">Durchführungsort<?= count($places) > 1 ? 'e' : '' ?></h3> <?= implode(', ', $places) ?></div>
+      <div class="events__additionalInfo"><h3>Höhenmeter</h3> <?= $altitudeMin ?> bis <?= $altitudeMax ?> Meter</div>
+      <div class="events__additionalInfo"><h3>Dauer</h3> <?= $duration ?></div>
+      <div class="events__additionalInfo"><h3>Kosten</h3>CHF <?= $price ?> pro Person</div>
+      <!-- <div class="events__prices events__additionalInfo">
         <span class=""><h3>Kosten</h3></span>
         <div>
           <?php foreach($pricesOrdered as $amount => $price): ?>
             <p>Ab <?= $amount ?> <?= $amount != 1 ? 'Personen' : 'Person' ?>: CHF <?= $price ?></p>
           <?php endforeach; ?>
         </div>
-      </div>
+      </div> -->
 
       <div class="events__difficultyWrapper events__additionalInfo">
         <div class="events__techniqueWrapper">
@@ -188,6 +199,8 @@
             $maxRegistrations = get_field('maxRegistrations', $id);
             $registrations = get_field('registrations', $id);
             $wcProductId = get_field('woocommerce_product', $id)->ID;
+            $placeID = get_field('place', $id);
+            $place = get_term($placeID)->name;
             $registrations = is_array($registrations) ? array_sum(array_map(function($registration){
               return $registration['people'];
             }, $registrations)) : 0;
@@ -203,6 +216,7 @@
             <input type="radio" name="tour" id="tour<?= $id ?>" data-wcid="<?= $wcProductId ?>" value="<?= $wcProductId ?>" <?php if($id==$_GET['id']): ?>checked="checked"<?php endif; ?>>
             <label for="tour<?= $id ?>" class="tour__date">
               <span><?= $dateString ?></span>
+              <span><?= $place ?></span>
               <span>Noch <?= $maxRegistrations - $registrations ?> freie Plätze</span>
             </label>
           </div>
@@ -213,7 +227,7 @@
           $wcProduct = get_field('woocommerce_product', $_GET['id']);
           $wcProductId = $wcProduct->ID;
         ?>
-        <a id="bookingButton" href="<?= wc_get_cart_url() ?>?add-to-cart=<?= $wcProductId ?>" data-tour="<?= $pageID ?>" data-url="<?= wc_get_cart_url() ?>" target="_self" class="button">Buchen</a>
+        <a id="bookingButton" href="<?= wc_get_cart_url() ?>?add-to-cart=<?= $wcProductId ?>" data-tour="<?= $pageID ?>" data-url="<?= wc_get_cart_url() ?>" target="_self" class="button <?= !$wcProduct ? 'disabled' : '' ?>">Buchen</a>
         <a href="<?= get_permalink(13) ?>" target="_self" class="button button--secondary">Kontakt</a>
       </div>
     </div>
