@@ -133,8 +133,14 @@
       }
     }
 
+    &__additionalWrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     &__additionalInfo {
-      margin: $BS * 64 0;
+      width: 50%;
+      margin: $BS * 48 0;
     }
 
     &__loaderWrapper {

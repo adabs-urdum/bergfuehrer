@@ -6,6 +6,7 @@
     $pageID = get_the_ID();
     $pageTitle = get_the_title();
     $detailText = get_field('details', $pageID);
+    $downloads = get_field('downloads', $pageID);
     $infos = get_field('infos', $pageID);
     $description = get_field('description', $pageID);
     $events = get_field('events', $pageID);
@@ -123,22 +124,14 @@
         <?= $detailText ?>
       </div>
 
-      <div class="events__additionalInfo"><h3 class="events__">Durchführungsort<?= count($places) > 1 ? 'e' : '' ?></h3> <?= implode(', ', $places) ?></div>
-      <div class="events__additionalInfo"><h3>Höhenmeter</h3> <?= $altitudeMin ?> bis <?= $altitudeMax ?> Meter</div>
-      <div class="events__additionalInfo"><h3>Dauer</h3> <?= $duration ?></div>
-      <div class="events__additionalInfo"><h3>Kosten</h3>CHF <?= $price ?> pro Person</div>
-      <!-- <div class="events__prices events__additionalInfo">
-        <span class=""><h3>Kosten</h3></span>
-        <div>
-          <?php foreach($pricesOrdered as $amount => $price): ?>
-            <p>Ab <?= $amount ?> <?= $amount != 1 ? 'Personen' : 'Person' ?>: CHF <?= $price ?></p>
-          <?php endforeach; ?>
-        </div>
-      </div> -->
+      <div class="events__additionalWrapper">
+        <div class="events__additionalInfo"><h3 class="events__">Durchführungsort<?= count($places) > 1 ? 'e' : '' ?></h3> <?= implode(', ', $places) ?></div>
+        <div class="events__additionalInfo"><h3>Höhenmeter</h3> <?= $altitudeMin ?> bis <?= $altitudeMax ?> Meter</div>
+        <div class="events__additionalInfo"><h3>Dauer</h3> <?= $duration ?></div>
+        <div class="events__additionalInfo"><h3>Kosten</h3>CHF <?= $price ?> pro Person</div>
 
-      <div class="events__difficultyWrapper events__additionalInfo">
-        <div class="events__techniqueWrapper">
-          <span>Technik</span>
+        <div class="events__additionalInfo events__techniqueWrapper">
+          <h3>Technik</h3>
           <span>
             <span class="events__icons">
               <?php for ($i=0; $i < $difficultyMax; $i++): ?>
@@ -150,8 +143,9 @@
             </span>
           </span>
         </div>
-        <div class="events__fitnessWrapper">
-          <span>Kondition</span>
+
+        <div class="events__additionalInfo events__fitnessWrapper">
+          <h3>Kondition</h3>
           <span>
             <span class="events__icons">
               <?php for ($i=0; $i < $difficultyMax; $i++): ?>
@@ -163,6 +157,11 @@
             </span>
           </span>
         </div>
+
+      </div>
+
+      <div class="tour__downloads">
+
       </div>
 
       <div class="tour__lists">
@@ -249,6 +248,26 @@
               $srcset = wp_get_attachment_image_srcset($img['ID']);
             ?>
             <img class="tour__galleryImage gallery__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+  <?php endif; ?>
+
+  <?php if($downloads): ?>
+    <section class="text tour__gallery gallery">
+      <h2 class="text__titleLeftWrapper">
+        Dokumente
+      </h2>
+      <div class="text__wrapper">
+        <div class="">
+          <?php foreach($downloads as $download): ?>
+            <?php
+              $title = $download['title'];
+              $file = $download['file'];
+              $url = $file['url'];
+            ?>
+            <p><a href="<?= $url ?>" download><?= $title ?></a></p>
           <?php endforeach; ?>
         </div>
       </div>
