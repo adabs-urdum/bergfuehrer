@@ -233,6 +233,7 @@ function save_post_handler( $post_id ) {
         $tourObj = get_field('tour', $post_id);
         $tour = get_the_title($tourObj);
         $date = get_field('conductDate', $post_id);
+        $maxRegistrations = get_field('maxRegistrations', $post_id);
         $data['ID'] = $post_id;
         $title =  $tour . ' - ' . $date;
         $data['post_title'] = $title;
@@ -251,12 +252,19 @@ function save_post_handler( $post_id ) {
               'post_status' => 'publish' // This could also be $data['status'];
           ];
           $wcProductId = wp_insert_post($args);
-
+          $wcProduct = new WC_Product($wcProductId);
+          $wcProduct->set_manage_stock(true);
+          wc_update_product_stock($wcProduct, $maxRegistrations, 'set');
         }
+
         $wcProduct = new WC_Product($wcProductId);
         update_field('woocommerce_product', $wcProductId, $post_id);
         update_field('conduct', $post_id, $wcProductId);
         update_field('tour', $tourObj, $wcProductId);
+
+        $registrations = get_field('registrations');
+        $registrations = is_array($registrations) ? count($registrations) : 0;
+        wc_update_product_stock($wcProduct, $maxRegistrations - $registrations, 'set');
 
         $wcProduct->set_regular_price($price);
         $wcProduct->save();
@@ -266,6 +274,18 @@ function save_post_handler( $post_id ) {
 
 }
 add_action( 'acf/save_post', 'save_post_handler' , 20 );
+
+// On update acf maxRegistrations
+function checkChangeMaxRegistrations($value, $post_id, $field) {
+  $old_value = get_post_meta($post_id, 'maxRegistrations', true);
+  $wcProductId = get_field('woocommerce_product', $post_id);
+  $registrations = get_field('registrations', $post_id);
+  $registrations = is_array($registrations) ? count($registrations) : 0;
+  write_log($registrations);
+  wc_update_product_stock($wcProductId, $value - $registrations, 'set');
+  return $value;
+}
+add_filter('acf/update_value/name=maxRegistrations', 'checkChangeMaxRegistrations', 10, 3);
 
 /**
  *	ACF Admin Columns
