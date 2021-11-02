@@ -2,7 +2,7 @@
 
 //----------------------------------------------------------
 function my_theme_styles() {
-  wp_enqueue_style('styles', get_template_directory_uri() . '/dist/css/styles.min.css', false, '4');
+  wp_enqueue_style('styles', get_template_directory_uri() . '/dist/css/styles.min.css', false, '11');
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_styles' );
 //----------------------------------------------------------
@@ -16,7 +16,7 @@ function my_theme_scripts() {
   // wp_enqueue_script('jquery-core', false, array(), null, true);
   // wp_enqueue_script('jquery-migrate', false, array(), null, true);
   // wp_enqueue_script('functions', get_template_directory_uri() . '/dist/js/functions.min.js', array( 'jquery' ), '1', true);
-  wp_enqueue_script('functions', get_template_directory_uri() . '/dist/js/functions.min.js', null, '5', true);
+  wp_enqueue_script('functions', get_template_directory_uri() . '/dist/js/functions.min.js', null, '6', true);
   wp_localize_script('functions', 'ajaxObject', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),));
   wp_deregister_script( 'wp-embed' );
 }
@@ -25,7 +25,7 @@ add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
 
 //----------------------------------------------------------
 function override_acf_styles() {
-  wp_enqueue_style('styles', get_template_directory_uri() . '/acf-admin-styles.css', false, '1');
+  wp_enqueue_style('styles', get_template_directory_uri() . '/acf-admin-styles.css', false, '2');
 }
 add_action( 'admin_enqueue_scripts', 'override_acf_styles', 100 );
 //----------------------------------------------------------
@@ -79,7 +79,7 @@ add_editor_style( get_template_directory_uri().'/dist/css/editor.min.css' );
 // Add admin.min.css to admin
 //----------------------------------------------------------
 function admin_style() {
-  wp_enqueue_style('admin-styles', get_template_directory_uri().'/dist/css/admin.min.css');
+  wp_enqueue_style('admin-styles', get_template_directory_uri().'/dist/css/admin.min.css?v=1');
 }
 add_action('admin_enqueue_scripts', 'admin_style');
 //----------------------------------------------------------
@@ -87,7 +87,7 @@ add_action('admin_enqueue_scripts', 'admin_style');
 // Add login.min.css to admin
 //----------------------------------------------------------
 function login_style() {
-    wp_enqueue_style( 'login-styles', get_stylesheet_directory_uri() . '/dist/css/admin.min.css' );
+    wp_enqueue_style( 'login-styles', get_stylesheet_directory_uri() . '/dist/css/admin.min.css?v=1' );
 }
 add_action( 'login_enqueue_scripts', 'login_style' );
 //----------------------------------------------------------

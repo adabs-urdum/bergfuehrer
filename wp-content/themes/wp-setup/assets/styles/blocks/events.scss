@@ -10,7 +10,7 @@
       display: flex;
       justify-content: space-between;
       align-items: stretch;
-      background-color: $Grey;
+      background-color: $ColorLightest;
       margin-bottom: $BS * 64;
       opacity: 0;
       animation: fadein forwards 0.2s ease-out;
@@ -209,9 +209,9 @@
       padding: $BS * 8;
       padding-right: $BS * 64;
       margin-bottom: $BS * 16;
-      border: solid 1px $Black;
+      border: solid 1px $ColorDark;
       cursor: pointer;
-      background-color: $White;
+      background-color: $ColorLightest;
     }
 
     &__lower {
@@ -221,11 +221,11 @@
       display: flex;
       flex-direction: column;
       transform: translateY(100%);
-      background-color: $White;
+      background-color: $ColorLightest;
       padding: $BS * 16;
       display: none;
       min-width: 100%;
-      border: solid 1px $Black;
+      border: solid 1px $ColorDark;
       z-index: 5000;
 
       input {
@@ -242,7 +242,7 @@
         }
 
         & ~ .events__label {
-          border-bottom-color: $White;
+          border-bottom-color: $ColorLightest;
           z-index: 5001;
           padding-bottom: $BS * 16;
           margin-bottom: 0;

@@ -7,6 +7,7 @@
     $pageTitle = get_the_title();
     $detailText = get_field('details', $pageID);
     $infos = get_field('infos', $pageID);
+    $description = get_field('description', $pageID);
     $events = get_field('events', $pageID);
     $images = get_field('images', $pageID);
     $technique = get_field('technique', $pageID);
@@ -52,6 +53,9 @@
   <section class="text">
     <div class="text__wrapper">
       <h1 style="text-align: center"><?= $pageTitle ?></h1>
+      <div>
+        <?= $description ?>
+      </div>
     </div>
   </section>
 
@@ -61,16 +65,59 @@
       <h2 class="text__titleLeftWrapper">Touren Details</h2>
     </div>
 
+    <div class="text__wrapper tour__infos">
+      <?php
+        $infos = [
+          'type' => [
+            'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-art.png',
+            'value' => $type,
+            'file' => 'place.svg',
+          ],
+          'altitude' => [
+            'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-hoehe.png',
+            'value' => "{$altitudeMin}m – {$altitudeMax}m",
+            'file' => 'altitude.svg',
+          ],
+          'duration' => [
+            'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-dauer.png',
+            'value' => "{$duration}",
+            'file' => 'duration.svg',
+          ],
+          'place' => [
+            'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-ort.png',
+            'value' => "{$place}",
+            'file' => 'place.svg',
+          ],
+        ];
+      ?>
+      <?php foreach($infos as $key => $info): ?>
+        <?php
+          $src = $info['icon'];
+          $file = $info['file'];
+          $alt = "{$key}: {$info['value']}";
+          $caption = $alt;
+          $imgTitle = $info['value'];
+        ?>
+        <div class="tour__info">
+          <div class="tour__infoImageWrapper">
+            <canvas width="1" height="1"></canvas>
+            <?php include(get_template_directory() . '/includes/' . $file) ?>
+          </div>
+          <h3 class="tour__infoText"><?= $info['value'] ?></h3>
+        </div>
+      <?php endforeach; ?>
+    </div>
+
     <div class="text tour__details">
       <div>
         <?= $detailText ?>
       </div>
 
-      <p class="events__additionalInfo"><strong>Ort:</strong> <?= $place ?></p>
-      <p class="events__additionalInfo"><strong>Höhenmeter:</strong> <?= $altitudeMin ?> bis <?= $altitudeMax ?> Meter</p>
-      <p class="events__additionalInfo"><strong>Dauer:</strong> <?= $duration ?></p>
+      <p class="events__additionalInfo"><h3 class="events__">Ort</h3> <?= $place ?></p>
+      <p class="events__additionalInfo"><h3>Höhenmeter</h3> <?= $altitudeMin ?> bis <?= $altitudeMax ?> Meter</p>
+      <p class="events__additionalInfo"><h3>Dauer</h3> <?= $duration ?></p>
       <div class="events__prices events__additionalInfo">
-        <span class=""><strong>Kosten:</strong></span>
+        <span class=""><h3>Kosten</h3></span>
         <div>
           <?php foreach($pricesOrdered as $amount => $price): ?>
             <p>Ab <?= $amount ?> <?= $amount != 1 ? 'Personen' : 'Person' ?>: CHF <?= $price ?></p>
@@ -131,43 +178,6 @@
           </ul>
         </div>
       </div>
-    </div>
-
-    <div class="text__wrapper tour__infos">
-      <?php
-        $infos = [
-          'type' => [
-            'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-art.png',
-            'value' => $type
-          ],
-          'altitude' => [
-            'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-hoehe.png',
-            'value' => "{$altitudeMin}m – {$altitudeMax}m"
-          ],
-          'duration' => [
-            'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-dauer.png',
-            'value' => "{$duration}"
-          ],
-          'place' => [
-            'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-ort.png',
-            'value' => "{$place}"
-          ],
-        ];
-      ?>
-      <?php foreach($infos as $key => $info): ?>
-        <?php
-          $src = $info['icon'];
-          $alt = "{$key}: {$info['value']}";
-          $caption = $alt;
-          $imgTitle = $info['value'];
-        ?>
-        <div class="tour__info">
-          <div class="tour__infoImageWrapper">
-            <img class="tour__infoImage" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
-          </div>
-          <h3 class="tour__infoText"><?= $info['value'] ?></h3>
-        </div>
-      <?php endforeach; ?>
     </div>
 
     <div class="text__wrapper tour__bookingWrapper">

@@ -17,6 +17,9 @@ class SingleTour {
   };
 
   onChangeTour = (e) => {
+    if (!e) {
+      return;
+    }
     const input = e.currentTarget;
     const wcId = input.value;
     // const conduct = this.tours.find((tour) => {

@@ -29,7 +29,7 @@
             <img class="team__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
           </div>
           <div class="team__textWrapper">
-            <h3 class="team__name"><?= $name ?><br /><?= $lastname ?></h3>
+            <h3 class="team__name"><?= $name ?> <?= $lastname ?></h3>
             <div class="team__description"><?= $text ?></div>
           </div>
         </div>

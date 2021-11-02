@@ -9,8 +9,8 @@
   .form .nf-form-content input[type="submit"] {
     display: inline-block;
     font-weight: 700;
-    background: $ColorLight;
-    color: $Black;
+    background: $ColorDark;
+    color: $ColorLightest;
     border: solid 1px $ColorLight;
     padding: $BS * 4 $BS * 16 $BS * 6;
     transition: background 0.3s ease-out;
@@ -19,8 +19,7 @@
     margin-bottom: $BS * 16;
 
     &:hover {
-      background: $ColorDark;
-      color: $Black;
+      background: $ColorLight;
     }
 
     &:after {

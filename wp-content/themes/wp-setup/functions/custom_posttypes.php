@@ -150,7 +150,7 @@ function registerEmployeeCategory() {
     'menu_name' => __( 'Sportarten' ),
   ];
 
-  register_taxonomy('Typ',['tour'], [
+  register_taxonomy('Typ',['tour', 'conduct'], [
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,
@@ -173,7 +173,7 @@ function registerEmployeeCategory() {
     'menu_name' => __( 'Orte' ),
   ];
 
-  register_taxonomy('Ortschaft',['tour'], [
+  register_taxonomy('Ortschaft',['tour', 'conduct'], [
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,
@@ -196,14 +196,14 @@ function registerEmployeeCategory() {
     'menu_name' => __( 'Info' ),
   ];
 
-  register_taxonomy('Info',['tour'], [
-    'hierarchical' => false,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_admin_column' => false,
-    'query_var' => true,
-    'rewrite' => ['slug' => 'info'],
-  ]);
+  // register_taxonomy('Info',['tour'], [
+  //   'hierarchical' => false,
+  //   'labels' => $labels,
+  //   'show_ui' => true,
+  //   'show_admin_column' => false,
+  //   'query_var' => true,
+  //   'rewrite' => ['slug' => 'info'],
+  // ]);
 
 }
 add_action( 'init', 'registerEmployeeCategory', 0 );

@@ -21,15 +21,21 @@
     $datetime = strtotime($date);
     $tourID = get_field('tour', $id)->ID;
     $place = get_field('place', $tourID);
-    $altitude = get_field('altitude', $tourID);
+    $altitudesGroup = get_field('altitudes', $tourID);
+    $altitudeMin = $altitudesGroup['min'];
+    $altitudeMax = $altitudesGroup['max'];
     $price = get_field('price', $tourID);
     $technique = get_field('technique', $tourID);
     $fitness = get_field('fitness', $tourID);
 
     $type = get_field('type', $tourID);
     if($datetime >= strtotime(date('d.m.Y'))){
-      if(!in_array($altitude, $altitudes)){
-        $altitudes[] = $altitude;
+      if(!in_array($altitudeMin, $altitudes)){
+        $altitudes[] = $altitudeMin;
+      }
+
+      if(!in_array($altitudeMax, $altitudes)){
+        $altitudes[] = $altitudeMax;
       }
 
       if(!in_array($price, $prices)){

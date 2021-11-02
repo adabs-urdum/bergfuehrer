@@ -1,0 +1,184 @@
+# Translation of Plugins - zahls.ch Credit Cards and TWINT for WooCommerce - Stable (latest release) in German (Switzerland)
+# This file is distributed under the same license as the Plugins - zahls.ch Credit Cards and TWINT for WooCommerce - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-09-22 06:56:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: de_CH\n"
+"Project-Id-Version: Plugins - zahls.ch Credit Cards and TWINT for WooCommerce - Stable (latest release)\n"
+
+#: woo-zahls-gateway.php:600
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: woo-zahls-gateway.php:339
+msgid "An error occured while processing this payment"
+msgstr "Bei der Verarbeitung dieser Zahlung ist ein Fehler aufgetreten"
+
+#: woo-zahls-gateway.php:331
+msgid "Payment was cancelled by the customer"
+msgstr "Zahlung wurde vom Kunden storniert"
+
+#: woo-zahls-gateway.php:313
+msgid "Payment was fully refunded"
+msgstr "Die Zahlung wurde vollständig zurückerstattet"
+
+#: woo-zahls-gateway.php:290
+msgid "Awaiting payment"
+msgstr "Warten auf Zahlung"
+
+#: woo-zahls-gateway.php:104
+msgid "zahls.ch Settings"
+msgstr "zahls.ch Einstellungen"
+
+#: woo-zahls-gateway.php:77
+msgid "Payment failed"
+msgstr "Zahlung fehlgeschlagen"
+
+#: woo-zahls-gateway.php:37
+msgid "Accept payments with zahls.ch."
+msgstr "Akzeptieren Sie Zahlungen mit zahls.ch."
+
+#: includes/settings-zahls.php:61
+msgid "Logos of payment providers to be displayed to the customer."
+msgstr "Logos von Zahlungsanbietern, die dem Kunden angezeigt werden sollen."
+
+#: includes/settings-zahls.php:53
+msgid "Enter a prefix to distinguish payments via this shop from other shops."
+msgstr "Geben Sie ein Präfix ein, um Zahlungen über diesen Shop von anderen Shops zu unterscheiden."
+
+#: includes/settings-zahls.php:50
+msgid "Prefix"
+msgstr "Präfix"
+
+#: includes/settings-zahls.php:45
+msgid "Enter the Look&Feel ID from the backend of zahls.ch to customise the appearance of zahls.ch."
+msgstr "Geben Sie die Look & Feel-ID aus dem Backend von zahls.ch ein, um das Erscheinungsbild von zahls.ch anzupassen."
+
+#: includes/settings-zahls.php:37
+msgid "Copy your API key from the backend of zahls.ch."
+msgstr "Kopieren Sie Ihren API-Schlüssel aus dem Backend von zahls.ch."
+
+#: includes/settings-zahls.php:34
+msgid "API key"
+msgstr "API-Schlüssel"
+
+#: includes/settings-zahls.php:29
+msgid "Enter your INSTANCE, without .zahls.ch (INSTANCE.zahls.ch)."
+msgstr "Geben Sie Ihre INSTANZ ohne .zahls.ch (INSTANZ.zahls.ch) ein."
+
+#: includes/settings-zahls.php:26
+msgid "Instance"
+msgstr "Instanz"
+
+#: includes/settings-zahls.php:14
+msgid "Credit Cards / TWINT"
+msgstr "Kreditkarten / TWINT"
+
+#: includes/settings-zahls.php:10
+msgid "Title"
+msgstr "Titel"
+
+#: includes/settings-zahls.php:6
+msgid "Activate zahls.ch"
+msgstr "Aktivieren Sie zahls.ch"
+
+#: includes/settings-zahls.php:4
+msgid "Activate"
+msgstr "Aktivieren Sie"
+
+#. Description of the plugin
+msgid "Integration of payment options from zahls.ch in WooCommerce"
+msgstr "Integration der Zahlungsoptionen von zahls.ch in WooCommerce"
+
+#: woo-zahls-gateway.php:144
+msgid "rating"
+msgstr "Bewertung"
+
+#: woo-zahls-gateway.php:144
+msgid "Please leave us a "
+msgstr "Bitte hinterlassen Sie uns eine"
+
+#: woo-zahls-gateway.php:138
+msgid "Do you have a question, idea, problem or praise? Please feel free to contact us."
+msgstr "Haben Sie eine Frage, eine Idee, ein Problem oder Lob? Sie können uns gerne kontaktieren."
+
+#: woo-zahls-gateway.php:131
+msgid "Support"
+msgstr "Unterstützung"
+
+#: woo-zahls-gateway.php:122
+msgid "Thank you for using zahls.ch. You need to have an account from zahls.ch to use this payment gateway for your transcations. You can get a free account on"
+msgstr "Vielen Dank, dass Sie zahls.ch verwenden. Sie benötigen ein Konto von zahls.ch, um Transaktionen tätigen zu können. Sie können ein kostenloses Konto eröffnen unter "
+
+#: woo-zahls-gateway.php:118
+msgid "zahls.ch for credit cards and TWINT"
+msgstr "zahls.ch für Kreditkarten und TWINT"
+
+#: woo-zahls-gateway.php:104
+msgid "Return to payments"
+msgstr "Zurück zu Zahlungen"
+
+#: woo-zahls-gateway.php:36
+msgid "zahls.ch"
+msgstr "zahls.ch"
+
+#: includes/settings-zahls.php:125
+msgid "This controls the payment method logos for recurring payments."
+msgstr "Wählen Sie die Logos an, die für wiederholende Zahlungen angezeigt werden sollen."
+
+#: includes/settings-zahls.php:122
+msgid "Recurring payment logo"
+msgstr "Wiederholende Zahlungen Logos"
+
+#: includes/settings-zahls.php:117
+msgid "This controls the description which the user sees besides the checkbox to activate recurring payments for a subscription. Checkbox shows only if the feature is active and a subscription is purchased."
+msgstr "Dies steuert die Beschreibung, die der Benutzer neben dem Kontrollkästchen sieht, um wiederkehrende Zahlungen für ein Abonnement zu aktivieren. Das Kontrollkästchen wird nur angezeigt, wenn die Funktion aktiv ist und ein Abonnement erworben wurde."
+
+#: includes/settings-zahls.php:114
+msgid "Description Checkbox"
+msgstr "Beschreibung Kontrollkästchen"
+
+#: includes/settings-zahls.php:110
+msgid "Enable recurring payments for customers when subscriptions are purchased"
+msgstr "Aktivieren Sie wiederholende Zahlungen, wenn Abos verkauft werden."
+
+#: includes/settings-zahls.php:108
+msgid "Enable/Disable Subscriptions"
+msgstr "Abos aktivieren"
+
+#: includes/settings-zahls.php:58
+msgid "Logos"
+msgstr "Logos"
+
+#: includes/settings-zahls.php:42
+msgid "Look&Feel ID"
+msgstr "Look&Feel ID"
+
+#: includes/settings-zahls.php:21
+msgid "This controls the description which the user sees during checkout."
+msgstr "Dies steuert die Beschreibung, die der Benutzer beim Auschecken sieht."
+
+#: includes/settings-zahls.php:18
+msgid "Description"
+msgstr "Beschreibung"
+
+#: includes/settings-zahls.php:13
+msgid "This controls the title which the user sees during checkout."
+msgstr "Dies steuert den Titel, den der Benutzer beim Auschecken sieht."
+
+#. Author URI of the plugin
+msgid "https://www.siebenberge.com"
+msgstr "https://www.siebenberge.com"
+
+#. Author of the plugin
+msgid "siebenberge gmbh"
+msgstr "siebenberge gmbh"
+
+#. Plugin Name of the plugin
+msgid "zahls.ch Credit Cards and TWINT for WooCommerce"
+msgstr "zahls.ch Kreditkarten und TWINT für WooCommerce"

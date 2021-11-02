@@ -6,14 +6,32 @@
 
   .tour {
     .tour__details {
-      background-color: $Grey;
+      // background-color: $Grey;
       padding: $BS * 32 $BS * 128;
+      max-width: $WidthNarrow;
+      margin: 0 auto;
     }
 
     &__info {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    &__infoImageWrapper {
+      position: relative;
+
+      canvas {
+        width: $BS * 128;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &__infoText {
@@ -64,16 +82,16 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        background-color: $Grey;
+        background-color: $ColorLightest;
         @include bsFontSize($BS, 22);
         padding: $BS * 8;
-        background-color: $Grey;
+        background-color: $ColorLightest;
         cursor: pointer;
         transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
         &:hover {
           background-color: $ColorLight;
-          color: $Black;
+          // color: $White;
         }
       }
 
@@ -82,8 +100,8 @@
 
         &:checked {
           & + label {
-            background-color: $ColorLight;
-            color: $Black;
+            background-color: $ColorDark;
+            color: $ColorLightest;
           }
         }
       }
