@@ -161,10 +161,13 @@
       }
 
       &__logoWrapper {
+        position: absolute;
+        bottom: $BS * 64;
+        left: $BS * 32;
         // display: none;
         margin-right: $BS * 56;
         canvas {
-          width: $BS * 256;
+          width: $BS * 150;
         }
       }
 

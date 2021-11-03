@@ -6,7 +6,10 @@
 
   .button,
   .form .nf-form-content input[type="button"],
-  .form .nf-form-content input[type="submit"] {
+  .form .nf-form-content input[type="submit"],
+  .woocommerce a.button.alt,
+  .woocommerce button.button.alt,
+  .woocommerce a.button {
     display: inline-block;
     font-weight: 700;
     background: $ColorDark;
