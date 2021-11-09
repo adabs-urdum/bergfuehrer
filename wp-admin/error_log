@@ -33,3 +33,63 @@
 [02-Nov-2021 18:31:56 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
 [02-Nov-2021 18:35:31 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
 [02-Nov-2021 18:36:49 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 18:55:25 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 18:55:26 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 19:03:19 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 19:54:27 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 19:54:30 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 20:42:02 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 20:48:22 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 21:18:33 UTC] PHP Warning:  Attempt to read property "name" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 21:22:46 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php:240
+Stack trace:
+#0 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(303): save_post_handler(331)
+#1 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#3 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/advanced-custom-fields-pro/includes/acf-form-functions.php(136): do_action('acf/save_post', 331)
+#4 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/advanced-custom-fields-pro/includes/forms/form-post.php(313): acf_save_post(331)
+#5 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(305): ACF_Form_Post->save_post(331, Object(WP_Post))
+#6 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#7 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#8 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/post.php(4468): do_action('save_post', 331, Object(WP_Post), true)
+#9 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/post.php(4570): wp_insert_post(Array, false, true)
+#10 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-admin/includes/post.php(423): wp_update_post(Array)
+#11 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-admin/post.php(227): edit_post()
+#12 {main}
+  thrown in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 240
+[02-Nov-2021 21:23:35 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php:240
+Stack trace:
+#0 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(303): save_post_handler(331)
+#1 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#3 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/advanced-custom-fields-pro/includes/acf-form-functions.php(136): do_action('acf/save_post', 331)
+#4 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/advanced-custom-fields-pro/includes/forms/form-post.php(313): acf_save_post(331)
+#5 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(305): ACF_Form_Post->save_post(331, Object(WP_Post))
+#6 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#7 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#8 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/post.php(4468): do_action('save_post', 331, Object(WP_Post), true)
+#9 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/post.php(4570): wp_insert_post(Array, false, true)
+#10 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-admin/includes/post.php(423): wp_update_post(Array)
+#11 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-admin/post.php(227): edit_post()
+#12 {main}
+  thrown in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 240
+[02-Nov-2021 21:23:53 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php:240
+Stack trace:
+#0 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(303): save_post_handler(333)
+#1 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#3 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/advanced-custom-fields-pro/includes/acf-form-functions.php(136): do_action('acf/save_post', 333)
+#4 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/advanced-custom-fields-pro/includes/forms/form-post.php(313): acf_save_post(333)
+#5 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(305): ACF_Form_Post->save_post(333, Object(WP_Post))
+#6 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#7 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#8 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/post.php(4468): do_action('save_post', 333, Object(WP_Post), true)
+#9 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-includes/post.php(4570): wp_insert_post(Array, false, true)
+#10 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-admin/includes/post.php(423): wp_update_post(Array)
+#11 /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-admin/post.php(227): edit_post()
+#12 {main}
+  thrown in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 240
+[02-Nov-2021 21:24:03 UTC] PHP Warning:  Undefined property: WP_Error::$name in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 328
+[02-Nov-2021 22:14:38 UTC] PHP Warning:  Undefined property: WP_Error::$name in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 333
+[02-Nov-2021 22:15:44 UTC] PHP Warning:  Undefined property: WP_Error::$name in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 333
+[03-Nov-2021 10:40:04 UTC] PHP Warning:  Undefined property: WP_Error::$name in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 353

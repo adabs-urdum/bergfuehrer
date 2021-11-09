@@ -1249,3 +1249,776 @@ Stack trace:
 [02-Nov-2021 18:43:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
 [02-Nov-2021 18:43:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
 [02-Nov-2021 18:43:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 18:46:13 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 18:46:13 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 18:46:13 UTC] Lawinenkurs BASIC
+[02-Nov-2021 18:46:13 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 18:46:13 UTC] 3
+[02-Nov-2021 18:46:13 UTC] Lawinenkurs BASIC
+[02-Nov-2021 18:46:13 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 18:46:13 UTC] 3
+[02-Nov-2021 18:49:23 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 18:49:23 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 18:49:23 UTC] Lawinenkurs BASIC
+[02-Nov-2021 18:49:23 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 18:49:23 UTC] 3
+[02-Nov-2021 18:49:23 UTC] Lawinenkurs BASIC
+[02-Nov-2021 18:49:23 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 18:49:23 UTC] 3
+[02-Nov-2021 18:49:45 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:49:45 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:49:45 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:49:45 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:49:45 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 193
+[02-Nov-2021 18:49:45 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 193
+[02-Nov-2021 18:49:45 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 18:49:45 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 18:49:53 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:49:53 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:49:53 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:49:53 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:49:53 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 193
+[02-Nov-2021 18:49:53 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 193
+[02-Nov-2021 18:49:53 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 18:49:53 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 18:54:19 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:54:19 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:54:19 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:54:19 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:54:19 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 193
+[02-Nov-2021 18:54:19 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 193
+[02-Nov-2021 18:54:19 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 18:54:19 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 18:54:44 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:54:44 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:54:44 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:54:44 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:54:44 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 193
+[02-Nov-2021 18:54:44 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 193
+[02-Nov-2021 18:54:44 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 18:54:44 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 18:56:44 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 18:56:44 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 18:56:44 UTC] Lawinenkurs BASIC
+[02-Nov-2021 18:56:44 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 18:56:44 UTC] 3
+[02-Nov-2021 18:56:44 UTC] Lawinenkurs BASIC
+[02-Nov-2021 18:56:44 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 18:56:44 UTC] 3
+[02-Nov-2021 18:57:24 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 18:57:24 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 18:57:24 UTC] Lawinenkurs BASIC
+[02-Nov-2021 18:57:24 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 18:57:24 UTC] 3
+[02-Nov-2021 18:57:24 UTC] Lawinenkurs BASIC
+[02-Nov-2021 18:57:24 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 18:57:24 UTC] 3
+[02-Nov-2021 18:57:34 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:57:34 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:57:34 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:57:34 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 18:57:34 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 18:57:34 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 18:59:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 19:00:20 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:00:20 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:00:20 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:00:20 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:00:20 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 19:00:20 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 19:00:37 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:00:37 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:00:37 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:00:37 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:00:37 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 19:00:37 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 19:02:10 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:02:10 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:02:10 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:02:10 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 166
+[02-Nov-2021 19:02:10 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 19:02:10 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 19:04:40 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 94
+[02-Nov-2021 19:04:40 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 94
+[02-Nov-2021 19:04:40 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 94
+[02-Nov-2021 19:04:40 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 94
+[02-Nov-2021 19:04:40 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 203
+[02-Nov-2021 19:04:40 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 204
+[02-Nov-2021 19:04:58 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 101
+[02-Nov-2021 19:04:58 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 101
+[02-Nov-2021 19:04:58 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 101
+[02-Nov-2021 19:04:58 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 101
+[02-Nov-2021 19:04:58 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 210
+[02-Nov-2021 19:04:58 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 211
+[02-Nov-2021 19:05:10 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 19:05:10 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 19:05:10 UTC] Lawinenkurs BASIC
+[02-Nov-2021 19:05:10 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 19:05:10 UTC] 3
+[02-Nov-2021 19:05:10 UTC] Lawinenkurs BASIC
+[02-Nov-2021 19:05:10 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 19:05:10 UTC] 3
+[02-Nov-2021 19:06:05 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 98
+[02-Nov-2021 19:06:05 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 98
+[02-Nov-2021 19:06:05 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 98
+[02-Nov-2021 19:06:05 UTC] PHP Warning:  Undefined variable $srcset in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 98
+[02-Nov-2021 19:06:05 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 207
+[02-Nov-2021 19:06:05 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 208
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[02-Nov-2021 20:08:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[02-Nov-2021 20:09:01 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:09:01 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:09:01 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:09:01 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:09:01 UTC] 3
+[02-Nov-2021 20:09:01 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:09:01 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:09:01 UTC] 3
+[02-Nov-2021 20:10:37 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:10:37 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:10:37 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:10:37 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:10:37 UTC] 3
+[02-Nov-2021 20:10:37 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:10:37 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:10:37 UTC] 3
+[02-Nov-2021 20:12:09 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:12:09 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:12:09 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:12:09 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:12:09 UTC] 1
+[02-Nov-2021 20:12:09 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:12:09 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:12:09 UTC] 1
+[02-Nov-2021 20:12:19 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:12:19 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:12:19 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:12:19 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:12:19 UTC] 3
+[02-Nov-2021 20:12:19 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:12:19 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:12:19 UTC] 3
+[02-Nov-2021 20:14:31 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:14:31 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:14:31 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:31 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:31 UTC] 3
+[02-Nov-2021 20:14:31 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:31 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:31 UTC] 3
+[02-Nov-2021 20:14:33 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:14:33 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:14:33 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:33 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:33 UTC] 3
+[02-Nov-2021 20:14:33 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:33 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:33 UTC] 3
+[02-Nov-2021 20:14:36 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:14:36 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:14:36 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:36 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:36 UTC] 3
+[02-Nov-2021 20:14:36 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:36 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:36 UTC] 3
+[02-Nov-2021 20:14:39 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:14:39 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:14:39 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:39 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:39 UTC] 3
+[02-Nov-2021 20:14:39 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:39 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:39 UTC] 3
+[02-Nov-2021 20:14:48 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:14:48 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:14:48 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:48 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:48 UTC] 3
+[02-Nov-2021 20:14:48 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:48 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:48 UTC] 3
+[02-Nov-2021 20:14:52 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:14:52 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:14:53 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:53 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:53 UTC] 3
+[02-Nov-2021 20:14:53 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:14:53 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:14:53 UTC] 3
+[02-Nov-2021 20:25:17 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:25:17 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:25:17 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:25:17 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:25:17 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:25:17 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:32:11 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:32:11 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:32:11 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:32:11 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:32:11 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:32:11 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:36:37 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:36:37 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:36:37 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:36:37 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:36:37 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:36:37 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:36:43 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:36:43 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:36:43 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:36:43 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:36:43 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:36:43 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:36:58 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:36:58 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:36:58 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:36:58 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:36:58 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:36:58 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:02 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:37:02 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:37:02 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:37:02 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:02 UTC] 3
+[02-Nov-2021 20:37:02 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:37:02 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:02 UTC] 3
+[02-Nov-2021 20:37:05 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:37:05 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:37:05 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:37:05 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:05 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:37:05 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:08 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:37:08 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:37:08 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:37:08 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:08 UTC] 3
+[02-Nov-2021 20:37:08 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:37:08 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:08 UTC] 3
+[02-Nov-2021 20:37:10 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:37:10 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:37:10 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:37:10 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:10 UTC] Lawinenkurs BASIC
+[02-Nov-2021 20:37:10 UTC] Array
+(
+    [min] => 300
+    [max] => 450
+)
+
+[02-Nov-2021 20:37:54 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:37:54 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:37:54 UTC] 3
+[02-Nov-2021 20:37:54 UTC] 3
+[02-Nov-2021 20:38:33 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:38:33 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 20:38:40 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 20:38:40 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 22:47:33 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 22:47:33 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 22:47:33 UTC] 1
+[02-Nov-2021 22:47:33 UTC] 1
+[02-Nov-2021 22:47:37 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 22:47:37 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 22:47:37 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[02-Nov-2021 22:47:37 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[02-Nov-2021 22:47:38 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[02-Nov-2021 22:47:38 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[02-Nov-2021 22:47:38 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[02-Nov-2021 22:47:38 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[02-Nov-2021 23:21:15 UTC] PHP Warning:  Undefined array key "zahls-allow-recurring" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/zahls-ch-payment-gateway/woo-zahls-gateway.php on line 404
+[02-Nov-2021 23:27:36 UTC] PHP Warning:  Undefined array key "zahls-allow-recurring" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/zahls-ch-payment-gateway/woo-zahls-gateway.php on line 404
+[03-Nov-2021 00:05:43 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 00:05:43 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 00:05:43 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 00:05:43 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:09:15 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:09:15 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:09:18 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:09:18 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:09:32 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:09:32 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:09:33 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:09:33 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:22:26 UTC] PHP Warning:  Undefined array key "zahls-allow-recurring" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/zahls-ch-payment-gateway/woo-zahls-gateway.php on line 404
+[03-Nov-2021 10:22:46 UTC] customer_completed_order
+[03-Nov-2021 10:22:47 UTC] customer_completed_order
+[03-Nov-2021 10:26:43 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:26:43 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:26:43 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:26:43 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:27:20 UTC] PHP Warning:  Undefined array key "zahls-allow-recurring" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/plugins/zahls-ch-payment-gateway/woo-zahls-gateway.php on line 404
+[03-Nov-2021 10:39:17 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:39:17 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:39:17 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:39:17 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Attempt to read property "ID" on bool in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 15
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 19
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 20
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 21
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 22
+[03-Nov-2021 10:39:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/blocks/team.php on line 23
+[03-Nov-2021 10:40:34 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 215
+[03-Nov-2021 10:40:34 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 215
+[03-Nov-2021 10:40:34 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 226
+[03-Nov-2021 10:40:34 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 227
+[03-Nov-2021 10:42:26 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 215
+[03-Nov-2021 10:42:26 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 215
+[03-Nov-2021 10:42:26 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 226
+[03-Nov-2021 10:42:26 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 227
+[03-Nov-2021 10:42:40 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 215
+[03-Nov-2021 10:42:40 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 215
+[03-Nov-2021 10:42:40 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 226
+[03-Nov-2021 10:42:40 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 227
+[03-Nov-2021 10:43:06 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:43:06 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:43:06 UTC] 1
+[03-Nov-2021 10:43:06 UTC] 1
+[03-Nov-2021 10:43:09 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:43:09 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:43:09 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:43:09 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:43:11 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:43:11 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:43:11 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:43:11 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:45:24 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:45:24 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:45:24 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:45:24 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:45:30 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:45:30 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:45:30 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:45:30 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:45:44 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[03-Nov-2021 10:45:44 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[03-Nov-2021 10:45:44 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[03-Nov-2021 10:45:44 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:31:19 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:31:19 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:31:19 UTC] 1
+[05-Nov-2021 14:31:19 UTC] 1
+[05-Nov-2021 14:33:26 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:33:26 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:33:26 UTC] 1
+[05-Nov-2021 14:33:26 UTC] 1
+[05-Nov-2021 14:35:00 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:35:00 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:35:00 UTC] 1
+[05-Nov-2021 14:35:00 UTC] 1
+[05-Nov-2021 14:36:01 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:01 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:01 UTC] 1
+[05-Nov-2021 14:36:01 UTC] 1
+[05-Nov-2021 14:36:06 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:06 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:06 UTC] 1
+[05-Nov-2021 14:36:06 UTC] 1
+[05-Nov-2021 14:36:11 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:11 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:11 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:36:11 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:36:14 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:14 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:14 UTC] 1
+[05-Nov-2021 14:36:14 UTC] 1
+[05-Nov-2021 14:36:22 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:22 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:22 UTC] 1
+[05-Nov-2021 14:36:22 UTC] 1
+[05-Nov-2021 14:36:48 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:48 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:48 UTC] 1
+[05-Nov-2021 14:36:48 UTC] 1
+[05-Nov-2021 14:36:53 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:53 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:53 UTC] 1
+[05-Nov-2021 14:36:53 UTC] 1
+[05-Nov-2021 14:36:54 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:54 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:54 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:36:54 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:36:54 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:54 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:55 UTC] 1
+[05-Nov-2021 14:36:55 UTC] 1
+[05-Nov-2021 14:36:55 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:36:55 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:36:55 UTC] 1
+[05-Nov-2021 14:36:55 UTC] 1
+[05-Nov-2021 14:37:04 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:37:04 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:37:04 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:37:04 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:37:22 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:37:22 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:37:22 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:37:22 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:38:16 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[05-Nov-2021 14:38:16 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[05-Nov-2021 14:38:16 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[05-Nov-2021 14:38:16 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
