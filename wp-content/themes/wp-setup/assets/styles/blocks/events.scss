@@ -369,6 +369,10 @@
         top: $BS * -6;
       }
     }
+
+    .text__titleLeftWrapper ~ .events__events {
+      margin-top: 0;
+    }
   }
 }
 

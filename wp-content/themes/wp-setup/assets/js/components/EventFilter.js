@@ -15,34 +15,41 @@ class EventFilter {
     this.loaderContainer = document.querySelector(".events__loaderWrapper");
     this.eventsContainer = document.querySelector(".events__events");
     this.filterContainer = document.querySelector(".events__filters");
-    this.rangeContainers = [
-      ...this.filterContainer.querySelectorAll(".events__rangeContainer"),
-    ];
+    if (this.filterContainer) {
+      this.rangeContainers = [
+        ...this.filterContainer.querySelectorAll(".events__rangeContainer"),
+      ];
+      this.inputs = [...this.filterContainer.querySelectorAll("input")];
+      this.filterTriggers = this.inputs.filter((input) => {
+        return input.name == "filterTrigger";
+      });
+    }
     this.uiSliders = {};
-    this.inputs = [...this.filterContainer.querySelectorAll("input")];
-    this.filterTriggers = this.inputs.filter((input) => {
-      return input.name == "filterTrigger";
-    });
 
     this.data = {
       ajaxNonce: this.nonce,
-      places: "",
-      types: this.filterContainer.dataset.type,
-      altMin: "",
-      altMax: "",
-      priceMin: "",
-      priceMax: "",
-      fitnessMin: "",
-      fitnessMax: "",
-      techniqueMin: "",
-      techniqueMax: "",
+      places: [],
+      types: this.filterContainer ? this.filterContainer.dataset.type : [],
+      altMin: false,
+      altMax: false,
+      priceMin: false,
+      priceMax: false,
+      fitnessMin: false,
+      fitnessMax: false,
+      techniqueMin: false,
+      techniqueMax: false,
       // dateMin: "",
       // dateMax: "",
     };
 
     this.addEventListeners();
 
-    this.getFilterValues();
+    if (this.filterContainer) {
+      this.getFilterValues();
+    } else {
+      this.getConducts();
+      this.data.numberposts = document.querySelector("#numberposts").value;
+    }
   }
 
   getConducts = () => {
@@ -70,42 +77,44 @@ class EventFilter {
   };
 
   addEventListeners = () => {
-    this.inputs.forEach((input) => {
-      if (input.name.indexOf("Trigger") == -1) {
-        input.addEventListener("change", this.onChangeInput);
-      }
-    });
-
-    this.filterTriggers.forEach((filterTrigger) => {
-      filterTrigger.addEventListener("change", this.onChangeFilterTrigger);
-    });
-
-    this.rangeContainers.forEach((container, key) => {
-      const sliderDiv = container.querySelector(".events__rangeSlider");
-      const minInput = container.querySelector(".min");
-      const min = parseInt(minInput.value);
-      const maxInput = container.querySelector(".max");
-      const max = parseInt(maxInput.value);
-      const uiSlider = noUiSlider.create(sliderDiv, {
-        start: [min, max],
-        range: {
-          min: [min],
-          max: [max],
-        },
+    if (this.filterContainer) {
+      this.inputs.forEach((input) => {
+        if (input.name.indexOf("Trigger") == -1) {
+          input.addEventListener("change", this.onChangeInput);
+        }
       });
 
-      this.uiSliders[key] = {
-        min: min,
-        max: max,
-        minInput: minInput,
-        maxInput: maxInput,
-        uiSlider: uiSlider,
-      };
+      this.filterTriggers.forEach((filterTrigger) => {
+        filterTrigger.addEventListener("change", this.onChangeFilterTrigger);
+      });
 
-      uiSlider.uiSlidersKey = key;
-      uiSlider.on("change", this.onChangeUiSlider);
-      uiSlider.on("update", this.onUpdateUiSlider);
-    });
+      this.rangeContainers.forEach((container, key) => {
+        const sliderDiv = container.querySelector(".events__rangeSlider");
+        const minInput = container.querySelector(".min");
+        const min = parseInt(minInput.value);
+        const maxInput = container.querySelector(".max");
+        const max = parseInt(maxInput.value);
+        const uiSlider = noUiSlider.create(sliderDiv, {
+          start: [min, max],
+          range: {
+            min: [min],
+            max: [max],
+          },
+        });
+
+        this.uiSliders[key] = {
+          min: min,
+          max: max,
+          minInput: minInput,
+          maxInput: maxInput,
+          uiSlider: uiSlider,
+        };
+
+        uiSlider.uiSlidersKey = key;
+        uiSlider.on("change", this.onChangeUiSlider);
+        uiSlider.on("update", this.onUpdateUiSlider);
+      });
+    }
   };
 
   onChangeUiSlider = (
@@ -148,7 +157,9 @@ class EventFilter {
 
   onChangeInput = (e) => {
     const input = e.currentTarget;
-    this.getFilterValues();
+    if (this.filterContainer) {
+      this.getFilterValues();
+    }
   };
 
   getFilterValues = () => {

@@ -148,6 +148,18 @@ function my_acf_block_types() {
             'align'             => 'center',
             'keywords'          => [],
         ]);
+
+        acf_register_block_type([
+            'name'              => 'currenttours',
+            'title'             => __('Aktuelle Touren'),
+            'description'       => __('Aktuelle Touren'),
+            'render_template'   => 'blocks/currenttours.php',
+            'category'          => 'contentelements',
+            'icon'              => 'format-gallery',
+            'mode'              => 'preview',
+            'align'             => 'center',
+            'keywords'          => [],
+        ]);
     }
 }
 add_action('acf/init', 'my_acf_block_types');
@@ -162,6 +174,7 @@ function allowed_block_types( $allowed_block_types, $post ) {
         'acf/bookingform',
         'acf/checkout',
         'acf/cart',
+        'acf/currenttours',
     ];
 }
 add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );

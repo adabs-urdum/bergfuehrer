@@ -25,10 +25,11 @@ function getconducts(WP_REST_Request $request) {
   $techniqueMax = $data->techniqueMax;
   $dateMin = strtotime($data->dateMin);
   $dateMax = strtotime($data->dateMax);
+  $amount = $data->numberposts ? intval($data->numberposts) : -1;
 
   $conducts = get_posts([
     'post_type' => 'conduct',
-    'numberposts' => -1,
+    'numberposts' => $amount,
     'meta_key' => 'conductDate',
     'orderby' => 'meta_value',
     'order' => 'ASC',
@@ -51,13 +52,13 @@ function getconducts(WP_REST_Request $request) {
     $price = get_field('price', $tourID);
     $prices = get_field('prices', $tourID);
 
-    $type = get_field('type', $tourID);
+    $types = get_field('type', $tourID);
     $guide = get_field('guide', $id);
     if($datetime >= strtotime(date('d.m.Y'))){
       $orderedConducts[] = [
         'id' => $id,
         'tour' => $tourID,
-        'type' => $type,
+        'types' => $types,
         'date' => $date,
         'datetime' => $datetime,
         'guide' => $guide ? $guide->ID : '',
@@ -78,7 +79,11 @@ function getconducts(WP_REST_Request $request) {
     $eventId = $conduct['tour'];
     $eventUrl = get_the_permalink($eventId);
     $title = get_the_title($eventId);
-    $type = get_term($conduct['type'])->name;
+    // $types = get_term($conduct['types'])->name;
+    // $types = array_map(function($type){
+    //   return get_term($type)->name;
+    // }, $conduct['types']);
+    $types = $conduct['types'];
     $date = $conduct['date'];
     $datetime = $conduct['datetime'];
     $teaser = get_field('teaser', $eventId);
@@ -101,7 +106,7 @@ function getconducts(WP_REST_Request $request) {
     $imgTitle = $img['title'] ? $img['title'] : $img['name'];
     $srcset = wp_get_attachment_image_srcset($img['ID']);
 
-    if($activeTypes && !in_array($conduct['type'], $activeTypes)){
+    if($activeTypes && !count(array_intersect($types, $activeTypes))){
 write_log(1);
       continue;
     }
@@ -109,19 +114,19 @@ write_log(1);
 write_log(2);
       continue;
     }
-    else if($altMin > $altFilterMax || $altMax < $altFilterMin){
+    else if((is_numeric($altFilterMax) && $altMin > $altFilterMax) || (is_numeric($altFilterMin) && $altMax < $altFilterMin)){
 write_log(3);
       continue;
     }
-    else if($price < $priceFilterMin || $price > $priceFilterMax){
+    else if((is_numeric($priceFilterMin) && $price < $priceFilterMin) || (is_numeric($priceFilterMax) && $price > $priceFilterMax)){
 write_log(4);
       continue;
     }
-    else if($fitness < $fitnessMin || $fitness > $fitnessMax){
+    else if((is_numeric($fitnessMin) && $fitness < $fitnessMin) || (is_numeric($fitnessMax) && $fitness > $fitnessMax)){
 write_log(5);
       continue;
     }
-    else if($technique < $techniqueMin || $technique > $techniqueMax){
+    else if((is_numeric($techniqueMin) && $technique < $techniqueMin) || (is_numeric($techniqueMax) && $technique > $techniqueMax)){
 write_log(6);
       continue;
     }
@@ -149,7 +154,8 @@ write_log(8);
     $markup .= '
         <a href="' . $eventUrl . '?id=' . $conduct['id'] . '" class="events__event" target="_self" style="animation-delay:' . $counter * 0.2 . 's">
           <div class="events__textWrapper">
-            <h4>' . $type . ' - ' . $date . '</h4>
+            <!-- <h4>' . $type . ' - ' . $date . '</h4> -->
+            <h4>' . $date . '</h4>
             <h3>' . $title . ' – ' . get_term($place)->name . '</h3>
             <p class="events__teaserText">' . $teaserText . '</p>
             <div class="events__difficultyWrapper">
