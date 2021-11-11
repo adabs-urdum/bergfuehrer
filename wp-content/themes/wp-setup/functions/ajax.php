@@ -29,7 +29,7 @@ function getconducts(WP_REST_Request $request) {
 
   $conducts = get_posts([
     'post_type' => 'conduct',
-    'numberposts' => $amount,
+    'numberposts' => -1,
     'meta_key' => 'conductDate',
     'orderby' => 'meta_value',
     'order' => 'ASC',
@@ -74,6 +74,19 @@ function getconducts(WP_REST_Request $request) {
 
   $markup = '';
   $counter = 1;
+
+  if($amount !== -1){
+    $tours = [];
+
+    $orderedConducts = array_filter($orderedConducts, function($conduct) use(&$tours){
+      if(!in_array($conduct['tour'], $tours)){
+        $tours[] = $conduct['tour'];
+        return true;
+      }
+      return false;
+    });
+    $orderedConducts = array_slice($orderedConducts, 0, $amount);
+  }
 
   foreach($orderedConducts as $key => $conduct):
     $eventId = $conduct['tour'];

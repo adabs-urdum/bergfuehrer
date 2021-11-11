@@ -43,7 +43,9 @@ ga('create', 'UA-2092620-46', 'auto');
 
 <header class="header" id="header">
 
-  <img class="header__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
+  <div class="header__imageWrapper">
+    <img class="header__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
+  </div>
   <div class="header__wrapper">
     <div class="header__logoWrapper">
       <a class="header__logoLink" href="/" target="_self">

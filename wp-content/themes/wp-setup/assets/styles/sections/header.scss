@@ -9,7 +9,7 @@
     height: 25vh;
     width: 100%;
     color: $White;
-    overflow: hidden;
+    // overflow: hidden;
 
     &__logoLink {
       display: flex;
@@ -78,6 +78,15 @@
       padding: $BS * 32;
       max-width: $WidthWide;
       margin: 0 auto;
+    }
+
+    &__imageWrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
 
     &__image {
