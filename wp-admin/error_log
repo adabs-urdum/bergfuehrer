@@ -99,3 +99,4 @@ Stack trace:
 [07-Nov-2021 19:24:40 UTC] PHP Warning:  Undefined property: WP_Error::$name in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 353
 [07-Nov-2021 19:30:15 UTC] PHP Warning:  Attempt to read property "show_ui" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-admin/includes/class-wp-terms-list-table.php on line 584
 [07-Nov-2021 19:30:23 UTC] PHP Warning:  Undefined property: WP_Error::$name in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 353
+[09-Nov-2021 09:28:18 UTC] PHP Warning:  Undefined property: WP_Error::$name in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/custom_posttypes.php on line 353

@@ -82,7 +82,7 @@
           'type' => [
             'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-art.png',
             'value' => $type,
-            'file' => 'place.svg',
+            'file' => 'type.svg',
           ],
           'altitude' => [
             'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-hoehe.png',

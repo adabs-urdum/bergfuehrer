@@ -2119,3 +2119,87 @@ Stack trace:
 [07-Nov-2021 14:38:30 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
 [07-Nov-2021 14:38:30 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
 [07-Nov-2021 14:38:30 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[09-Nov-2021 09:15:14 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 09:15:14 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 09:15:14 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[09-Nov-2021 09:15:14 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[09-Nov-2021 09:29:13 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 09:29:13 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 09:29:13 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[09-Nov-2021 09:29:13 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[09-Nov-2021 09:29:17 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 09:29:17 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 09:29:17 UTC] 1
+[09-Nov-2021 09:29:17 UTC] 1
+[09-Nov-2021 09:29:19 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 09:29:19 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 09:29:19 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[09-Nov-2021 09:29:19 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 173
+[09-Nov-2021 10:08:02 UTC] PHP Warning:  Undefined variable $titleLeft in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/includes/events.php on line 2
+[09-Nov-2021 10:08:03 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 10:08:03 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 10:08:03 UTC] PHP Warning:  Undefined property: stdClass::$numberposts in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 28
+[09-Nov-2021 10:08:03 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 10:08:03 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 10:08:03 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 10:08:03 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 10:08:06 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 10:08:06 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 10:08:07 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 10:08:07 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 10:08:07 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 10:08:07 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 10:09:58 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 10:09:58 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 10:09:58 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 10:09:58 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 10:09:58 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 10:09:58 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 10:10:02 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 10:10:02 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 10:10:02 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 10:10:02 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 10:10:02 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 10:10:02 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 21:28:09 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 21:28:09 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 21:28:09 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 21:28:09 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 21:28:09 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 21:28:09 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 21:28:19 UTC] PHP Warning:  Undefined variable $titleLeft in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/includes/events.php on line 2
+[09-Nov-2021 21:28:19 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[09-Nov-2021 21:28:19 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[09-Nov-2021 21:28:19 UTC] PHP Warning:  Undefined property: stdClass::$numberposts in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 28
+[09-Nov-2021 21:28:19 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 21:28:19 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[09-Nov-2021 21:28:19 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[09-Nov-2021 21:28:19 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[11-Nov-2021 15:09:36 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[11-Nov-2021 15:09:36 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[11-Nov-2021 15:09:36 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[11-Nov-2021 15:09:36 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[11-Nov-2021 15:09:36 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[11-Nov-2021 15:09:36 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[11-Nov-2021 15:09:48 UTC] PHP Warning:  Undefined variable $titleLeft in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/includes/events.php on line 2
+[11-Nov-2021 15:09:48 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[11-Nov-2021 15:09:48 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[11-Nov-2021 15:09:48 UTC] PHP Warning:  Undefined property: stdClass::$numberposts in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 28
+[11-Nov-2021 15:09:49 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[11-Nov-2021 15:09:49 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[11-Nov-2021 15:09:49 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[11-Nov-2021 15:09:49 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[11-Nov-2021 16:44:36 UTC] PHP Warning:  Undefined property: stdClass::$dateMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 26
+[11-Nov-2021 16:44:36 UTC] PHP Warning:  Undefined property: stdClass::$dateMax in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 27
+[11-Nov-2021 16:44:36 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[11-Nov-2021 16:44:36 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[11-Nov-2021 16:44:36 UTC] PHP Warning:  Undefined variable $type in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 157
+[11-Nov-2021 16:44:36 UTC] PHP Warning:  Undefined variable $priceMin in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/functions/ajax.php on line 179
+[11-Nov-2021 16:46:36 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 171
+[11-Nov-2021 16:46:36 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 182
+[11-Nov-2021 16:46:36 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 226
+[11-Nov-2021 16:46:36 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 227
+[11-Nov-2021 16:47:06 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 171
+[11-Nov-2021 16:47:06 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 182
+[11-Nov-2021 16:47:06 UTC] PHP Warning:  Undefined array key "id" in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 226
+[11-Nov-2021 16:47:06 UTC] PHP Warning:  Attempt to read property "ID" on null in /home/slothnew/public_html/staging/bergfuehrer.adabs.ch/wp-content/themes/wp-setup/single-tour.php on line 227

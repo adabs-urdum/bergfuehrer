@@ -9,6 +9,7 @@
     height: 25vh;
     width: 100%;
     color: $White;
+    overflow: hidden;
 
     &__logoLink {
       display: flex;
@@ -81,14 +82,10 @@
 
     &__image {
       position: absolute;
-      left: 0;
-      top: 0;
+      left: 50%;
+      top: 50%;
       width: 100%;
-
-      @supports (object-fit: cover) {
-        object-fit: cover;
-        height: 100% !important;
-      }
+      transform: translate(-50%, -60%);
     }
 
     &__mobileNavCheckbox,
@@ -171,6 +168,18 @@
         }
       }
 
+      &__image {
+        transform: translate(-50%, -50%);
+        width: auto;
+        min-height: 100%;
+        min-width: 100%;
+
+        // @supports (object-fit: cover) {
+        //   object-fit: cover;
+        //   height: 100%;
+        // }
+      }
+
       &__menu {
         margin-bottom: 0;
         .sub-menu {
@@ -203,6 +212,18 @@
 }
 
 // Render custom styles with breakpoints
+@include breakPointM() {
+  $BS: getBaseSize("M");
+
+  .home {
+    .header {
+      &__image {
+        transform: translate(-60%, -50%);
+      }
+    }
+  }
+}
+
 @include breakPointS() {
   $BS: getBaseSize("S");
 
@@ -271,6 +292,10 @@
           left: 0;
           width: 100%;
           height: 100%;
+
+          path {
+            stroke: $White;
+          }
         }
       }
 
@@ -282,6 +307,13 @@
             }
           }
         }
+      }
+
+      &__image {
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
       }
     }
   }
