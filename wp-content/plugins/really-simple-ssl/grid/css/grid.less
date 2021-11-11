@@ -1,5 +1,4 @@
 // RTL generator: https://cssjanus.github.io/
-
 @gridblock_height: 475px;
 @gridblock_width: 800px;
 @gridblock_width_small:400px;
@@ -39,7 +38,7 @@
     background: inherit;
     border: 0;
     &.nav-tab-active {
-      border-bottom: 2px solid @color_open !important;
+      border-bottom: 2px solid @color_open;
       background: #fff;
       padding-bottom:15px;
     }
@@ -293,12 +292,13 @@
             height: 20px;
             border-radius: 5px;
             background-color: #f7f7f7;
-          }
-
-          .progress .bar {
-            height: 100%;
-            background-color: @color-success;
-
+            .bar {
+              height: 100%;
+              background-color: @color-success;
+            }
+            .bar.orange {
+              background-color: @color_open;
+            }
           }
 
           .progress-text {
@@ -324,6 +324,9 @@
           }
 
           .rsssl-progress-table {
+            tr {
+              position:relative;
+            }
             td {
               padding: 10px 10px 10px 0;
             }

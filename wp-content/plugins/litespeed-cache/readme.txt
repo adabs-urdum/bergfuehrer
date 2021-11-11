@@ -2,8 +2,8 @@
 Contributors: LiteSpeedTech
 Tags: caching, optimize, performance, pagespeed, core web vitals, seo, speed, image optimize, compress, object cache, redis, memcached, database cleaner
 Requires at least: 4.0
-Tested up to: 5.7.2
-Stable tag: 4.4.1
+Tested up to: 5.8.1
+Stable tag: 4.4.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -70,7 +70,7 @@ LiteSpeed Cache for WordPress is compatible with ClassicPress.
 * HTTP/2 support
 * [HTTP/3 & QUIC](https://www.litespeedtech.com/http3-faq) support
 * ESI (Edge Side Includes) support<sup>*</sup>
-* Widgets and Shortcodes as ESI blocks<sup>*</sup> (requires Classic Widgets plugin with WP 5.8 currently)
+* Widgets and Shortcodes as ESI blocks<sup>*</sup> (requires Classic Widgets plugin for WP 5.8+)
 
 <sup>*</sup> Feature not available in OpenLiteSpeed
 
@@ -248,6 +248,33 @@ For more detailed information about crawler setup, please see [the Crawler docum
 The vast majority of plugins and themes are compatible with LiteSpeed Cache. The most up-to-date compatibility information can be found [in our documentation](https://docs.litespeedtech.com/lscache/lscwp/thirdparty/)
 
 == Changelog ==
+
+= 4.4.3 - Oct 13 2021 =
+* 🐞**Media** Fixed an issue where WebP is served erroneously under Guest Mode on older versions of Safari. (hash73)
+* 🐞**Media** Reverted regex change to fix `Lazy Load Image Parent Class Name Excludes` failure. (thpstock)
+* **Purge** Disabled `Purge Delay` in the optimization process by default.
+* **Conf** Dropped `.htaccess Path Settings` options for security concern. (WP)
+* **Conf** Dropped `CSS HTTP/2 Push`/`JS HTTP/2 Push` options. (Kevin)
+* **Conf** Set `Guest Optimization` default to OFF.
+* **Conf** Set `CCSS Per URL` default to OFF to avoid consuming more quota than intended after upgrade to v4. (n111)
+* **Object** Fixed an issue with Object Cache warnings during upgrade, when Guest Mode is enabled.
+* ☁️**Cloud** Fixed an issue with PHP notices when inquiring about quota usage for a service not currently in use.
+* **GUI** Added GO detail warning. (n111)
+* **GUI** Moved "quota wil be still in use" warning from Guest Mode to Guest Optimization section.
+* **API** Added `LITESPEED_CFG_HTACCESS` PHP Constant to specify .htaccess path.
+* **API** Added `litespeed_qs_forbidden` hook to bypass `?LSCWP_CTRL=` query string. (minhduc)
+* **API** Added `litespeed_delay_purge` hook to delay the following Purge header until the next request.
+* **API** Added `litespeed_wpconfig_readonly` hook to disable `WP_CACHE` constant update based on the wp-config.php file. (#633545)
+
+= 4.4.2 - Sep 23 2021 =
+* **Purge** In order to clear pages containing 404 CSS/JS, the purge header will always be sent even in cases where purge must be delayed.
+* 🐞**Purge** Fixed a potential PHP warning caused when generating different optimized filenames.
+* **Cron** Dropped unnecessary HTML response in cron which sometimes resulted in wp-cron report email. (Gilles)
+* **Page Optimize** Purge caused by CSS/JS file deletion will now be silent.
+* **Page Optimize** Fixed an issue where the homepage failed to purge when addressing the 404 CSS/JS issue.
+* **Avatar** Fixed potential localized Avatar folder creation warning. (mattk0220/josebab)
+* **API** Added filter `litespeed_optm_html_after_head` to move all optimized code(UCSS/CCSS/Combined CSS/Combined JS) to be right before the `</head>` tag. (ducpl/Kris Regmi)
+* **Debug** Under debug mode, cache/purge tags will be plaintext.
 
 = 4.4.1 - Sep 16 2021 =
 * 🐞**ESI** Fixed ESI failure on non-cached pages caused by `DONOTCACHEPAGE` constant.

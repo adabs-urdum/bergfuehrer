@@ -95,6 +95,12 @@ This is all very important to us and allows us to do even better things for you!
 
 == Changelog ==
 
+= 4.0.0 (2021-09-25) =
+* `[Fixed]` Searching for phrases in database with mixed data structure
+* `[Added]` Escaping functions for translated phrases
+* `[Added]` Escaping phrases for SQL Query
+* `[Added]` Modifications to appearance of plugin settings page
+
 = 3.8.1 (2021-05-22) =
 * `[Fixed]` Closing notice in admin panel
 

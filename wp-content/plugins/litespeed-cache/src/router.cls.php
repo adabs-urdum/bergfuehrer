@@ -14,7 +14,6 @@ class Router extends Base {
 	const NONCE = 'LSCWP_NONCE';
 	const ACTION = 'LSCWP_CTRL';
 
-	const ACTION_SAVE_HTACCESS = 'save-htaccess';
 	const ACTION_SAVE_SETTINGS_NETWORK = 'save-settings-network';
 	const ACTION_DB_OPTM = 'db_optm';
 	const ACTION_PLACEHOLDER = 'placeholder';
@@ -499,6 +498,11 @@ class Router extends Base {
 				return;
 			}
 
+			if ( apply_filters( 'litespeed_qs_forbidden', false ) ) {
+				Debug2::debug( '[Router] LSCWP_CTRL forbidden by hook litespeed_qs_forbidden' );
+				return;
+			}
+
 			$_is_public_action = true;
 		}
 
@@ -512,13 +516,6 @@ class Router extends Base {
 		$_can_option = current_user_can( 'manage_options' );
 
 		switch ( $action ) {
-			// Save htaccess
-			case self::ACTION_SAVE_HTACCESS:
-				if ( ( ! $_is_multisite && $_can_option ) || $_can_network_option ) {
-					self::$_action = $action;
-				}
-				return;
-
 			// Save network settings
 			case self::ACTION_SAVE_SETTINGS_NETWORK:
 				if ( $_can_network_option ) {

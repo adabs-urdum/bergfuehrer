@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite64eea9f89b5f8c3bb51e9a7dc7ebac4
+class ComposerStaticInit6533a5ab5d63d6d9965e7098eff80849
 {
     public static $prefixLengthsPsr4 = array (
         'A' => 
@@ -16,20 +16,40 @@ class ComposerStaticInite64eea9f89b5f8c3bb51e9a7dc7ebac4
     public static $prefixDirsPsr4 = array (
         'AcfBetterSearch\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
     public static $classMap = array (
+        'AcfBetterSearch\\AcfBetterSearch' => __DIR__ . '/../..' . '/src/AcfBetterSearch.php',
+        'AcfBetterSearch\\Admin\\Acf' => __DIR__ . '/../..' . '/src/Admin/Acf.php',
+        'AcfBetterSearch\\Admin\\Assets' => __DIR__ . '/../..' . '/src/Admin/Assets.php',
+        'AcfBetterSearch\\Admin\\Install' => __DIR__ . '/../..' . '/src/Admin/Install.php',
+        'AcfBetterSearch\\Admin\\Notice' => __DIR__ . '/../..' . '/src/Admin/Notice.php',
+        'AcfBetterSearch\\Admin\\Plugin' => __DIR__ . '/../..' . '/src/Admin/Plugin.php',
+        'AcfBetterSearch\\Admin\\Uninstall' => __DIR__ . '/../..' . '/src/Admin/Uninstall.php',
+        'AcfBetterSearch\\Helper\\ViewLoader' => __DIR__ . '/../..' . '/src/Helper/ViewLoader.php',
+        'AcfBetterSearch\\HookableInterface' => __DIR__ . '/../..' . '/src/HookableInterface.php',
+        'AcfBetterSearch\\PluginInfo' => __DIR__ . '/../..' . '/src/PluginInfo.php',
+        'AcfBetterSearch\\Search\\Init' => __DIR__ . '/../..' . '/src/Search/Init.php',
+        'AcfBetterSearch\\Search\\Join' => __DIR__ . '/../..' . '/src/Search/Join.php',
+        'AcfBetterSearch\\Search\\Query' => __DIR__ . '/../..' . '/src/Search/Query.php',
+        'AcfBetterSearch\\Search\\Request' => __DIR__ . '/../..' . '/src/Search/Request.php',
+        'AcfBetterSearch\\Search\\Where' => __DIR__ . '/../..' . '/src/Search/Where.php',
+        'AcfBetterSearch\\Settings\\Acf' => __DIR__ . '/../..' . '/src/Settings/Acf.php',
+        'AcfBetterSearch\\Settings\\Config' => __DIR__ . '/../..' . '/src/Settings/Config.php',
+        'AcfBetterSearch\\Settings\\Options' => __DIR__ . '/../..' . '/src/Settings/Options.php',
+        'AcfBetterSearch\\Settings\\Page' => __DIR__ . '/../..' . '/src/Settings/Page.php',
+        'AcfBetterSearch\\Settings\\Save' => __DIR__ . '/../..' . '/src/Settings/Save.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite64eea9f89b5f8c3bb51e9a7dc7ebac4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite64eea9f89b5f8c3bb51e9a7dc7ebac4::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInite64eea9f89b5f8c3bb51e9a7dc7ebac4::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6533a5ab5d63d6d9965e7098eff80849::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6533a5ab5d63d6d9965e7098eff80849::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit6533a5ab5d63d6d9965e7098eff80849::$classMap;
 
         }, null, ClassLoader::class);
     }
