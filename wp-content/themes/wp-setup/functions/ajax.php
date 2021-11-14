@@ -189,7 +189,7 @@ write_log(8);
                 </span>
               </div>
             </div>
-            <div class="events__price">Ab CHF ' . $priceMin . '</div>
+            <div class="events__price">CHF ' . $price . ' pro Person</div>
             <span class="button">Details</span>
           </div>
           <div class="events__imageWrapper">

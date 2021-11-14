@@ -27,6 +27,9 @@
     //   $pricesOrdered[$price['anzahl']] = $price['price'];
     // }
     $type = get_term(get_field('type', $pageID))->name;
+    $types = array_map(function($type) use($pageID){
+      return get_term($type)->name;
+    }, get_field('type'));
     $place = get_term(get_field('place', $pageID))->name;
     $bookingPermalink = get_permalink(163);
 
@@ -81,7 +84,7 @@
         $infos = [
           'type' => [
             'icon' => '/wp-content/uploads/2021/11/211028-cwe-icons-website-art.png',
-            'value' => $type,
+            'value' => $types,
             'file' => 'type.svg',
           ],
           'altitude' => [
@@ -114,7 +117,13 @@
             <canvas width="1" height="1"></canvas>
             <?php include(get_template_directory() . '/includes/' . $file) ?>
           </div>
-          <h3 class="tour__infoText"><?= $info['value'] ?></h3>
+          <?php if(!is_array($info['value'])): ?>
+            <h3 class="tour__infoText"><?= $info['value'] ?></h3>
+          <?php else: ?>
+            <?php foreach($info['value'] as $value): ?>
+              <h3 class="tour__infoText"><?= $value ?></h3>
+            <?php endforeach; ?>
+          <?php endif; ?>
         </div>
       <?php endforeach; ?>
     </div>
