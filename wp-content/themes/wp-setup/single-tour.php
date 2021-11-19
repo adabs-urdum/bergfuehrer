@@ -73,11 +73,7 @@
     </div>
   </section>
 
-  <section class="text">
-
-    <div for="details">
-      <h2 class="text__titleLeftWrapper">Touren Details</h2>
-    </div>
+  <section class="text text--tourInfos">
 
     <div class="text__wrapper tour__infos">
       <?php
@@ -127,8 +123,28 @@
         </div>
       <?php endforeach; ?>
     </div>
+  </section>
 
-    <div class="text tour__details">
+    <?php
+      $img = get_field('image');
+      $caption = $img['caption'];
+      $src = $img['sizes']['L'];
+      $alt = $img['alt'] ? $img['alt'] : $img['name'];
+      $imgTitle = $img['title'] ? $img['title'] : $img['name'];
+      $srcset = wp_get_attachment_image_srcset($img['ID']);
+    ?>
+
+    <section class="image">
+      <div class="image__wrapper">
+        <img class="image__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
+      </div>
+    </section>
+
+  <section class="text">
+    <h2 class="text__titleLeftWrapper">Touren Details</h2>
+
+
+    <div class="tour__details">
       <div>
         <?= $detailText ?>
       </div>
@@ -186,18 +202,40 @@
           </ul>
         </div>
         <div class="tour__programlist">
-          <h3>Programm</h3>
+          <h3>Dokumente</h3>
           <ul class="tour__program">
-            <?php foreach($program as $programPoint): ?>
+            <?php foreach($downloads as $download): ?>
               <?php
-                $programPoint = $programPoint['programpoint'];
+                $title = $download['title'];
+                $file = $download['file'];
+                $url = $file['url'];
               ?>
-              <li class="tour__programPoint"><?= $programPoint ?></li>
+              <p><a class="tour__download" href="<?= $url ?>" download><?= $title ?></a></p>
             <?php endforeach; ?>
           </ul>
         </div>
       </div>
     </div>
+
+    <!-- <?php if($downloads): ?>
+      <section class="text tour__gallery gallery">
+        <h2 class="text__titleLeftWrapper">
+          Dokumente
+        </h2>
+        <div class="text__wrapper">
+          <div class="">
+            <?php foreach($downloads as $download): ?>
+              <?php
+                $title = $download['title'];
+                $file = $download['file'];
+                $url = $file['url'];
+              ?>
+              <p><a class="tour__download" href="<?= $url ?>" download><?= $title ?></a></p>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </section>
+    <?php endif; ?> -->
 
     <div class="text__wrapper tour__bookingWrapper">
       <div class="tour__dates">
@@ -243,9 +281,9 @@
 
   <?php if($images): ?>
     <section class="text tour__gallery gallery">
-      <h2 class="text__titleLeftWrapper">
+      <!-- <h2 class="text__titleLeftWrapper">
         Impressionen
-      </h2>
+      </h2> -->
       <div class="text__wrapper">
         <div class="tour__galleryImages">
           <?php foreach($images as $img): ?>
@@ -257,26 +295,6 @@
               $srcset = wp_get_attachment_image_srcset($img['ID']);
             ?>
             <img class="tour__galleryImage gallery__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
-          <?php endforeach; ?>
-        </div>
-      </div>
-    </section>
-  <?php endif; ?>
-
-  <?php if($downloads): ?>
-    <section class="text tour__gallery gallery">
-      <h2 class="text__titleLeftWrapper">
-        Dokumente
-      </h2>
-      <div class="text__wrapper">
-        <div class="">
-          <?php foreach($downloads as $download): ?>
-            <?php
-              $title = $download['title'];
-              $file = $download['file'];
-              $url = $file['url'];
-            ?>
-            <p><a href="<?= $url ?>" download><?= $title ?></a></p>
           <?php endforeach; ?>
         </div>
       </div>

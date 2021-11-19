@@ -7,9 +7,14 @@
   .tour {
     .tour__details {
       // background-color: $Grey;
-      padding: $BS * 32 $BS * 128;
+      padding: 0 $BS * 128 $BS * 32;
       max-width: $WidthNarrow;
       margin: 0 auto;
+    }
+
+    &__download {
+      @include bsFontSize($BS, 19);
+      line-height: 100%;
     }
 
     &__info {
@@ -22,7 +27,7 @@
       position: relative;
 
       canvas {
-        width: $BS * 128;
+        width: $BS * 100;
       }
 
       svg {
@@ -36,8 +41,9 @@
 
     &__infoText {
       text-align: center;
-
+      @include bsFontSize($BS, 25);
       margin-bottom: 0;
+
       &:not(:first-of-type) {
         margin-top: 0;
       }
@@ -47,14 +53,25 @@
       width: $BS * 128;
     }
 
+    &__gallery {
+      &.text:not(.qty) {
+        padding-top: 0;
+        .text__wrapper {
+          max-width: $WidthWide;
+          margin: 0 auto;
+        }
+      }
+    }
+
     &__galleryImages {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     &__galleryImage {
       cursor: pointer;
-      height: $BS * 256;
+      height: $BS * 420;
       margin: $BS * 16;
     }
 
@@ -98,6 +115,10 @@
           background-color: $ColorLight;
           // color: $White;
         }
+
+        span {
+          flex-basis: 100%;
+        }
       }
 
       input {
@@ -131,7 +152,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      padding: $BS * 64 $BS * 128;
+      padding: 0 $BS * 128 $BS * 64;
     }
   }
 
@@ -158,12 +179,14 @@
   $BS: getBaseSize("S");
 
   .tour {
-    .tour__details {
-      padding: $BS * 64 $BS * 32;
+    .text:not(.qty) {
+      .tour__infos.text__wrapper {
+        padding: 0 $BS * 64 $BS * 64;
+      }
     }
 
     .tour__infos {
-      padding: $BS * 32;
+      padding: $BS * 32 0;
     }
 
     &__lists {

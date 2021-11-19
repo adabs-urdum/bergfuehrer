@@ -20,6 +20,10 @@
         padding: 0 0 $BS * 40 $BS * 32;
       }
     }
+
+    &.text--tourInfos {
+      padding-top: 0;
+    }
   }
 }
 

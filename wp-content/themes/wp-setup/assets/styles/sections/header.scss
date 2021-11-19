@@ -164,16 +164,18 @@
       &__wrapper {
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        transform: translateY($BS * -200);
       }
 
       &__logoWrapper {
-        position: absolute;
+        // position: absolute;
         bottom: $BS * 64;
         left: $BS * 32;
         // display: none;
-        margin-right: $BS * 56;
+        margin-bottom: $BS * 56;
         canvas {
-          width: $BS * 150;
+          width: $BS * 200;
         }
       }
 
