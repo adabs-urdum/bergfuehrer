@@ -202,9 +202,9 @@
       margin: $BS * 32;
     }
 
-    &__details {
-      padding-left: $BS * 32;
-      padding-right: $BS * 32;
+    .tour__details {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &__bookingWrapper {
@@ -236,6 +236,10 @@
       height: auto;
       margin-left: 0;
       margin-right: 0;
+    }
+
+    &__date {
+      flex-wrap: wrap;
     }
   }
 }

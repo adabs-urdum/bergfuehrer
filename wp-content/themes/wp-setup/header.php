@@ -11,21 +11,21 @@
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76879621-3"></script> -->
-<!-- <script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WL5C65K8C"></script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-76879621-3', { 'anonymize_ip': true });
+  gtag('config', 'G-7WL5C65K8C', { 'anonymize_ip': true });
 </script>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-2092620-46', 'auto');
-</script> -->
+ga('create', 'G-7WL5C65K8C', 'auto');
+</script>
 
 
 <?php wp_head(); ?>
@@ -75,7 +75,7 @@ ga('create', 'UA-2092620-46', 'auto');
             'echo'              => true, // (bool) Whether to echo the menu or return it. Default true.
           ]);
         ?>
-        <div>
+        <div class="header__mobileNavWrapper">
           <label class="header__mobileNavLabel" for="mobileNavCheckbox">
             <canvas class="header__mobileNavCanvas" width="20" height="14"></canvas>
             <svg class="header__mobileNavSVG" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">

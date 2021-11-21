@@ -13,6 +13,26 @@ class Lightbox {
         this.onClickImage(e, key);
       });
     });
+
+    window.addEventListener("keyup", this.onKeyUp);
+  };
+
+  onKeyUp = (e) => {
+    const keyCode = e.keyCode;
+
+    if (this.overlayActive) {
+      switch (keyCode) {
+        case 27:
+          this.onClickOverlay(null);
+          break;
+        case 39:
+          this.onClickArrow(e, 1);
+          break;
+        case 37:
+          this.onClickArrow(e, -1);
+          break;
+      }
+    }
   };
 
   onClickImage = (e, key) => {
@@ -52,14 +72,20 @@ class Lightbox {
     this.overlay.appendChild(arrowRight);
 
     document.body.appendChild(this.overlay);
+    this.overlayActive = true;
   };
 
   onClickOverlay = (e) => {
-    const clicked = e.target;
+    let clicked;
 
-    if (clicked == this.overlay) {
+    if (e) {
+      clicked = e.target;
+    }
+
+    if (!e || clicked == this.overlay) {
       document.body.removeChild(this.overlay);
       this.overlay = null;
+      this.overlayActive = false;
     }
   };
 

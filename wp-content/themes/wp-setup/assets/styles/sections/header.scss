@@ -248,7 +248,7 @@
       &__nav {
         position: fixed;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         top: 0;
         right: 0;
         width: 100%;
@@ -260,22 +260,32 @@
         padding: $BS * 32;
       }
 
+      &__mobileNavWrapper {
+        position: absolute;
+        top: $BS * 32;
+        right: $BS * 32;
+        z-index: 101;
+      }
+
       &__menu {
         flex-direction: column;
 
         li {
           padding-left: 0;
           margin-left: 0;
+          margin-right: 0;
+          padding-right: 0;
+          text-align: center;
 
           a {
             color: $Black;
             text-shadow: none;
+            @include bsFontSize($BS, 48);
           }
 
           &:hover {
             .sub-menu {
               padding: 0;
-              padding-left: $BS * 32;
             }
           }
         }
@@ -286,6 +296,8 @@
           transform: translateY(0);
           background-color: transparent;
           padding-left: $BS * 32;
+          padding-left: 0;
+          opacity: 0.7;
         }
       }
 
@@ -305,7 +317,7 @@
           height: 100%;
 
           path {
-            stroke: $White;
+            stroke: $Black;
           }
         }
       }
@@ -338,7 +350,7 @@
 
       &__menu {
         .sub-menu {
-          transform: translateY(0);
+          display: none;
         }
       }
 

@@ -455,3 +455,23 @@
     }
   }
 }
+
+@include breakPointXS() {
+  $BS: getBaseSize("XS");
+
+  .events {
+    &__additionalInfo {
+      width: 100%;
+      margin: $BS * 16 0;
+    }
+
+    &__additionalWrapper {
+      padding-top: $BS * 64;
+      padding-bottom: $BS * 64;
+    }
+
+    &__rangeContainer {
+      min-width: 100%;
+    }
+  }
+}
