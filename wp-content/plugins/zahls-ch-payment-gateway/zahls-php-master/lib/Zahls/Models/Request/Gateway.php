@@ -226,6 +226,14 @@ class Gateway extends \Zahls\Models\Base
     protected $successMessage;
 
     /**
+     * optional
+     *
+     * @access  protected
+     * @var     array       $basket
+     */
+    protected $basket;
+
+    /**
      * @access  public
      * @return  int
      */
@@ -760,6 +768,28 @@ class Gateway extends \Zahls\Models\Base
     public function setSuccessMessage($successMessage)
     {
         $this->successMessage = $successMessage;
+    }
+
+    /**
+     * @return array
+     */
+    public function getBasket(): array
+    {
+        return $this->basket;
+    }
+
+    /**
+     * It is a multidimensional array to parse each product as an array
+     *
+     * @param array $basket         Available product values:
+     *                              name => Can be an array with the key as language ID
+     *                              description => Can be an array with the key as language ID
+     *                              quantity => quantity of the product
+     *                              amount => Product amount
+     */
+    public function setBasket(array $basket): void
+    {
+        $this->basket = $basket;
     }
 
 }

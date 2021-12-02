@@ -172,6 +172,18 @@ function my_acf_block_types() {
             'align'             => 'center',
             'keywords'          => [],
         ]);
+
+        acf_register_block_type([
+            'name'              => 'vimeo',
+            'title'             => __('Vimeo'),
+            'description'       => __('Vimeo'),
+            'render_template'   => 'blocks/vimeo.php',
+            'category'          => 'contentelements',
+            'icon'              => 'format-gallery',
+            'mode'              => 'preview',
+            'align'             => 'center',
+            'keywords'          => [],
+        ]);
     }
 }
 add_action('acf/init', 'my_acf_block_types');
@@ -188,6 +200,7 @@ function allowed_block_types( $allowed_block_types, $post ) {
         'acf/cart',
         'acf/currenttours',
         'acf/gallery',
+        'acf/vimeo',
     ];
 }
 add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );

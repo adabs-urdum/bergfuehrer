@@ -5,11 +5,11 @@
  * Author: siebenberge gmbh
  * Author URI: https://www.siebenberge.com
  * Text Domain: zahls-ch-payment-gateway
- * Version: 1.1.2
+ * Version: 1.1.4
  * Requires at least: 4.6
- * Tested up to: 5.8
+ * Tested up to: 5.9
  * WC requires at least: 4.0
- * WC tested up to: 5.4.1
+ * WC tested up to: 5.9
  */
 
 if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) return;
@@ -25,6 +25,8 @@ function WC_Zahls_offline_gateway_init()
         public $description;
         public $instance;
         public $sid;
+		public $platform;
+        public $apiKey;
         public $prefix;
         public $logos;
         public $lang;
@@ -63,12 +65,14 @@ function WC_Zahls_offline_gateway_init()
             $this->description = $this->get_option('description');
             
             
-            $this->instance  = $this->get_option('instance');
+            $this->instance  	= $this->get_option('instance');
+			$this->platform = "zahls.ch";
             
             $this->instance = str_replace(".zahls.ch", "", $this->instance);
             $this->instance = str_replace(".ch", "", $this->instance);
             
             $this->sid = $this->get_option('sid');
+			$this->apiKey = !empty($this->get_option('apiKey')) ? $this->get_option('apiKey') : $this->get_option('sid');
             $this->prefix = $this->get_option('prefix');
             $this->logos = $this->get_option('logos');
             $this->lookAndFeelId = $this->get_option('lookAndFeelId');
@@ -107,7 +111,18 @@ function WC_Zahls_offline_gateway_init()
 					<div id="post-body-content">
 						<table class="form-table">
 							<?php $this->generate_settings_html();?>
+	
 						</table><!--/.form-table-->
+						
+						
+							
+						<div style="display: block; margin: 20px 0 0 0; padding: 10px; background-color: #3f245c; color: #fff;">
+						
+						<div style="font-size: 20px; padding: 10px 0 10px 0;"><i class="dashicons dashicons-arrow-right-alt"></i> <b><?php _e('Order status sync with zahls.ch', 'zahls-ch-payment-gateway'); ?></b></div>
+							<p><?php _e('Please copy this Webhook URL to the section "Webhooks" in your zahls.ch backend to sync the payment status of your orders.', 'zahls-ch-payment-gateway'); ?> </p>
+							<p><input style="background-color:  #fff; border: 1px solid #000; width: 100%; padding: 5px; font-size: 20px;" type="input" value="<?php echo get_site_url()."/?wc-api=wc_zahls_gateway"; ?>" readonly></p>
+							<p><a href="https://login.zahls.ch" target="_blank" style="color: #fff;"><?php _e('Open your zahls.ch backend.', 'zahls-ch-payment-gateway'); ?></a></p>
+					</div>
 					</div>
 					<div id="postbox-container-1" class="postbox-container">
 	                        <div id="side-sortables" class="meta-box-sortables ui-sortable"> 
@@ -124,8 +139,8 @@ function WC_Zahls_offline_gateway_init()
 	                                    </div>
 	                                </div>
 	                            </div>
-                                
-	                           
+								
+							                          
 
 	                            <div class="postbox">
 	                                <h3 class="hndle"><span><i class="dashicons dashicons-editor-help"></i>&nbsp;&nbsp;<?php _e('Support', 'zahls-ch-payment-gateway'); ?></span></h3>
@@ -194,7 +209,7 @@ function WC_Zahls_offline_gateway_init()
         
         
 
-        public function register_autoloader()
+     /*    public function register_autoloader()
         {
             spl_autoload_register(function ($class) {
                 $root = __DIR__ . '/zahls-php-master';
@@ -203,7 +218,7 @@ function WC_Zahls_offline_gateway_init()
                     require_once $classFile;
                 }
             });
-        }
+        } */
 
         public function get_icon()
         {
@@ -273,7 +288,9 @@ function WC_Zahls_offline_gateway_init()
                 if (!$order) {
                     throw new \Exception('Fraudulent request');
                 }
-
+				
+				$this->register_autoloader();
+				
                 switch ($status) {
                     case \Zahls\Models\Response\Transaction::WAITING:
                         $newTransactionsStatus = 'on-hold';
@@ -287,7 +304,7 @@ function WC_Zahls_offline_gateway_init()
                             break;
                         }
 
-                        $order->update_status($newTransactionsStatus, __('Awaiting payment', 'wc-zahls-gateway'));
+                        $order->update_status($newTransactionsStatus, __('Awaiting payment', 'zahls-ch-payment-gateway'));
                         break;
                     case \Zahls\Models\Response\Transaction::CONFIRMED:
                         if ($order->has_status(['processing', 'completed'])) {
@@ -348,15 +365,75 @@ function WC_Zahls_offline_gateway_init()
 
         public function get_zahls_gateway($order_id)
         {
+            $productPriceIncludesTax = ('yes' === get_option( 'woocommerce_prices_include_tax'));
+			
             $order = new WC_Order($order_id);
-            $amount = floatval($order->get_total());
+            $totalAmount = floatval($order->get_total());
             $currency = get_woocommerce_currency();
 
-            $productNames = array();
+            $basketAmount = 0;
+
             $cartItems = WC()->cart->get_cart();
+            $products = [];
             foreach ($cartItems as $item) {
-                $quantity = $item['quantity'] > 1 ? $item['quantity'] . 'x ' : '';
-                $productNames[] = $quantity . $item['data']->get_title();
+                $amount = $item['data']->get_price();
+                $basketAmount += $amount;
+                $products[] = [
+                    'name' => $item['data']->get_title(),
+                    'description' => $item['data']->get_short_description(),
+                    'quantity' => $item['quantity'],
+                    'amount' => $amount * 100,
+                    'sku' => $item['data']->get_sku(),
+                ];
+            }
+			
+            $shipping = WC()->cart->get_shipping_total();
+            $shippingTax = WC()->cart->get_shipping_tax();
+            if ($shipping || $shippingTax) {
+                $amount = $shipping + $shippingTax;
+                $basketAmount += $amount;
+                $products[] = [
+                    'name' => 'Shipping',
+                    'quantity' => 1,
+                    'amount' => $amount * 100,
+                ];
+            }
+
+            $discount = WC()->cart->get_discount_total();
+            $discountTax = WC()->cart->get_discount_tax();
+            if ($discount) {
+                $amount = $discount;
+                $amount += !$productPriceIncludesTax ? 0 : $discountTax;
+                $basketAmount += $amount;
+                $products[] = [
+                    'name' => 'Discount',
+                    'quantity' => 1,
+                    'amount' => $amount * -100,
+                ];
+            }
+
+            $fee = WC()->cart->get_fee_total();
+            $feeTax = WC()->cart->get_fee_tax();
+            if ($fee) {
+                $amount = $fee;
+                $amount += !$productPriceIncludesTax ? 0 : $feeTax;
+                $basketAmount += $amount;
+                $products[] = [
+                    'name' => 'Fee',
+                    'quantity' => 1,
+                    'amount' => $amount * 100,
+                ];
+            }
+			
+            $taxAmount = WC()->cart->get_cart_contents_tax();
+            if ($taxAmount && !$productPriceIncludesTax) {
+                $amount = $taxAmount;
+                $basketAmount += $amount;
+                $products[] = [
+                    'name' => 'Tax',
+                    'quantity' => 1,
+                    'amount' => $amount * 100,
+                ];
             }
 
             $first_name = $order->get_billing_first_name();
@@ -368,37 +445,27 @@ function WC_Zahls_offline_gateway_init()
             $country = $order->get_billing_country();
             $phone = $order->get_billing_phone();
             $email = $order->get_billing_email();
-
-            $this->register_autoloader();
-            // $instanceName is a part of the url where you access your zahls installation.
-            //https://{$instanceName}.zahls.ch
-            $settings = get_option("woocommerce_zahls_settings");
-            // $secret is the zahls secret for the communication between the applications
-            // if you think someone got your secret, just regenerate it in the zahls administration
-            $instanceName = $settings['instance'];
-            
-            $instanceName = str_replace(".zahls.ch", "", $instanceName);
-            $instanceName = str_replace(".ch", "", $instanceName);
-            
-            
-            $secret = $settings['sid'];
-            $zahls = new \Zahls\Zahls($instanceName, $secret);
-
+			
+            $zahls = $this->getZahlsInterface();
             $gateway = new \Zahls\Models\Request\Gateway();
-
-            $am = $amount;
-            $gateway->setAmount($am * 100);
+			
+            $gateway->setAmount($totalAmount * 100);
+			
+			
 
             if ($currency == "") {
                 $currency = "CHF";
             }
             $gateway->setCurrency($currency);
 
-            $gateway->setPurpose(implode(', ', $productNames));
             $gateway->setSuccessRedirectUrl($this->get_return_url($order));
             $gateway->setFailedRedirectUrl(wc_get_cart_url() . '?zahls_error=1');
             $gateway->setCancelRedirectUrl(wc_get_cart_url() . '?zahls_error=1');
-            $gateway->setPsp(array());
+
+            if ($totalAmount === floatval($basketAmount)) {
+                $gateway->setBasket($products);
+            }
+            $gateway->setPsp([]);
             $gateway->setSkipResultPage(true);
             // Maybe register for tokenization
             if ($_POST['zahls-allow-recurring'] == 1) {
@@ -432,34 +499,25 @@ function WC_Zahls_offline_gateway_init()
                 $response = $zahls->create($gateway);
                 $order->update_meta_data('zahls_gateway_id', $response->getId());
                 $order->save();
-
-                $language = substr(get_locale(), 0, 2);
+				
+				$language = substr(get_locale(), 0, 2);
                 !in_array($language, $this->lang) ? $language = $this->lang[0] : null;
-                $res = 'https://' . $instanceName . '.zahls.ch/' . $language . '/?payment=' . $response->getHash();
+                $res = str_replace('?', $language . '/?', $response->getLink());
                 return $res;
             } catch (\Zahls\ZahlsException $e) {
                 print $e->getMessage();
+				error_log($e->getMessage());
             }
         }
 
+
         public function get_zahls_status($transactionId)
         {
-            
             if (!$transactionId) {
                 return false;
             }
-            
-            //$order = new WC_Order($order_id);
-            //$gatewayId = $order->get_meta('zahls_gateway_id', true);
 
-            $this->register_autoloader();
-
-            $settings = get_option("woocommerce_zahls_settings");
-            $instanceName = $settings['instance'];
-            $instanceName = str_replace(".zahls.ch", "", $instanceName);
-            $instanceName = str_replace(".ch", "", $instanceName);
-            $secret = $settings['sid'];
-            $zahls = new \Zahls\Zahls($instanceName, $secret);
+            $zahls = $this->getZahlsInterface();
 
             $transaction = new \Zahls\Models\Request\Transaction();
             $transaction->setId($transactionId);
@@ -478,7 +536,6 @@ function WC_Zahls_offline_gateway_init()
         public function process_recurring_payment($amount, $renewal)
         {
             $subscriptions = wcs_get_subscriptions_for_order($renewal, array('order_type' => 'any'));
-            $this->register_autoloader();
 
             foreach ($subscriptions as $subscription) {
                 $related_orders = $subscription->get_related_orders('ids');
@@ -495,23 +552,25 @@ function WC_Zahls_offline_gateway_init()
 
                 // Both must be given to do a valid recurring transaction
                 if ($last_order_id > 0 && $transaction_id > 0) {
-                    $settings = get_option("woocommerce_zahls_settings");
-                    
-                    $settings['instance'] = str_replace(".zahls.ch", "", $settings['instance']);
-                    
-                    $zahls = new \Zahls\Zahls($settings['instance'], $settings['sid']);
+
+                    $zahls = $this->getZahlsInterface();
                     $transaction = new \Zahls\Models\Request\Transaction();
                     $transaction->setId($transaction_id);
                     $transaction->setAmount(floatval($amount) * 100);
-                    $response = $zahls->charge($transaction);
-                    // Save the transaction id to the current order for next payment
-                    $renewal->update_meta_data('zahls_auth_transaction_id', $transaction_id);
-                    // For the moment, blindly accept that it "worked"
-                    WC_Subscriptions_Manager::process_subscription_payments_on_order($renewal);
-                    $renewal->set_status('completed');
-                    $renewal->save_meta_data();
-                    $renewal->save();
-                    return;
+                    try {
+                        $zahls->charge($transaction);
+                        // Save the transaction id to the current order for next payment
+                        $renewal->update_meta_data('zahls_auth_transaction_id', $transaction_id);
+                        // For the moment, blindly accept that it "worked"
+                        WC_Subscriptions_Manager::process_subscription_payments_on_order($renewal);
+                        $renewal->update_status('completed', __('Recurring payment successfully completed', 'zahls-ch-payment-gateway'));
+                        $renewal->save_meta_data();
+                        $renewal->save();
+                        // Return successfully
+                        return;
+                    } catch (\Zahls\ZahlsException $e) {
+                        $renewal->update_status('failed', sprintf(__('Recurring payment failed: %s', 'zahls-ch-payment-gateway'), $e->getMessage()));
+                    }
                 }
 
                 // Recurring payment failed if we reach this point
@@ -577,6 +636,28 @@ function WC_Zahls_offline_gateway_init()
             return $description;
         }
         
+		private function getZahlsInterface()
+        {
+            $this->register_autoloader();
+            $platform = !empty($this->platform) ? $this->platform : \Zahls\Communicator::API_URL_BASE_DOMAIN;
+			
+            return new \Zahls\Zahls($this->instance, $this->apiKey, '', $platform);
+        }
+
+        private function getCustomTransactionStatus($status) {
+            return apply_filters('woo_zahls_custom_transaction_status_' . $status, $status);
+        }
+
+        private function register_autoloader()
+        {
+            spl_autoload_register(function ($class) {
+                $root = __DIR__ . '/zahls-php-master';
+                $classFile = $root . '/lib/' . str_replace('\\', '/', $class) . '.php';
+                if (file_exists($classFile)) {
+                    require_once $classFile;
+                }
+            });
+        }
         
     
     }

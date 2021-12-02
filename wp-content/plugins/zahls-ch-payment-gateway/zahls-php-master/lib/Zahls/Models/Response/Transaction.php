@@ -142,7 +142,7 @@ class Transaction extends \Zahls\Models\Request\Transaction
     /**
      * @param int $pspId
      */
-    public function setPspId($pspId): void
+    public function setPspId($pspId)
     {
         $this->pspId = $pspId;
     }

@@ -49,8 +49,8 @@ class Invoice extends \Zahls\Models\Base
     protected $subscriptionCancellationInterval = '';
     protected $fields = array();
     protected $concardisOrderId = '';
-    
-   /** @var string $expirationDate */
+
+    /** @var string $expirationDate */
     protected $expirationDate;
 
     /**

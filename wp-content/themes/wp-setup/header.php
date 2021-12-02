@@ -39,13 +39,37 @@ ga('create', 'G-7WL5C65K8C', 'auto');
   $alt = $img['alt'] ? $img['alt'] : $img['name'];
   $imgTitle = $img['title'] ? $img['title'] : $img['name'];
   $srcset = wp_get_attachment_image_srcset($img['ID']);
+
+  $galleryImages = $img = get_field('images', 'option');
+  $isHome = is_front_page();
 ?>
 
 <header class="header" id="header">
 
-  <div class="header__imageWrapper">
-    <img class="header__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
-  </div>
+  <?php if(!$isHome): ?>
+    <div class="header__imageWrapper">
+      <img class="header__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
+    </div>
+  <?php else: ?>
+    <div class="swiper-container header__imageWrapper">
+      <div class="swiper-wrapper">
+        <?php foreach($galleryImages as $img): ?>
+          <?php
+            $caption = $img['caption'];
+            $src = $img['sizes']['L'];
+            $srcset = wp_get_attachment_image_srcset($img['ID']);
+            $alt = $img['alt'] ? $img['alt'] : $img['name'];
+            $imgTitle = $img['title'] ? $img['title'] : $img['name'];
+            $srcset = wp_get_attachment_image_srcset($img['ID']);
+          ?>
+          <div class="swiper-slide">
+            <img class="header__image" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  <?php endif; ?>
+
   <div class="header__wrapper">
     <div class="header__logoWrapper">
       <a class="header__logoLink" href="/" target="_self">

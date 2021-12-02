@@ -373,6 +373,10 @@
     .text__titleLeftWrapper ~ .events__events {
       margin-top: 0;
     }
+
+    &__showAllButtonWrapper {
+      text-align: center;
+    }
   }
 }
 

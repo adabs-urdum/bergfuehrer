@@ -76,10 +76,24 @@ final class NF_Admin_Menus_Submissions extends NF_Abstracts_Submenu
             add_action( 'admin_body_class', array( $this, 'body_class' ) );
 
             add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+
+            add_action('current_screen',  [$this, 'remove_legacy_submissions_page']);
         }
 
     }
-
+    
+    /**
+     * Remove the old Submissions page link when legacy mode is not enabled
+     * 
+     * @param $screen object of current screen details 
+     */
+    public function remove_legacy_submissions_page( $screen ) {
+        if ( "nf_sub" === $screen->post_type && $screen->id === "edit-nf_sub") {
+            $form_id = !empty($_GET["form_id"]) ? "&form_id=" . $_GET["form_id"] : "";
+            wp_safe_redirect( admin_url( "admin.php?page=nf-submissions" . $form_id ), 302, "Ninja Forms");
+            exit;
+        }
+    }
     /**
      * Add an option in the bulk action select field
      */
@@ -653,7 +667,7 @@ final class NF_Admin_Menus_Submissions extends NF_Abstracts_Submenu
 	 */
 	public function enqueue_scripts( $page ) {
 		// let's check and make sure we're on the submissions page.
-		if( isset( $page ) && "ninja-forms_page_nf-submissions" === $page ) {
+		if( isset( $page ) && substr( $page, -strlen( "_page_nf-submissions" ) ) === "_page_nf-submissions") {
             
 			wp_enqueue_style( 'nf-admin-settings', Ninja_Forms::$url . 'assets/css/admin-settings.css', ['wp-components'] );
 			wp_register_script( 'ninja_forms_admin_submissions', Ninja_Forms::$url . 'assets/js/admin-submissions.js', array( 'jquery' ), false, true );

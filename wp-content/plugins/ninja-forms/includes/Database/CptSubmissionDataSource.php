@@ -127,7 +127,7 @@ class CptSubmissionDataSource implements ContractsSubmissionDataSource
         foreach($singleSubmission->getSubmissionFieldCollection() as $submissionField){
             $updatedFieldsCollection[$submissionField->getSlug()]=$submissionField->getValue();         
         }
-        // error_log(serialize($updatedFieldsCollection));
+
         $submission->update_field_values($updatedFieldsCollection)->save();
         
         $submission->save();

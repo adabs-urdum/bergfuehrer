@@ -158,5 +158,10 @@
     </div>
     <ul class="events__events">
     </ul>
+    <?php if($hasShowAllButton): ?>
+      <div class="events__showAllButtonWrapper">
+        <a class="button" href="<?= get_the_permalink(9) ?>">Alle Angebote</a>
+      </div>
+    <?php endif ?>
   </div>
 </section>

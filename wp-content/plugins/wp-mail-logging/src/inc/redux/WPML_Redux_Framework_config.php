@@ -68,6 +68,11 @@ if (!class_exists('WPML_Redux_Framework_config')) {
             //add_filter('redux/options/' . $this->args['opt_name'] . '/sections', array($this, 'dynamic_section'));
 
             $this->ReduxFramework = new \ReduxFramework( $this->sections, $this->args );
+
+            // Disable the Redux demo
+            if ( method_exists( "Redux", "disable_demo" ) ) {
+                \Redux::disable_demo();
+            }
         }
 
         // Remove the demo link and the notice of integrated demo from the redux-framework plugin

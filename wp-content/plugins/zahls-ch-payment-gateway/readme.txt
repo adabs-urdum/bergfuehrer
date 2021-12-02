@@ -3,8 +3,8 @@ Contributors: ivanlouis
 Donate link: https://www.zahls.ch
 Tags: twint, kreditkarten, postfinance, payment, e-commerce, zahls, gateway, payrexx, payrexx direct, wir, giropay, concardis, paymill, braintree, stripe, ogone, ingenico, viveum, reka, datatrans, six, saferpay, onepage, shop, payment link, invoices, virtual terminal, vpos
 Requires at least: 4.6
-Tested up to: 5.8
-Stable tag: 1.1.2
+Tested up to: 5.9
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -132,7 +132,19 @@ The zahls.ch support team will be happy to assist you with the installation.
 = 1.1.2 =
 * Minor changes, no backup necessary
 
+= 1.1.3 =
+* Minor changes, no backup necessary
+
+= 1.1.4 =
+* Minor changes, no backup necessary
+
 == Changelog ==
+
+= 1.1.4 =
+* Changed for Compatibility with Elementor E-Commerce Features
+
+= 1.1.3 =
+* Improved Error Handling Webhook
 
 = 1.1.2 =
 * Improved Error Handling Webhook

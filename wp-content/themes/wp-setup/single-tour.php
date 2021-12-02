@@ -273,7 +273,7 @@
           $wcProduct = get_field('woocommerce_product', $_GET['id']);
           $wcProductId = $wcProduct->ID;
         ?>
-        <a id="bookingButton" href="<?= wc_get_cart_url() ?>?add-to-cart=<?= $wcProductId ?>" data-tour="<?= $pageID ?>" data-url="<?= wc_get_cart_url() ?>" target="_self" class="button <?= !$wcProduct ? 'disabled' : '' ?>">Buchen</a>
+        <a id="bookingButton" href="<?= wc_get_cart_url() ?>?add-to-cart=<?= $wcProductId ?>&quantity=1" data-tour="<?= $pageID ?>" data-url="<?= wc_get_cart_url() ?>" target="_self" class="button <?= !$wcProduct ? 'disabled' : '' ?>">Buchen</a>
         <a href="<?= get_permalink(13) ?>" target="_self" class="button button--secondary">Kontakt</a>
       </div>
     </div>

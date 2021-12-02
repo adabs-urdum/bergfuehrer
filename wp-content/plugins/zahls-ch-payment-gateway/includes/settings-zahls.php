@@ -6,20 +6,21 @@ $settings = array(
     'label' => __('Activate zahls.ch', 'zahls-ch-payment-gateway'),
     'default' => 'no',
   ),
+	 
   'title' => array(
     'title' => __('Title', 'zahls-ch-payment-gateway'),
     'type' => 'text',
     'custom_attributes' => array('required' => 'required'),
-    'description' => __('This controls the title which the user sees during checkout.', 'woocommerce'),
+    'description' => __('This controls the title which the user sees during checkout.', 'zahls-ch-payment-gateway'),
     'default' => __('Credit Cards / TWINT', 'zahls-ch-payment-gateway'),
     'desc_tip' => true,
   ),
   'description' => array(
-    'title' => __('Description', 'woocommerce'),
+    'title' => __('Description', 'zahls-ch-payment-gateway'),
     'type' => 'textarea',
     'css'  => 'width:400px;',
-    'description' => __('This controls the description which the user sees during checkout.', 'woocommerce'),
-    'default' => __(get_option("woocommerce_zahls_description"), 'woocommerce'),
+    'description' => __('This controls the description which the user sees during checkout.', 'zahls-ch-payment-gateway'),
+    'default' => __(get_option("woocommerce_zahls_description"), 'zahls-ch-payment-gateway'),
     'desc_tip' => true,
   ),
   'instance' => array(
@@ -54,6 +55,7 @@ $settings = array(
     'default' => __(get_option("woocommerce_zahls_prefix"), 'zahls-ch-payment-gateway'),
     'desc_tip' => true,
   ),
+
   'logos' => array(
     'title' => __('Logos', 'zahls-ch-payment-gateway'),
     'type' => 'multiselect',
@@ -96,8 +98,12 @@ $settings = array(
       'eps' => 'EPS',      
       'antepay' => 'AntePay',
       'paysafecash' => 'Paysafe Cash',
-     'masterpass' => 'Masterpass',
+      'masterpass' => 'Masterpass',
       'bob-invoice' => 'Kauf auf Rechnung',
+      'samsung_pay' => 'Samsung Pay',
+      'klarna_paynow' => 'Klarna Pay now',
+      'klarna_paylater' => 'Klarna Pay Later',
+      'oney' => 'Oney',
     )
   )
 );

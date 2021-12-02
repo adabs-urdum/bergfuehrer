@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Really Simple SSL - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-09 09:39:04+0000\n"
+"PO-Revision-Date: 2021-11-23 08:26:45+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,90 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Really Simple SSL - Stable (latest release)\n"
+
+#: grid/templates/tips-tricks.php:55
+msgid "Install a Let's Encrypt SSL Certificate with Really Simple SSL"
+msgstr "Install a Let's Encrypt SSL Certificate with Really Simple SSL"
+
+#: grid/templates/tips-tricks.php:7
+msgid "Improve security: Add Cross-Site Protection Headers to prevent malicious attacks"
+msgstr "Improve security: Add Cross-Site Protection Headers to prevent malicious attacks"
+
+#: class-site-health.php:76
+msgid "Your website does not send all recommended security headers."
+msgstr "Your website does not send all recommended security headers."
+
+#: class-site-health.php:58 class-site-health.php:102
+msgid "Security"
+msgstr "Security"
+
+#: class-admin.php:3370
+msgid "Recommended security headers enabled."
+msgstr "Recommended security headers enabled."
+
+#: class-admin.php:3363
+msgid "The following recommended security headers are not enabled:"
+msgstr "The following recommended security headers are not enabled:"
+
+#: lets-encrypt/wizard/config/questions.php:63
+msgid "Disable OCSP Stapling"
+msgstr "Disable OCSP Stapling"
+
+#: lets-encrypt/wizard/config/questions.php:62
+msgid "OCSP Stapling"
+msgstr "OCSP Stapling"
+
+#: lets-encrypt/wizard/config/questions.php:61
+msgid "OCSP stapling should be enabled by default. You can disable if this is not supported by your hosting provider."
+msgstr "OCSP stapling should be enabled by default. You can disable if this is not supported by your hosting provider."
+
+#: lets-encrypt/functions.php:504
+msgid "For more information, please read this %sarticle%s"
+msgstr "For more information, please read this %sarticle%s"
+
+#: class-admin.php:4197
+msgid "Enable High Contrast mode"
+msgstr "Enable High Contrast mode"
+
+#: class-admin.php:4196
+msgid "If enabled, all the Really Simple SSL pages within the WordPress admin will be in high contrast"
+msgstr "If enabled, all the Really Simple SSL pages within the WordPress admin will be in high contrast"
+
+#: class-admin.php:3423
+msgid "Black Friday sale! Get 40% Off Really Simple SSL Pro"
+msgstr "Black Friday sale! Get 40% Off Really Simple SSL Pro"
+
+#: lets-encrypt/wizard/templates/content.php:18
+msgid "Reset Let's Encrypt"
+msgstr "Reset Let's Encrypt"
+
+#: lets-encrypt/wizard/templates/content.php:18
+msgid "This will clear all settings for Really Simple SSL Let\\'s Encrypt, and will clear the order in the ssl/keys directory."
+msgstr "This will clear all settings for Really Simple SSL Let's Encrypt, and will clear the order in the ssl/keys directory."
+
+#: lets-encrypt/wizard/config/steps.php:123
+msgid "Checking if Terms & Conditions are accepted..."
+msgstr "Checking if Terms & Conditions are accepted..."
+
+#: lets-encrypt/wizard/class-wizard.php:840
+msgid "Save and continue"
+msgstr "Save and continue"
+
+#: lets-encrypt/wizard/class-wizard.php:403
+msgid "During the SSL generation process you might discover you want to give some feedback about your experiences or need some help. If so, keep our form ready and try to be as complete and precise as possible so we can assist as fast as possible."
+msgstr "During the SSL generation process you might discover you want to give some feedback about your experiences or need some help. If so, keep our form ready and try to be as complete and precise as possible so we can assist as fast as possible."
+
+#: lets-encrypt/class-letsencrypt-handler.php:941
+msgid "The Terms & Conditions were not accepted. Please accept in the general settings."
+msgstr "The Terms & Conditions were not accepted. Please accept in the general settings."
+
+#: lets-encrypt/class-letsencrypt-handler.php:937
+msgid "Terms & Conditions are accepted."
+msgstr "Terms & Conditions are accepted."
+
+#: class-admin.php:3328
+msgid "HttpOnly Secure cookies have been set automatically!"
+msgstr "HttpOnly Secure cookies have been set automatically!"
 
 #: lets-encrypt/wizard/templates/dns-verification.php:21
 msgid "Value"
@@ -19,55 +103,55 @@ msgstr "Value"
 msgid "domain"
 msgstr "domain"
 
-#: class-admin.php:3230
+#: class-admin.php:3407
 msgid "As Really Simple SSL handles all the functionality this plugin provides, we recommend to disable this plugin to prevent unexpected behaviour."
 msgstr "As Really Simple SSL handles all the functionality this plugin provides, we recommend to disable this plugin to prevent unexpected behaviour."
 
-#: class-admin.php:3230
+#: class-admin.php:3407
 msgid "We have detected the %s plugin on your website."
 msgstr "We have detected the %s plugin on your website."
 
-#: class-admin.php:528
+#: class-admin.php:564
 msgid "This detection method is not 100% accurate. If you’re certain an SSL certificate is present, please check “Override SSL detection” to continue activating SSL."
 msgstr "This detection method is not 100% accurate. If you’re certain an SSL certificate is present, please tick “Override SSL detection” to continue activating SSL."
 
-#: class-admin.php:527
+#: class-admin.php:563
 msgid "Please %srefresh detection%s if a certificate has been installed recently."
 msgstr "Please %srefresh detection%s if a certificate has been installed recently."
 
-#: class-admin.php:526
+#: class-admin.php:562
 msgid "No SSL certificate has been detected."
 msgstr "No SSL certificate has been detected."
 
-#: lets-encrypt/wizard/notices.php:102
+#: lets-encrypt/wizard/notices.php:99
 msgid "Read more about this add on."
 msgstr "Read more about this add on."
 
-#: lets-encrypt/wizard/notices.php:99
+#: lets-encrypt/wizard/notices.php:96
 msgid "Your server provides shell functionality, which offers additional methods to install SSL. If installing SSL using the default methods is not possible, you can install the shell add on."
 msgstr "Your server provides shell functionality, which offers additional methods to install SSL. If installing SSL using the default methods is not possible, you can install the shell add on."
 
-#: lets-encrypt/class-letsencrypt-handler.php:456
+#: lets-encrypt/class-letsencrypt-handler.php:450
 msgid "If you entered your DNS records before, they need to be changed."
 msgstr "If you entered your DNS records before, they need to be changed."
 
-#: lets-encrypt/class-letsencrypt-handler.php:453
+#: lets-encrypt/class-letsencrypt-handler.php:447
 msgid "Order ID mismatch, regenerate order."
 msgstr "Order ID mismatch, regenerate order."
 
-#: class-admin.php:4499 class-multisite.php:236
+#: class-admin.php:4732 class-multisite.php:237
 msgid "Improve security - Upgrade to Pro"
 msgstr "Improve security - Upgrade to Pro"
 
-#: class-admin.php:3344
+#: class-admin.php:3539
 msgid "%sMore info%s"
 msgstr "%sMore info%s"
 
-#: class-admin.php:2923
+#: class-admin.php:3093
 msgid "Really Simple SSL pro is not up to date. Update Really Simple SSL pro to ensure compatibility."
 msgstr "Really Simple SSL pro is not up to date. Update Really Simple SSL pro to ensure compatibility."
 
-#: class-admin.php:811
+#: class-admin.php:847
 msgid "Override SSL detection"
 msgstr "Override SSL detection"
 
@@ -234,13 +318,9 @@ msgstr "If the challenge directory cannot be created, or is not reachable, you c
 msgid "Next step"
 msgstr "Next step"
 
-#: lets-encrypt/wizard/templates/content.php:13
+#: lets-encrypt/wizard/templates/content.php:22
 msgid "Notifications"
 msgstr "Notifications"
-
-#: lets-encrypt/wizard/templates/content.php:10
-msgid "Back to Dashboard"
-msgstr "Back to Dashboard"
 
 #: lets-encrypt/wizard/templates/activate.php:60
 msgid "No SSL certificate has been detected yet. In some cases this takes a few minutes."
@@ -267,57 +347,57 @@ msgstr "In some cases it takes a few minutes for the certificate to get detected
 msgid "Your site is secured with a valid SSL certificate!"
 msgstr "Your site is secured with a valid SSL certificate!"
 
-#: lets-encrypt/wizard/notices.php:158
+#: lets-encrypt/wizard/notices.php:155
 #: lets-encrypt/wizard/templates/directories.php:17
 #: lets-encrypt/wizard/templates/directories.php:42
 msgid "Switch to DNS verification"
 msgstr "Switch to DNS verification"
 
-#: lets-encrypt/wizard/notices.php:157
+#: lets-encrypt/wizard/notices.php:154
 msgid "Please note that auto-renewal with a DNS challenge might not be possible."
 msgstr "Please note that auto-renewal with a DNS challenge might not be possible."
 
-#: lets-encrypt/wizard/notices.php:156
+#: lets-encrypt/wizard/notices.php:153
 msgid "If you also want to secure subdomains like mail.domain.com, cpanel.domain.com, you have to use the %sDNS%s challenge."
 msgstr "If you also want to secure subdomains like mail.domain.com, cpanel.domain.com, you have to use the %sDNS%s challenge."
 
-#: lets-encrypt/wizard/notices.php:153
+#: lets-encrypt/wizard/notices.php:150
 msgid "Switch to directory verification"
 msgstr "Switch to directory verification"
 
-#: lets-encrypt/wizard/notices.php:152
+#: lets-encrypt/wizard/notices.php:149
 msgid "You can switch back to directory verification here."
 msgstr "You can switch back to directory verification here."
 
-#: lets-encrypt/wizard/notices.php:151
+#: lets-encrypt/wizard/notices.php:148
 msgid "You have switched to DNS verification."
 msgstr "You have switched to DNS verification."
 
-#: lets-encrypt/wizard/notices.php:119
+#: lets-encrypt/wizard/notices.php:116
 msgid "Your Key and Certificate directories are not properly protected."
 msgstr "Your Key and Certificate directories are not properly protected."
 
-#: lets-encrypt/wizard/notices.php:84
+#: lets-encrypt/wizard/notices.php:81
 msgid "Your certificate will be renewed and installed automatically."
 msgstr "Your certificate will be renewed and installed automatically."
 
-#: lets-encrypt/wizard/notices.php:77
+#: lets-encrypt/wizard/notices.php:74
 msgid "Automatic renewal of your certificate was not possible. The SSL certificate should be %srenewed%s manually."
 msgstr "Automatic renewal of your certificate was not possible. The SSL certificate should be %srenewed%s manually."
 
-#: lets-encrypt/wizard/notices.php:70
+#: lets-encrypt/wizard/notices.php:67
 msgid "The SSL certificate has been renewed, and requires manual %sinstallation%s in your hosting dashboard."
 msgstr "The SSL certificate has been renewed, and requires manual %sinstallation%s in your hosting dashboard."
 
-#: lets-encrypt/wizard/notices.php:63
+#: lets-encrypt/wizard/notices.php:60
 msgid "The automatic installation of your certificate has failed. Please check your credentials, and retry the %sinstallation%s."
 msgstr "The automatic installation of your certificate has failed. Please check your credentials, and retry the %sinstallation%s."
 
-#: lets-encrypt/wizard/notices.php:48
+#: lets-encrypt/wizard/notices.php:45
 msgid "Your certificate will expire on %s. You can renew it %shere%s."
 msgstr "Your certificate will expire on %s. You can renew it %shere%s."
 
-#: lets-encrypt/wizard/notices.php:44
+#: lets-encrypt/wizard/notices.php:41
 msgid "Your certificate is valid to: %s"
 msgstr "Your certificate is valid to: %s"
 
@@ -329,11 +409,11 @@ msgstr "The www version of your site does not point to this website. This is rec
 msgid "The non-www version of your site does not point to this website. This is recommended, as it will allow you to add it to the certificate as well."
 msgstr "The non-www version of your site does not point to this website. This is recommended, as it will allow you to add it to the certificate as well."
 
-#: lets-encrypt/wizard/config/steps.php:142
+#: lets-encrypt/wizard/config/steps.php:147
 msgid "Searching for link to SSL installation page on your server..."
 msgstr "Searching for link to SSL installation page on your server..."
 
-#: lets-encrypt/wizard/config/steps.php:139
+#: lets-encrypt/wizard/config/steps.php:144
 #: lets-encrypt/wizard/templates/menu.php:2
 msgid "Installation"
 msgstr "Installation"
@@ -351,7 +431,7 @@ msgid "Retrieving DNS verification token..."
 msgstr "Retrieving DNS verification token..."
 
 #: lets-encrypt/wizard/config/steps.php:104
-#: lets-encrypt/wizard/config/steps.php:123
+#: lets-encrypt/wizard/config/steps.php:129
 msgid "Creating account..."
 msgstr "Creating account..."
 
@@ -439,107 +519,107 @@ msgstr "Detected status of your setup."
 msgid "System Status"
 msgstr "System Status"
 
-#: lets-encrypt/wizard/config/questions.php:289
+#: lets-encrypt/wizard/config/questions.php:299
 msgid "Store for renewal purposes. If not stored, renewal may need to be done manually."
 msgstr "Store for renewal purposes. If not stored, renewal may need to be done manually."
 
-#: lets-encrypt/wizard/config/questions.php:288
+#: lets-encrypt/wizard/config/questions.php:298
 msgid "Credentials storage"
 msgstr "Credentials storage"
 
-#: lets-encrypt/wizard/config/questions.php:271
+#: lets-encrypt/wizard/config/questions.php:281
 msgid "Plesk password"
 msgstr "Plesk password"
 
-#: lets-encrypt/wizard/config/questions.php:254
+#: lets-encrypt/wizard/config/questions.php:264
 msgid "You can find your Plesk username and password in %s"
 msgstr "You can find your Plesk username and password in %s"
 
-#: lets-encrypt/wizard/config/questions.php:253
+#: lets-encrypt/wizard/config/questions.php:263
 msgid "Plesk username"
 msgstr "Plesk username"
 
-#: lets-encrypt/wizard/config/questions.php:237
+#: lets-encrypt/wizard/config/questions.php:247
 msgid "The URL you use to access your Plesk dashboard. Ends on :8443."
 msgstr "The URL you use to access your Plesk dashboard. Ends on :8443."
 
-#: lets-encrypt/wizard/config/questions.php:236
+#: lets-encrypt/wizard/config/questions.php:246
 msgid "Plesk host"
 msgstr "Plesk host"
 
-#: lets-encrypt/wizard/config/questions.php:224
+#: lets-encrypt/wizard/config/questions.php:234
 msgid "You can find your api key %shere%s (make sure you're logged in with your main account)."
 msgstr "You can find your api key %shere%s (make sure you're logged in with your main account)."
 
-#: lets-encrypt/wizard/config/questions.php:221
+#: lets-encrypt/wizard/config/questions.php:231
 msgid "CloudWays api key"
 msgstr "CloudWays api key"
 
-#: lets-encrypt/wizard/config/questions.php:208
+#: lets-encrypt/wizard/config/questions.php:218
 msgid "CloudWays user email"
 msgstr "CloudWays user email"
 
-#: lets-encrypt/wizard/config/questions.php:190
+#: lets-encrypt/wizard/config/questions.php:200
 msgid "DirectAdmin password"
 msgstr "DirectAdmin password"
 
-#: lets-encrypt/wizard/config/questions.php:173
+#: lets-encrypt/wizard/config/questions.php:183
 msgid "DirectAdmin username"
 msgstr "DirectAdmin username"
 
-#: lets-encrypt/wizard/config/questions.php:156
+#: lets-encrypt/wizard/config/questions.php:166
 msgid "The URL you use to access your DirectAdmin dashboard. Ends on :2222."
 msgstr "The URL you use to access your DirectAdmin dashboard. Ends on :2222."
 
-#: lets-encrypt/wizard/config/questions.php:155
+#: lets-encrypt/wizard/config/questions.php:165
 msgid "DirectAdmin host"
 msgstr "DirectAdmin host"
 
-#: lets-encrypt/wizard/config/questions.php:139
+#: lets-encrypt/wizard/config/questions.php:149
 msgid "CPanel password"
 msgstr "CPanel password"
 
-#: lets-encrypt/wizard/config/questions.php:122
+#: lets-encrypt/wizard/config/questions.php:132
 msgid "CPanel username"
 msgstr "CPanel username"
 
-#: lets-encrypt/wizard/config/questions.php:105
+#: lets-encrypt/wizard/config/questions.php:115
 msgid "The URL you use to access your cPanel dashboard. Ends on :2083."
 msgstr "The URL you use to access your cPanel dashboard. Ends on :2083."
 
-#: lets-encrypt/wizard/config/questions.php:104
+#: lets-encrypt/wizard/config/questions.php:114
 msgid "CPanel host"
 msgstr "CPanel host"
 
-#: lets-encrypt/wizard/config/questions.php:93
+#: lets-encrypt/wizard/config/questions.php:103
 msgid "Hosting provider"
 msgstr "Hosting provider"
 
-#: lets-encrypt/wizard/config/questions.php:91
+#: lets-encrypt/wizard/config/questions.php:101
 msgid "If your hosting provider is not listed, and there's an SSL activation/installation link, please let us %sknow%s."
 msgstr "If your hosting provider is not listed, and there's an SSL activation/installation link, please let us %sknow%s."
 
-#: lets-encrypt/wizard/config/questions.php:90
+#: lets-encrypt/wizard/config/questions.php:100
 msgid "By selecting your hosting provider we can tell you if your hosting provider already supports free SSL, and/or where you can activate it."
 msgstr "By selecting your hosting provider we can tell you if your hosting provider already supports free SSL, and/or where you can activate it."
 
-#: lets-encrypt/wizard/config/questions.php:88
+#: lets-encrypt/wizard/config/questions.php:98
 msgid "By selecting your hosting provider we can tell you if your hosting provider already supports free SSL, and how you can activate it."
 msgstr "By selecting your hosting provider we can tell you if your hosting provider already supports free SSL, and how you can activate it."
 
-#: lets-encrypt/wizard/config/questions.php:76
+#: lets-encrypt/wizard/config/questions.php:86
 msgid "Include alias domain too?"
 msgstr "Include alias domain too?"
 
-#: lets-encrypt/wizard/config/questions.php:74
+#: lets-encrypt/wizard/config/questions.php:84
 msgid "You should have the www domain pointed to the same website as the non-www domain."
 msgstr "You should have the www domain pointed to the same website as the non-www domain."
 
-#: lets-encrypt/wizard/config/questions.php:74
+#: lets-encrypt/wizard/config/questions.php:84
 msgid "This will include both the www. and non-www. version of your domain."
 msgstr "This will include both the www. and non-www. version of your domain."
 
-#: lets-encrypt/wizard/config/questions.php:62
+#: lets-encrypt/wizard/config/questions.php:72
 #: lets-encrypt/wizard/config/steps.php:51
 msgid "Domain"
 msgstr "Domain"
@@ -553,7 +633,7 @@ msgid "Terms & Conditions"
 msgstr "Terms & Conditions"
 
 #: lets-encrypt/wizard/config/questions.php:42
-#: lets-encrypt/wizard/config/questions.php:63
+#: lets-encrypt/wizard/config/questions.php:73
 msgid "This field is prefilled based on your configuration"
 msgstr "This field is prefilled based on your configuration"
 
@@ -565,32 +645,29 @@ msgstr "Email address"
 msgid "This email address will used to create a Let's Encrypt account. This is also where you will receive renewal notifications."
 msgstr "This email address will used to create a Let's Encrypt account. This is also where you will receive renewal notifications."
 
-#: lets-encrypt/wizard/config/class-config.php:521
+#: lets-encrypt/wizard/config/class-config.php:530
 msgid "No"
 msgstr "No"
 
-#: lets-encrypt/wizard/config/class-config.php:520
+#: lets-encrypt/wizard/config/class-config.php:529
 msgid "Yes"
 msgstr "Yes"
 
-#: lets-encrypt/wizard/class-wizard.php:968
-#: lets-encrypt/wizard/config/class-config.php:527
+#: lets-encrypt/wizard/class-wizard.php:966
+#: lets-encrypt/wizard/config/class-config.php:536
 msgid "I don't know, or not listed, proceed with installation"
 msgstr "I don't know, or not listed, proceed with installation"
 
-#: lets-encrypt/wizard/class-wizard.php:899
+#: lets-encrypt/wizard/class-wizard.php:897
 msgid "Go to dashboard"
 msgstr "Go to dashboard"
 
-#: lets-encrypt/wizard/class-wizard.php:842
-msgid "Next"
-msgstr "Next"
-
-#: lets-encrypt/wizard/class-wizard.php:833
+#: lets-encrypt/wizard/class-wizard.php:831
 msgid "Previous"
 msgstr "Previous"
 
-#: lets-encrypt/wizard/class-wizard.php:826
+#: grid/templates/grid-container.php:6
+#: lets-encrypt/wizard/templates/content.php:8
 msgid "Changes saved successfully"
 msgstr "Changes saved successfully"
 
@@ -601,10 +678,6 @@ msgstr "If this user stops editing, the lock will expire after %s minutes."
 #: lets-encrypt/wizard/class-wizard.php:648
 msgid "The wizard is currently being edited by %s"
 msgstr "The wizard is currently being edited by %s"
-
-#: lets-encrypt/wizard/class-wizard.php:403
-msgid "We're currently in Beta. This means we need your help! During this process you might discover you want to give some feedback about your experiences or need some help. If so, keep or form ready and try to be so complete and precise as possible so we can assist as fast as possible."
-msgstr "We're currently in Beta. This means we need your help! During this process you might discover you want to give some feedback about your experiences or need some help. If so, keep or form ready and try to be so complete and precise as possible so we can assist as fast as possible."
 
 #: lets-encrypt/wizard/class-wizard.php:402
 msgid "Before you begin!"
@@ -619,7 +692,7 @@ msgid "Checking for subdomain setup..."
 msgstr "Checking for subdomain setup..."
 
 #: lets-encrypt/wizard/class-wizard.php:63
-#: lets-encrypt/wizard/config/steps.php:129
+#: lets-encrypt/wizard/config/steps.php:135
 msgid "Generating SSL certificate..."
 msgstr "Generating SSL certificate..."
 
@@ -730,10 +803,6 @@ msgstr "Successfully installed Let's Encrypt"
 msgid "Failed retrieving access token"
 msgstr "Failed retrieving access token"
 
-#: lets-encrypt/functions.php:504
-msgid "For more information on this subject, please read this %sarticle%s"
-msgstr "For more information on this subject, please read this %sarticle%s"
-
 #: lets-encrypt/functions.php:405
 msgid "You can follow these %sinstructions%s."
 msgstr "You can follow these %sinstructions%s."
@@ -807,7 +876,7 @@ msgstr "Once every day"
 msgid "Once every week"
 msgstr "Once every week"
 
-#: lets-encrypt/class-letsencrypt-handler.php:1644
+#: lets-encrypt/class-letsencrypt-handler.php:1652
 #: lets-encrypt/integrations/cloudways/functions.php:22
 #: lets-encrypt/integrations/cpanel/functions.php:16
 #: lets-encrypt/integrations/cpanel/functions.php:33
@@ -816,326 +885,326 @@ msgstr "Once every week"
 msgid "The system is not ready for the installation yet. Please run the wizard again."
 msgstr "The system is not ready for the installation yet. Please run the wizard again."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1639
+#: lets-encrypt/class-letsencrypt-handler.php:1647
 msgid "Installation failed."
 msgstr "Installation failed."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1633
+#: lets-encrypt/class-letsencrypt-handler.php:1641
 msgid "Not recognized server."
 msgstr "Server not recognised."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1607
+#: lets-encrypt/class-letsencrypt-handler.php:1615
 msgid "The certificate installation was rate limited. Please try again later."
 msgstr "The certificate installation was rate limited. Please try again later."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1527
+#: lets-encrypt/class-letsencrypt-handler.php:1535
 msgid "Error code %s"
 msgstr "Error code %s"
 
-#: lets-encrypt/class-letsencrypt-handler.php:1510
+#: lets-encrypt/class-letsencrypt-handler.php:1518
 msgid "Please create a folder 'rsssl' in the uploads directory, with 644 permissions."
 msgstr "Please create a folder 'rsssl' in the uploads directory, with 644 permissions."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1509
+#: lets-encrypt/class-letsencrypt-handler.php:1517
 msgid "Could not create test folder and file."
 msgstr "Could not create test folder and file."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1480
+#: lets-encrypt/class-letsencrypt-handler.php:1488
 msgid "If this is not the case, don't add this alias to your certificate."
 msgstr "If this is not the case, don't add this alias to your certificate."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1480
+#: lets-encrypt/class-letsencrypt-handler.php:1488
 msgid "Could not verify alias domain."
 msgstr "Could not verify alias domain."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1478
+#: lets-encrypt/class-letsencrypt-handler.php:1486
 msgid "Please check if the www version of your site also points to this website."
 msgstr "Please check if the www version of your site also points to this website."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1476
+#: lets-encrypt/class-letsencrypt-handler.php:1484
 msgid "Please check if the non www version of your site also points to this website."
 msgstr "Please check if the non www version of your site also directs to this website."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1457
+#: lets-encrypt/class-letsencrypt-handler.php:1465
 msgid "Alias domain check is not relevant for a subdomain"
 msgstr "Alias domain check is not relevant for a subdomain"
 
-#: lets-encrypt/class-letsencrypt-handler.php:1427
+#: lets-encrypt/class-letsencrypt-handler.php:1435
 msgid "No subdomain setup detected."
 msgstr "No subdomain setup detected."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1422
+#: lets-encrypt/class-letsencrypt-handler.php:1430
 msgid "This is a multisite configuration with subdomains, which requires a wildcard certificate. Wildcard certificates are part of the %spremium%s plan."
 msgstr "This is a multisite configuration with subdomains, which requires a wildcard certificate. Wildcard certificates are part of the %spremium%s plan."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1224
-#: lets-encrypt/class-letsencrypt-handler.php:1487
-#: lets-encrypt/class-letsencrypt-handler.php:1538
+#: lets-encrypt/class-letsencrypt-handler.php:1232
+#: lets-encrypt/class-letsencrypt-handler.php:1495
+#: lets-encrypt/class-letsencrypt-handler.php:1546
 msgid "Successfully verified alias domain."
 msgstr "Successfully verified alias domain."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1211
-#: lets-encrypt/class-letsencrypt-handler.php:1215
+#: lets-encrypt/class-letsencrypt-handler.php:1219
+#: lets-encrypt/class-letsencrypt-handler.php:1223
 msgid "Error code %s."
 msgstr "Error code %s."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1197
+#: lets-encrypt/class-letsencrypt-handler.php:1205
 msgid "Challenge directory not writable."
 msgstr "Challenge directory not writable."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1191
+#: lets-encrypt/class-letsencrypt-handler.php:1199
 msgid "Could not reach challenge directory over %s."
 msgstr "Could not reach challenge directory over %s."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1187
-#: lets-encrypt/class-letsencrypt-handler.php:1464
+#: lets-encrypt/class-letsencrypt-handler.php:1195
+#: lets-encrypt/class-letsencrypt-handler.php:1472
 msgid "no response"
 msgstr "no response"
 
-#: lets-encrypt/class-letsencrypt-handler.php:1128
+#: lets-encrypt/class-letsencrypt-handler.php:1136
 msgid "The certs directory was successfully created."
 msgstr "The certs directory was successfully created."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1124
+#: lets-encrypt/class-letsencrypt-handler.php:1132
 msgid "The certs directory is not created yet."
 msgstr "The certs directory is not created yet."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1109
+#: lets-encrypt/class-letsencrypt-handler.php:1117
 msgid "The key directory was successfully created."
 msgstr "The key directory was successfully created."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1101
+#: lets-encrypt/class-letsencrypt-handler.php:1109
 msgid "Trying to create directory in root of website."
 msgstr "Trying to create directory in root of website."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1097
+#: lets-encrypt/class-letsencrypt-handler.php:1105
 msgid "The key directory is not created yet."
 msgstr "The key directory is not created yet."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1084
+#: lets-encrypt/class-letsencrypt-handler.php:1092
 msgid "The challenge directory was successfully created."
 msgstr "The challenge directory was successfully created."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1080
+#: lets-encrypt/class-letsencrypt-handler.php:1088
 msgid "The challenge directory is not created yet."
 msgstr "The challenge directory is not created yet."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1065
+#: lets-encrypt/class-letsencrypt-handler.php:1073
 msgid "The required directories have the necessary writing permissions."
 msgstr "The required directories have the necessary writing permissions."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1058
+#: lets-encrypt/class-letsencrypt-handler.php:1066
 msgid "Set permissions to 644 to enable SSL generation."
 msgstr "Set permissions to 644 to enable SSL generation."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1058
+#: lets-encrypt/class-letsencrypt-handler.php:1066
 msgid "The following directories do not have the necessary writing permissions."
 msgstr "The following directories do not have the necessary writing permissions."
 
-#: lets-encrypt/class-letsencrypt-handler.php:1042
+#: lets-encrypt/class-letsencrypt-handler.php:1050
 msgid "Please complete the following step(s) first: %s"
 msgstr "Please complete the following step(s) first: %s"
 
-#: lets-encrypt/class-letsencrypt-handler.php:789
+#: lets-encrypt/class-letsencrypt-handler.php:785
 msgid "Order successfully retrieved."
 msgstr "Order successfully retrieved."
 
-#: lets-encrypt/class-letsencrypt-handler.php:772
+#: lets-encrypt/class-letsencrypt-handler.php:768
 msgid "Order successfully created."
 msgstr "Order successfully created."
 
-#: lets-encrypt/class-letsencrypt-handler.php:728
+#: lets-encrypt/class-letsencrypt-handler.php:724
 msgid "Bundle not available yet..."
 msgstr "Bundle not available yet..."
 
-#: lets-encrypt/class-letsencrypt-handler.php:720
+#: lets-encrypt/class-letsencrypt-handler.php:716
 msgid "Files not created yet..."
 msgstr "Files not created yet..."
 
-#: lets-encrypt/class-letsencrypt-handler.php:714
+#: lets-encrypt/class-letsencrypt-handler.php:710
 msgid "Successfully generated certificate."
 msgstr "Successfully generated certificate."
 
-#: lets-encrypt/class-letsencrypt-handler.php:676
+#: lets-encrypt/class-letsencrypt-handler.php:672
 msgid "OCSP not supported, the certificate will be generated without OCSP."
 msgstr "OCSP not supported, the certificate will be generated without OCSP."
 
-#: lets-encrypt/class-letsencrypt-handler.php:668
+#: lets-encrypt/class-letsencrypt-handler.php:664
 msgid "As your order will be regenerated, you'll need to update your DNS text records."
 msgstr "As your order will be regenerated, you'll need to update your DNS text records."
 
-#: lets-encrypt/class-letsencrypt-handler.php:449
-#: lets-encrypt/class-letsencrypt-handler.php:665
+#: lets-encrypt/class-letsencrypt-handler.php:443
+#: lets-encrypt/class-letsencrypt-handler.php:661
 msgid "The order is invalid, possibly due to too many failed authorization attempts. Please start at the previous step."
 msgstr "The order is invalid, possibly due to too many failed authorisation attempts. Please start at the previous step."
 
-#: lets-encrypt/class-letsencrypt-handler.php:648
+#: lets-encrypt/class-letsencrypt-handler.php:644
 msgid "Authorization not completed yet."
 msgstr "Authorisation not completed yet."
 
-#: lets-encrypt/class-letsencrypt-handler.php:623
+#: lets-encrypt/class-letsencrypt-handler.php:619
 msgid "Certificate already generated. It was renewed if required."
 msgstr "Certificate already generated. It was renewed if required."
 
-#: lets-encrypt/class-letsencrypt-handler.php:592
+#: lets-encrypt/class-letsencrypt-handler.php:588
 msgid "DNS records were not verified yet. Please complete the previous step."
 msgstr "DNS records were not verified yet. Please complete the previous step."
 
-#: lets-encrypt/class-letsencrypt-handler.php:578
+#: lets-encrypt/class-letsencrypt-handler.php:574
 msgid "Please double check your DNS txt record."
 msgstr "Please double check your DNS txt record."
 
-#: lets-encrypt/class-letsencrypt-handler.php:576
+#: lets-encrypt/class-letsencrypt-handler.php:572
 msgid "The certificate generation was rate limited for 10 minutes because the authorization failed."
 msgstr "The certificate generation was rate limited for 10 minutes because the authorisation failed."
 
-#: lets-encrypt/class-letsencrypt-handler.php:537
+#: lets-encrypt/class-letsencrypt-handler.php:531
 msgid "Could not verify TXT record for domain %s"
 msgstr "Could not verify TXT record for domain %s"
 
-#: lets-encrypt/class-letsencrypt-handler.php:528
+#: lets-encrypt/class-letsencrypt-handler.php:522
 msgid "The DNS response for %s was %s, while it should be %s."
 msgstr "The DNS response for %s was %s, while it should be %s."
 
-#: lets-encrypt/class-letsencrypt-handler.php:521
+#: lets-encrypt/class-letsencrypt-handler.php:515
 msgid "Successfully verified DNS records"
 msgstr "Successfully verified DNS records"
 
-#: lets-encrypt/class-letsencrypt-handler.php:507
+#: lets-encrypt/class-letsencrypt-handler.php:501
 #: lets-encrypt/integrations/cpanel/functions.php:45
 msgid "Token not generated. Please complete the previous step."
 msgstr "Token not generated. Please complete the previous step."
 
-#: lets-encrypt/class-letsencrypt-handler.php:480
+#: lets-encrypt/class-letsencrypt-handler.php:474
 msgid "Configured for HTTP challenge"
 msgstr "Configured for HTTP challenge"
 
-#: lets-encrypt/class-letsencrypt-handler.php:439
+#: lets-encrypt/class-letsencrypt-handler.php:433
 msgid "Token not received yet."
 msgstr "Token not received yet."
 
-#: lets-encrypt/class-letsencrypt-handler.php:424
-#: lets-encrypt/class-letsencrypt-handler.php:432
+#: lets-encrypt/class-letsencrypt-handler.php:418
+#: lets-encrypt/class-letsencrypt-handler.php:426
 msgid "Token successfully retrieved."
 msgstr "Token successfully retrieved."
 
-#: lets-encrypt/class-letsencrypt-handler.php:387
+#: lets-encrypt/class-letsencrypt-handler.php:381
 msgid "The email address was not set. Please set the email address"
 msgstr "The email address was not set. Please set the email address"
 
-#: lets-encrypt/class-letsencrypt-handler.php:378
+#: lets-encrypt/class-letsencrypt-handler.php:372
 msgid "Please change your email address %shere%s and try again."
 msgstr "Please change your email address %shere%s and try again."
 
-#: lets-encrypt/class-letsencrypt-handler.php:377
+#: lets-encrypt/class-letsencrypt-handler.php:371
 msgid "The used domain for your email address is not allowed."
 msgstr "The used domain for your email address is not allowed."
 
-#: lets-encrypt/class-letsencrypt-handler.php:369
+#: lets-encrypt/class-letsencrypt-handler.php:363
 msgid "Successfully retrieved account"
 msgstr "Successfully retrieved account"
 
-#: lets-encrypt/class-letsencrypt-handler.php:349
+#: lets-encrypt/class-letsencrypt-handler.php:343
 msgid "The PHP function CURL has successfully been detected."
 msgstr "The PHP function CURL has successfully been detected."
 
-#: lets-encrypt/class-letsencrypt-handler.php:345
+#: lets-encrypt/class-letsencrypt-handler.php:339
 msgid "The PHP function CURL is not available on your server, which is required. Please contact your hosting provider."
 msgstr "The PHP function CURL is not available on your server, which is required. Please contact your hosting provider."
 
-#: lets-encrypt/class-letsencrypt-handler.php:329
+#: lets-encrypt/class-letsencrypt-handler.php:323
 msgid "DirectAdmin recognized. Possibly the certificate can be installed automatically."
 msgstr "DirectAdmin recognised. Possibly the certificate can be installed automatically."
 
-#: lets-encrypt/class-letsencrypt-handler.php:326
+#: lets-encrypt/class-letsencrypt-handler.php:320
 msgid "Plesk recognized. Possibly the certificate can be installed automatically."
 msgstr "Plesk recognised. Possibly the certificate can be installed automatically."
 
-#: lets-encrypt/class-letsencrypt-handler.php:323
+#: lets-encrypt/class-letsencrypt-handler.php:317
 msgid "CPanel recognized. Possibly the certificate can be installed automatically."
 msgstr "CPanel recognised. Possibly the certificate can be installed automatically."
 
-#: lets-encrypt/class-letsencrypt-handler.php:319
+#: lets-encrypt/class-letsencrypt-handler.php:313
 msgid "The Hosting Panel software was not recognized. Depending on your hosting provider, the generated certificate may need to be installed manually."
 msgstr "The Hosting Panel software was not recognised. Depending on your hosting provider, the generated certificate may need to be installed manually."
 
-#: lets-encrypt/class-letsencrypt-handler.php:288
+#: lets-encrypt/class-letsencrypt-handler.php:282
 msgid "SSL certificate should be generated and installed."
 msgstr "SSL certificate should be generated and installed."
 
-#: lets-encrypt/class-letsencrypt-handler.php:282
+#: lets-encrypt/class-letsencrypt-handler.php:276
 msgid "You already have a valid SSL certificate."
 msgstr "You already have a valid SSL certificate."
 
-#: lets-encrypt/class-letsencrypt-handler.php:278
+#: lets-encrypt/class-letsencrypt-handler.php:272
 msgid "Continue to renew."
 msgstr "Continue to renew."
 
-#: lets-encrypt/class-letsencrypt-handler.php:278
+#: lets-encrypt/class-letsencrypt-handler.php:272
 msgid "Your certificate will expire on %s."
 msgstr "Your certificate will expire on %s."
 
-#: lets-encrypt/class-letsencrypt-handler.php:272
+#: lets-encrypt/class-letsencrypt-handler.php:266
 msgid "(unknown)"
 msgstr "(unknown)"
 
-#: lets-encrypt/class-letsencrypt-handler.php:208
+#: lets-encrypt/class-letsencrypt-handler.php:202
 msgid "Your domain meets the requirements for Let's Encrypt."
 msgstr "Your domain meets the requirements for Let's Encrypt."
 
-#: lets-encrypt/class-letsencrypt-handler.php:194
+#: lets-encrypt/class-letsencrypt-handler.php:188
 msgid "It is not possible to install Let's Encrypt on a localhost environment."
 msgstr "It is not possible to install Let's Encrypt on a localhost environment."
 
-#: lets-encrypt/class-letsencrypt-handler.php:204
+#: lets-encrypt/class-letsencrypt-handler.php:198
 msgid "It is not possible to install Let's Encrypt on a subfolder configuration."
 msgstr "It is not possible to install Let's Encrypt on a subfolder configuration."
 
-#: lets-encrypt/class-letsencrypt-handler.php:199
+#: lets-encrypt/class-letsencrypt-handler.php:193
 msgid "It is not possible to install Let's Encrypt on a subsite. Please go to the main site of your website."
 msgstr "It is not possible to install Let's Encrypt on a subsite. Please go to the main site of your website."
 
-#: class-admin.php:3218
+#: class-admin.php:3395
 msgid "You have the Really Simple SSL Let's Encrypt beta add-on activated. This functionality has now been integrated in core, so you can deactivate the add-on."
 msgstr "You have the Really Simple SSL Let's Encrypt beta add-on activated. This functionality has now been integrated in core, so you can deactivate the add-on."
 
-#: class-admin.php:3003
+#: class-admin.php:3173
 msgid "Re-check"
 msgstr "Re-check"
 
-#: class-admin.php:3001
+#: class-admin.php:3171
 msgid "Depending on your hosting provider, %smanual installation%s may be required."
 msgstr "Depending on your hosting provider, %smanual installation%s may be required."
 
-#: class-admin.php:3000
+#: class-admin.php:3170
 msgid "If your hosting provider auto-renews your certificate, no action is required. Alternatively, you have the option to generate an SSL certificate with Really Simple SSL."
 msgstr "If your hosting provider auto-renews your certificate, no action is required. Alternatively, you have the option to generate an SSL certificate with Really Simple SSL."
 
-#: class-admin.php:3000
+#: class-admin.php:3170
 msgid "SSL certificate will expire on %s."
 msgstr "SSL certificate will expire on %s."
 
-#: class-admin.php:2999
+#: class-admin.php:3169
 msgid "Your SSL certificate will expire soon."
 msgstr "Your SSL certificate will expire soon."
 
-#: class-admin.php:2986
+#: class-admin.php:3156
 msgid "No SSL detected. Use the retry button to check again."
 msgstr "No SSL detected. Use the retry button to check again."
 
-#: class-admin.php:2863
+#: class-admin.php:3033
 msgid "(Unknown)"
 msgstr "(Unknown)"
 
-#: class-admin.php:808 class-admin.php:2987 class-admin.php:3002
+#: class-admin.php:844 class-admin.php:3157 class-admin.php:3172
 msgid "Install SSL certificate"
 msgstr "Install SSL certificate"
 
-#: class-admin.php:2988 lets-encrypt/wizard/class-wizard.php:906
+#: class-admin.php:3158 lets-encrypt/wizard/class-wizard.php:904
 msgid "Retry"
 msgstr "Retry"
 
-#: class-admin.php:524 lets-encrypt/wizard/templates/activate.php:58
+#: class-admin.php:560 lets-encrypt/wizard/templates/activate.php:58
 msgid "An SSL certificate has been detected"
 msgstr "An SSL certificate has been detected"
 
@@ -1147,35 +1216,31 @@ msgstr "Adding a Permission Policy"
 msgid "Adding a Content Security Policy"
 msgstr "Adding a Content Security Policy"
 
-#: class-admin.php:3180
+#: class-admin.php:3348
 msgid "Or set your wp-config.php to writable and reload this page."
 msgstr "Or set your wp-config.php to writable and reload this page."
 
-#: class-admin.php:3172
+#: class-admin.php:3340
 msgid "Add the following lines of code to your wp-config.php."
 msgstr "Add the following lines of code to your wp-config.php."
 
-#: class-admin.php:3172
+#: class-admin.php:3340
 msgid "To set the httponly secure cookie settings, your wp-config.php has to be edited, but the file is not writable."
 msgstr "To set the HttpOnly secure cookie settings, your wp-config.php has to be edited, but the file is not writable."
 
-#: class-admin.php:3165
+#: class-admin.php:3333
 msgid "HttpOnly Secure cookies not set."
 msgstr "HttpOnly secure cookies not set."
 
-#: class-admin.php:3158
-msgid "New feature! HttpOnly Secure cookies have been set automatically!"
-msgstr "New feature! HttpOnly secure cookies have been set automatically!"
-
-#: class-admin.php:3205
+#: class-admin.php:3382
 msgid "Due to a recent update by WP Engine, we have changed your settings automatically to adapt."
 msgstr "Due to a recent update by WP Engine, we have changed your settings automatically to adapt."
 
-#: class-admin.php:2892
+#: class-admin.php:3062
 msgid "The Really Simple SSL plugin folder in the /wp-content/plugins/ directory has been renamed to %s. This might cause issues when deactivating, or with premium add-ons. To fix this you can rename the Really Simple SSL folder back to the default %s."
 msgstr "The Really Simple SSL plugin folder in the /wp-content/plugins/ directory has been renamed to %s. This might cause issues when deactivating, or with premium add-ons. To fix this you can rename the Really Simple SSL folder back to the default %s."
 
-#: class-site-health.php:76
+#: class-site-health.php:75
 msgid "Not all recommended security headers are installed"
 msgstr "Not all recommended security headers are installed"
 
@@ -1183,231 +1248,223 @@ msgstr "Not all recommended security headers are installed"
 msgid "Beautiful recipes optimized for Google "
 msgstr "Beautiful recipes optimised for Google "
 
-#: class-site-health.php:64
+#: class-site-health.php:63
 msgid "The recommended security headers are detected on your site."
 msgstr "The recommended security headers are detected on your site."
 
-#: class-site-health.php:56
+#: class-site-health.php:55
 msgid "Recommended security headers installed"
 msgstr "Recommended security headers installed"
 
-#: class-site-health.php:39
+#: class-site-health.php:38
 msgid "Security Headers Test"
 msgstr "Security Headers Test"
 
-#: class-site-health.php:33
+#: class-site-health.php:32
 msgid "SSL Status Test"
 msgstr "SSL Status Test"
 
-#: class-admin.php:2985
+#: class-admin.php:3155
 msgid "No SSL detected"
 msgstr "No SSL detected"
 
-#: class-site-health.php:81
+#: class-site-health.php:80
 msgid "Learn more about security headers"
 msgstr "Learn more about security headers"
 
-#: class-site-health.php:77
-msgid "Your .htaccess file does not contain all recommended security headers."
-msgstr "Your .htaccess file does not contain all recommended security headers."
-
-#: class-site-health.php:147
+#: class-site-health.php:146
 msgid "Enable 301 redirect"
 msgstr "Enable 301 redirect"
 
-#: class-site-health.php:142
+#: class-site-health.php:141
 msgid "To ensure all traffic passes through SSL, please enable a 301 redirect."
 msgstr "To ensure all traffic passes through SSL, please enable a 301 redirect."
 
-#: class-site-health.php:139
+#: class-site-health.php:138
 msgid "No 301 redirect to SSL enabled."
 msgstr "No 301 redirect to SSL enabled."
 
-#: class-site-health.php:133
+#: class-site-health.php:132
 msgid "Really Simple SSL is installed, but no valid SSL certificate is detected."
 msgstr "Really Simple SSL is installed, but no valid SSL certificate is detected."
 
-#: class-site-health.php:120
+#: class-site-health.php:119
 msgid "Really Simple SSL detected an SSL certificate, but has not been configured to enforce SSL."
 msgstr "Really Simple SSL detected an SSL certificate, but has not been configured to enforce SSL."
 
-#: class-site-health.php:117
+#: class-site-health.php:116
 msgid "SSL is not enabled."
 msgstr "SSL is not enabled."
 
-#: class-admin.php:4439
+#: class-admin.php:4672
 msgid "Deactivate, revert to http"
 msgstr "Deactivate, revert to http"
 
-#: class-admin.php:4438
+#: class-admin.php:4671
 msgid "Deactivate, keep https"
 msgstr "Deactivate, keep https"
 
-#: class-admin.php:4425
+#: class-admin.php:4658
 msgid "The WordPress 301 redirect will stop working"
 msgstr "The WordPress 301 redirect will stop working"
 
-#: class-admin.php:4420
+#: class-admin.php:4653
 msgid "Deactivate, and revert to http. This will remove all changes by the plugin."
 msgstr "Deactivate, and revert to http. This will remove all changes by the plugin."
 
-#: class-admin.php:4419
+#: class-admin.php:4652
 msgid "Deactivate, but stay on SSL."
 msgstr "Deactivate, but stay on SSL."
 
-#: class-admin.php:4417
+#: class-admin.php:4650
 msgid "To deactivate the plugin correctly, please select if you want to:"
 msgstr "To deactivate the plugin correctly, please select if you want to:"
 
-#: class-admin.php:4140
+#: class-admin.php:4343
 msgid "If the setting 'stop editing the .htaccess file' is enabled, you can't change this setting."
 msgstr "If the setting 'stop editing the .htaccess file' is enabled, you can't change this setting."
 
-#: class-admin.php:3999
+#: class-admin.php:4193 class-multisite.php:341
 msgid "Enable this option to permanently dismiss all +1 notices in the 'Your progress' tab"
 msgstr "Enable this option to permanently dismiss all +1 notices in the 'Your progress' tab"
 
-#: class-admin.php:3996
+#: class-admin.php:4190
 msgid "Fire mixed content fixer with different method"
 msgstr "Fire mixed content fixer with different method"
 
-#: class-admin.php:3978
+#: class-admin.php:4172
 msgid "Enable WordPress 301 redirect"
 msgstr "Enable WordPress 301 redirect"
 
-#: class-admin.php:3977
+#: class-admin.php:4171
 msgid "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable if the .htaccess redirect cannot be used, for example on NGINX servers."
 msgstr "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable if the .htaccess redirect cannot be used, for example on NGINX servers."
 
-#: class-admin.php:3945
+#: class-admin.php:4139
 msgid "Copied!"
 msgstr "Copied!"
 
-#: class-admin.php:3939
+#: class-admin.php:4133
 msgid " You still have %s tasks open."
 msgstr " You still have %s tasks open."
 
-#: class-admin.php:3844
+#: class-admin.php:4038
 msgid "Premium"
 msgstr "Premium"
 
-#: class-admin.php:3842
+#: class-admin.php:4036
 msgid "Open"
 msgstr "Open"
 
-#: class-admin.php:3840
+#: class-admin.php:4034
 msgid "Warning"
 msgstr "Warning"
 
-#: class-admin.php:3838
+#: class-admin.php:4032
 msgid "Completed"
 msgstr "Completed"
 
-#: class-admin.php:3773
+#: class-admin.php:3967
 msgid "Instructions manual"
 msgstr "Instructions manual"
 
-#: class-admin.php:3714
+#: class-admin.php:3908
 msgid "Upgrade to pro"
 msgstr "Upgrade to pro"
 
-#: class-admin.php:3716
+#: class-admin.php:3910
 msgid "Installed"
 msgstr "Installed"
 
-#: class-admin.php:3711
+#: class-admin.php:3905
 msgid "Install"
 msgstr "Install"
 
-#: class-admin.php:3598
+#: class-admin.php:3793
 msgid "Tips & Tricks"
 msgstr "Tips & Tricks"
 
-#: class-admin.php:3348
+#: class-admin.php:3543
 msgid "%sEnable%s or %sdismiss%s"
 msgstr "%sEnable%s or %sdismiss%s"
 
-#: class-admin.php:3342
+#: class-admin.php:3537
 msgid "%sMore info%s or %sdismiss%s"
 msgstr "%sMore info%s or %sdismiss%s"
 
-#: class-admin.php:3194
-msgid "Recommended security headers not enabled (%sRead more%s)."
-msgstr "Recommended security headers not enabled (%sRead more%s)."
-
-#: class-admin.php:3126
+#: class-admin.php:3296
 msgid "Your site uses Divi. This can require some additional steps before getting the secure lock."
 msgstr "Your site uses Divi. This can require some additional steps before getting the secure lock."
 
-#: class-admin.php:3112
+#: class-admin.php:3282
 msgid "Your site uses Elementor. This can require some additional steps before getting the secure lock."
 msgstr "Your site uses Elementor. This can require some additional steps before getting the secure lock."
 
-#: class-admin.php:3097
+#: class-admin.php:3267
 msgid "The .htaccess redirect rules selected by this plugin failed in the test. Set manually or dismiss to leave on WordPress redirect."
 msgstr "The .htaccess redirect rules selected by this plugin failed in the test. Set manually or dismiss to leave on WordPress redirect."
 
-#: class-admin.php:3091
+#: class-admin.php:3261
 msgid "The %s file is not writable. You can either use the WordPress redirect, add the rules manually, or set the file to %swritable%s."
 msgstr "The %s file is not writable. You can either use the WordPress redirect, add the rules manually, or set the file to %swritable%s."
 
-#: class-admin.php:3079
+#: class-admin.php:3249
 msgid "WordPress 301 redirect enabled. We recommend to enable a 301 .htaccess redirect."
 msgstr "WordPress 301 redirect enabled. We recommend to enable a 301 .htaccess redirect."
 
-#: class-admin.php:3039
+#: class-admin.php:3209
 msgid "Mixed content fixer not enabled. Enable the option to fix mixed content on your site."
 msgstr "Mixed content fixer not enabled. Enable the option to fix mixed content on your site."
 
-#: class-admin.php:3028
+#: class-admin.php:3198
 msgid "The mixed content fixer is active, but was not detected on the frontpage."
 msgstr "The mixed content fixer is active, but was not detected on the front page."
 
-#: class-admin.php:3021
+#: class-admin.php:3191
 msgid "Really Simple SSL has received no response from the webpage."
 msgstr "Really Simple SSL has received no response from the webpage."
 
-#: class-admin.php:2981
+#: class-admin.php:3151
 msgid "Cannot activate SSL due to system configuration."
 msgstr "Cannot activate SSL due to system configuration."
 
-#: class-admin.php:2970
+#: class-admin.php:3140
 msgid "SSL is not enabled yet."
 msgstr "SSL is not enabled yet."
 
-#: class-admin.php:2953
+#: class-admin.php:3123
 msgid "Really Simple SSL 4.0. Learn more about our newest major release."
 msgstr "Really Simple SSL 4.0. Learn more about our newest major release."
 
-#: class-admin.php:2952
+#: class-admin.php:3122
 msgid "https://really-simple-ssl.com/really-simple-ssl-4-a-new-dashboard"
 msgstr "https://really-simple-ssl.com/really-simple-ssl-4-a-new-dashboard"
 
-#: class-admin.php:2908
+#: class-admin.php:3078
 msgid "SSL is now activated. Check if your website is secure by following this article."
 msgstr "SSL is now activated. Check if your website is secure by following this article."
 
-#: class-admin.php:2848
+#: class-admin.php:3018
 msgid "No recommended redirect rules detected."
 msgstr "No recommended redirect rules detected."
 
-#: class-admin.php:2769
+#: class-admin.php:2939
 msgid "General"
 msgstr "General"
 
-#: class-admin.php:511 lets-encrypt/wizard/templates/activate.php:45
+#: class-admin.php:553 lets-encrypt/wizard/templates/activate.php:45
 msgid "Before you migrate, please check for: "
 msgstr "Before you migrate, please check for: "
 
-#: rlrsssl-really-simple-ssl.php:194
+#: rlrsssl-really-simple-ssl.php:192
 msgid "Please upgrade to the latest version to be able use the full functionality of the plugin."
 msgstr "Please upgrade to the latest version to be able use the full functionality of the plugin."
 
-#: rlrsssl-really-simple-ssl.php:193
+#: rlrsssl-really-simple-ssl.php:191
 msgid "You have a premium add-on with a version that is not compatible with the >4.0 release of Really Simple SSL."
 msgstr "You have a premium add-on with a version that is not compatible with the >4.0 release of Really Simple SSL."
 
-#: rlrsssl-really-simple-ssl.php:192
+#: rlrsssl-really-simple-ssl.php:190
 msgid "Plugin dependency error"
 msgstr "Plugin dependency error"
 
@@ -1419,60 +1476,60 @@ msgstr "Really Simple SSL cannot be activated. The plugin requires WordPress 4.8
 msgid "Really Simple SSL cannot be activated. The plugin requires PHP 5.6 or higher"
 msgstr "Really Simple SSL cannot be activated. The plugin requires PHP 5.6 or higher"
 
-#: class-multisite.php:1014
+#: class-multisite.php:1044
 msgid "Really Simple SSL has converted all your websites to non SSL."
 msgstr "Really Simple SSL has converted all your websites to non SSL."
 
-#: class-multisite.php:1011
+#: class-multisite.php:1041
 msgid "Really Simple SSL has converted all your websites to SSL."
 msgstr "Really Simple SSL has converted all your websites to SSL."
 
-#: class-multisite.php:1009
+#: class-multisite.php:1039
 msgid "Conversion of websites completed."
 msgstr "Conversion of websites completed."
 
-#: class-multisite.php:1004
+#: class-multisite.php:1034
 msgid "Site conversion in progress. Please refresh this page to check if the process has finished. It will proceed in the background."
 msgstr "Site conversion in progress. Please refresh this page to check if the process has finished. It will proceed in the background."
 
-#: class-multisite.php:542
+#: class-multisite.php:570
 msgid "Setup"
 msgstr "Setup"
 
-#: class-admin.php:3606 class-multisite.php:398
+#: class-admin.php:3801 class-multisite.php:425
 msgid "Our plugins"
 msgstr "Our plugins"
 
-#: class-admin.php:3613 class-multisite.php:390
+#: class-admin.php:3808 class-multisite.php:417
 msgid "Support forum"
 msgstr "Support forum"
 
-#: class-admin.php:3583 class-multisite.php:374
+#: class-admin.php:3778 class-multisite.php:401
 msgid "Your progress"
 msgstr "Your progress"
 
-#: class-multisite.php:353
+#: class-multisite.php:359
 msgid "Choose option"
 msgstr "Choose option"
 
-#: class-admin.php:2793 class-admin.php:4491 class-multisite.php:228
-#: class-multisite.php:447 lets-encrypt/wizard/class-wizard.php:405
+#: class-admin.php:2963 class-admin.php:4724 class-multisite.php:229
+#: class-multisite.php:474 lets-encrypt/wizard/class-wizard.php:405
 msgid "Support"
 msgstr "Support"
 
-#: class-multisite.php:125
+#: class-multisite.php:126
 msgid "SSL is enabled per site."
 msgstr "SSL is enabled per site."
 
-#: class-multisite.php:121
+#: class-multisite.php:122
 msgid "SSL is enabled networkwide."
 msgstr "SSL is enabled networkwide."
 
-#: class-multisite.php:92
+#: class-multisite.php:93
 msgid "SSL is activated network wide."
 msgstr "SSL is activated network wide."
 
-#: class-multisite.php:90
+#: class-multisite.php:91
 msgid "No choice has been made regarding networkwide or per site activation."
 msgstr "No choice has been made regarding networkwide or per site activation."
 
@@ -1480,9 +1537,9 @@ msgstr "No choice has been made regarding networkwide or per site activation."
 msgid "301 Redirect"
 msgstr "301 Redirect"
 
-#: class-admin.php:802 class-site-health.php:126
+#: class-admin.php:838 class-site-health.php:125
 #: grid/templates/progress-footer.php:25
-#: lets-encrypt/wizard/config/steps.php:151
+#: lets-encrypt/wizard/config/steps.php:156
 msgid "Activate SSL"
 msgstr "Activate SSL"
 
@@ -1494,25 +1551,25 @@ msgstr "Go PRO!"
 msgid "SSL Not activated"
 msgstr "SSL Not activated"
 
-#: class-admin.php:3935 grid/templates/progress.php:39
+#: class-admin.php:4129 grid/templates/progress.php:43
 msgid "SSL is not yet enabled on this site."
 msgstr "SSL is not yet enabled on this site."
 
-#: class-admin.php:3931 grid/templates/progress.php:33
+#: class-admin.php:4125 grid/templates/progress.php:37
 msgid "Basic SSL configuration finished! Improve your score with %sReally Simple SSL Pro%s."
 msgstr "Basic SSL configuration finished! Improve your score with %sReally Simple SSL Pro%s."
 
-#: grid/templates/progress.php:28
+#: grid/templates/progress.php:32
 msgid "SSL configuration finished!"
 msgstr "SSL configuration finished!"
 
-#: class-admin.php:3938 grid/templates/progress.php:25
+#: class-admin.php:4132 grid/templates/progress.php:29
 msgid "You still have %s task open."
 msgid_plural "You still have %s tasks open."
 msgstr[0] "You still have %s task open."
 msgstr[1] "You still have %s tasks open."
 
-#: class-admin.php:3933 grid/templates/progress.php:25
+#: class-admin.php:4127 grid/templates/progress.php:29
 msgid "SSL is activated on your site."
 msgstr "SSL is activated on your site."
 
@@ -1552,7 +1609,7 @@ msgstr "Server type:"
 msgid "Download system status"
 msgstr "Download system status"
 
-#: grid/templates/tips-tricks.php:56
+#: grid/templates/tips-tricks.php:64
 msgid "Any questions? See the %sdocumentation%s or the %sWordPress Forum%s."
 msgstr "Any questions? See the %sdocumentation%s or the %sWordPress Forum%s."
 
@@ -1571,12 +1628,9 @@ msgstr "Improve security: Enable HTTP Strict Transport Security (HSTS)"
 #: grid/templates/tips-tricks.php:10 grid/templates/tips-tricks.php:18
 #: grid/templates/tips-tricks.php:26 grid/templates/tips-tricks.php:34
 #: grid/templates/tips-tricks.php:42 grid/templates/tips-tricks.php:50
+#: grid/templates/tips-tricks.php:58
 msgid "Read more"
 msgstr "Read more"
-
-#: grid/templates/tips-tricks.php:7
-msgid "Is your site still not secure? Do the extensive site scan"
-msgstr "Is your site still not secure? Do the extensive site scan"
 
 #: grid/templates/progress-header.php:15
 msgid "Remaining tasks"
@@ -1594,68 +1648,68 @@ msgstr "Really Simple Plugins"
 msgid "Really Simple SSL Pro"
 msgstr "Really Simple SSL Pro"
 
-#: class-admin.php:2517
+#: class-admin.php:2687
 msgid "Hi, Really Simple SSL has kept your site secure for some time now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
 msgstr "Hi, Really Simple SSL has kept your site secure for some time now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
 
-#: class-admin.php:534 lets-encrypt/wizard/templates/activate.php:30
+#: class-admin.php:570 lets-encrypt/wizard/templates/activate.php:30
 #: lets-encrypt/wizard/templates/activate.php:70
 msgid "Check out Really Simple SSL Pro"
 msgstr "Check out Really Simple SSL Pro"
 
-#: class-admin.php:805 lets-encrypt/wizard/class-wizard.php:911
+#: class-admin.php:841 lets-encrypt/wizard/class-wizard.php:909
 msgid "Get ready with PRO!"
 msgstr "Get ready with PRO!"
 
-#: class-admin.php:514
+#: class-admin.php:556
 msgid "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server"
 msgstr "Images, style sheets or scripts from a domain without an SSL certificate: remove them or move to your own server"
 
-#: class-admin.php:2527
+#: class-admin.php:2697
 msgid "Don't show again"
 msgstr "Don't show again"
 
-#: class-admin.php:3045
+#: class-admin.php:3215
 msgid "The mixed content fixer could not be detected due to a cURL error: %s. cURL errors are often caused by an outdated version of PHP or cURL and don't affect the front-end of your site. Contact your hosting provider for a fix."
 msgstr "The mixed content fixer could not be detected due to a cURL error: %s. cURL errors are often caused by an outdated version of PHP or cURL and don't affect the front-end of your site. Contact your hosting provider for a fix."
 
-#: class-admin.php:3033
+#: class-admin.php:3203
 msgid "Error occurred when retrieving the webpage."
 msgstr "Error occurred when retrieving the webpage."
 
-#: class-site-health.php:154
+#: class-site-health.php:153
 msgid "The 301 .htaccess redirect is the fastest and most reliable redirect option."
 msgstr "The 301 .htaccess redirect is the fastest and most reliable redirect option."
 
-#: class-site-health.php:151
+#: class-site-health.php:150
 msgid "301 .htaccess redirect is not enabled."
 msgstr "301 .htaccess redirect is not enabled."
 
-#: class-site-health.php:108
+#: class-site-health.php:107
 msgid "You have set a 301 redirect to SSL. This is important for SEO purposes"
 msgstr "You have set a 301 redirect to SSL. This is important for SEO purposes"
 
-#: class-site-health.php:100
+#: class-site-health.php:99
 msgid "301 SSL redirect enabled"
 msgstr "301 SSL redirect enabled"
 
-#: class-admin.php:4000
+#: class-admin.php:4194 class-multisite.php:342
 msgid "Dismiss all Really Simple SSL notices"
 msgstr "Dismiss all Really Simple SSL notices"
 
-#: class-admin.php:3143
+#: class-admin.php:3313
 msgid "HTTP Strict Transport Security is not enabled %s(Read more)%s."
 msgstr "HTTP Strict Transport Security is not enabled %s(Read more)%s."
 
-#: class-admin.php:3074
+#: class-admin.php:3244
 msgid "301 redirect to https set: .htaccess redirect."
 msgstr "301 redirect to https set: .htaccess redirect."
 
-#: class-multisite.php:1005
+#: class-multisite.php:1035
 msgid "If the conversion does not proceed after a few minutes, click %shere%s to force the conversion process."
 msgstr "If the conversion does not proceed after a few minutes, click %shere%s to force the conversion process."
 
-#: class-admin.php:2878
+#: class-admin.php:3048
 msgid "The 'force-deactivate.php' file has to be renamed to .txt. Otherwise your ssl can be deactivated by anyone on the internet."
 msgstr "The 'force-deactivate.php' file has to be renamed to .txt. Otherwise your SSL can be deactivated by anyone on the internet."
 
@@ -1663,67 +1717,67 @@ msgstr "The 'force-deactivate.php' file has to be renamed to .txt. Otherwise you
 msgid "Once every minute"
 msgstr "Once every minute"
 
-#: class-multisite.php:1003
+#: class-multisite.php:1033
 msgid "Conversion of websites %s percent complete."
 msgstr "Conversion of websites %s percent complete."
 
-#: class-admin.php:2526
+#: class-admin.php:2696
 msgid "Maybe later"
 msgstr "Maybe later"
 
-#: class-admin.php:2525
+#: class-admin.php:2695
 msgid "Leave a review"
 msgstr "Leave a review"
 
-#: class-admin.php:2519
+#: class-admin.php:2689
 msgid "Hi, Really Simple SSL has kept your site secure for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
 msgstr "Hi, Really Simple SSL has kept your site secure for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s."
 
-#: class-multisite.php:158
+#: class-multisite.php:159
 msgid "Activate SSL per site or install a wildcard certificate to fix this."
 msgstr "Activate SSL per site or install a wildcard certificate to fix this."
 
-#: class-multisite.php:157
+#: class-multisite.php:158
 msgid "This leads to issues when activating SSL networkwide since subdomains will be forced over SSL as well while they don't have a valid certificate."
 msgstr "This leads to issues when activating SSL networkwide since subdomains will be forced over SSL as well while they don't have a valid certificate."
 
-#: class-multisite.php:156
+#: class-multisite.php:157
 msgid "You run a Multisite installation with subdomains, but your site doesn't have a wildcard certificate."
 msgstr "You run a Multisite installation with subdomains, but your site doesn't have a wildcard certificate."
 
-#: class-admin.php:4437
+#: class-admin.php:4670
 msgid "Cancel"
 msgstr "Cancel"
 
-#: class-admin.php:4427
+#: class-admin.php:4660
 msgid "The .htaccess redirect will remain active"
 msgstr "The .htaccess redirect will remain active"
 
-#: class-admin.php:4426
+#: class-admin.php:4659
 msgid "Your site address will remain https://"
 msgstr "Your site address will remain https://"
 
-#: class-admin.php:4424
+#: class-admin.php:4657
 msgid "The mixed content fixer will stop working"
 msgstr "The mixed content fixer will stop working"
 
-#: class-admin.php:4422
+#: class-admin.php:4655
 msgid "Deactivating the plugin while keeping SSL will do the following:"
 msgstr "Deactivating the plugin while keeping SSL will do the following:"
 
-#: class-admin.php:4404
+#: class-admin.php:4637
 msgid "Are you sure?"
 msgstr "Are you sure?"
 
-#: class-admin.php:3892
+#: class-admin.php:4086
 msgid "More info"
 msgstr "More info"
 
-#: class-admin.php:115
+#: class-admin.php:117
 msgid "Really Simple SSL and Really Simple SSL add-ons do not process any personal identifiable information, so the GDPR does not apply to these plugins or usage of these plugins on your website. You can find our privacy policy <a href=\"%s\" target=\"_blank\">here</a>."
 msgstr "Really Simple SSL and Really Simple SSL add-ons do not process any personal identifiable information, so the GDPR does not apply to these plugins or usage of these plugins on your website. You can find our privacy policy <a href=\"%s\" target=\"_blank\">here</a>."
 
-#: class-admin.php:520 lets-encrypt/wizard/templates/activate.php:55
+#: lets-encrypt/wizard/templates/activate.php:55
 msgid "We strongly recommend to create a %sbackup%s of your site before activating SSL"
 msgstr "We strongly recommend to create a %sbackup%s of your site before activating SSL"
 
@@ -1731,100 +1785,101 @@ msgstr "We strongly recommend to create a %sbackup%s of your site before activat
 msgid "https://really-simple-plugins.com"
 msgstr "https://really-simple-plugins.com"
 
-#: class-admin.php:2938
+#: class-admin.php:3108
 msgid "Don't forget to change your settings in Google Analytics and Search Console."
 msgstr "Don't forget to change your settings in Google Analytics and Search Console."
 
-#: class-admin.php:3995
+#: class-admin.php:4189
 msgid "If this option is set to true, the mixed content fixer will fire on the init hook instead of the template_redirect hook. Only use this option when you experience problems with the mixed content fixer.\""
 msgstr "If this option is set to true, the mixed content fixer will fire on the init hook instead of the template_redirect hook. Only use this option when you experience problems with the mixed content fixer.\""
 
-#: class-admin.php:533 lets-encrypt/wizard/templates/activate.php:26
+#: class-admin.php:569 lets-encrypt/wizard/templates/activate.php:26
 #: lets-encrypt/wizard/templates/activate.php:66
 msgid "You can also let the automatic scan of the pro version handle this for you, and get premium support, increased security with HSTS and more!"
 msgstr "You can also let the automatic scan of the pro version handle this for you, and get premium support, increased security with HSTS and more!"
 
-#: class-multisite.php:94
+#: class-multisite.php:95
 msgid "SSL is activated per site."
 msgstr "SSL is activated per site."
 
-#: class-multisite.php:429
+#: class-multisite.php:456
 msgid "Options saved."
 msgstr "Options saved."
 
-#: class-multisite.php:336
+#: class-multisite.php:338
 msgid "Select to enable SSL networkwide or per site."
 msgstr "Select to enable SSL network-wide or per site."
 
-#: class-multisite.php:356
+#: class-multisite.php:362
 msgid "per site"
 msgstr "per site"
 
-#: class-multisite.php:355
+#: class-multisite.php:361
 msgid "networkwide"
 msgstr "network-wide"
 
-#: class-multisite.php:337
+#: class-multisite.php:339
 msgid "Enable SSL"
 msgstr "Enable SSL"
 
-#: class-admin.php:4107 class-admin.php:4137 class-admin.php:4460
+#: class-admin.php:4310 class-admin.php:4340 class-admin.php:4417
+#: class-admin.php:4693
 msgid "This option is enabled on the network menu."
 msgstr "This option is enabled on the network menu."
 
-#: class-admin.php:521 lets-encrypt/wizard/templates/activate.php:56
+#: class-admin.php:557 lets-encrypt/wizard/templates/activate.php:56
 msgid "You may need to login in again."
 msgstr "You may need to log in again."
 
-#: class-admin.php:4133
+#: class-admin.php:4336
 msgid "Before you enable the htaccess redirect, make sure you know how to %sregain access%s to your site in case of a redirect loop."
 msgstr "Before you enable the htaccess redirect, make sure you know how to %sregain access%s to your site in case of a redirect loop."
 
-#: class-admin.php:3982
+#: class-admin.php:4176
 msgid "A .htaccess redirect is faster and works better with caching. Really Simple SSL detects the redirect code that is most likely to work (99% of websites), but this is not 100%. Make sure you know how to regain access to your site if anything goes wrong!"
 msgstr "A .htaccess redirect is faster and works better with caching. Really Simple SSL detects the redirect code that is most likely to work (99% of websites), but this is not 100%. Make sure you know how to regain access to your site if anything goes wrong!"
 
-#: class-admin.php:3983 class-site-health.php:159
+#: class-admin.php:4177 class-site-health.php:158
 msgid "Enable 301 .htaccess redirect"
 msgstr "Enable 301 .htaccess redirect"
 
-#: class-admin.php:3062
+#: class-admin.php:3232
 msgid "No 301 redirect is set. Enable the WordPress 301 redirect in the settings to get a 301 permanent redirect."
 msgstr "No 301 redirect is set. Enable the WordPress 301 redirect in the settings to get a 301 permanent redirect."
 
-#: class-admin.php:3085
+#: class-admin.php:3255
 msgid "Enable a .htaccess redirect or WordPress redirect in the settings to create a 301 redirect."
 msgstr "Enable an .htaccess redirect or WordPress redirect in the settings to create a 301 redirect."
 
-#: class-admin.php:3972
+#: class-admin.php:4166
 msgid "In most cases you need to leave this enabled, to prevent mixed content issues on your site."
 msgstr "In most cases you need to leave this enabled, to prevent mixed content issues on your site."
 
-#: class-admin.php:3989
+#: class-admin.php:4183
 msgid "If you want to customize the Really Simple SSL .htaccess, you need to prevent Really Simple SSL from rewriting it. Enabling this option will do that."
 msgstr "If you want to customise the Really Simple SSL .htaccess, you need to prevent Really Simple SSL from rewriting it. Enabling this option will do that."
 
-#: class-admin.php:3139
+#: class-admin.php:3309
 msgid "HTTP Strict Transport Security was enabled."
 msgstr "HTTP Strict Transport Security was enabled."
 
-#: class-admin.php:3058
+#: class-admin.php:3228
 msgid "301 redirect to https set."
 msgstr "301 redirect to https set."
 
-#: class-multisite.php:548 class-multisite.php:576
+#: class-multisite.php:576 class-multisite.php:604
 msgid "You can also let the automatic scan of the pro version handle this for you, and get premium support and increased security with HSTS included."
 msgstr "You can also let the automatic scan of the pro version handle this for you, and get premium support and increased security with HSTS included."
 
-#: class-admin.php:4493 class-multisite.php:230
+#: class-admin.php:4726 class-multisite.php:231
 msgid "Premium Support"
 msgstr "Premium Support"
 
-#: class-multisite.php:550 class-multisite.php:578
+#: class-multisite.php:578 class-multisite.php:606
 msgid "Check out Really Simple SSL Premium"
 msgstr "Check out Really Simple SSL Premium"
 
-#: lets-encrypt/wizard/class-wizard.php:902
+#: lets-encrypt/wizard/class-wizard.php:900
 msgid "Go ahead, activate SSL!"
 msgstr "Go ahead, activate SSL!"
 
@@ -1832,11 +1887,11 @@ msgstr "Go ahead, activate SSL!"
 msgid "Instructions"
 msgstr "Instructions"
 
-#: class-multisite.php:129
+#: class-multisite.php:130
 msgid "SSL is not enabled yet"
 msgstr "SSL is not enabled yet."
 
-#: class-admin.php:2966
+#: class-admin.php:3136
 msgid "SSL is enabled on your site."
 msgstr "SSL is enabled on your site."
 
@@ -1844,81 +1899,81 @@ msgstr "SSL is enabled on your site."
 msgid "SSL Activated"
 msgstr "SSL Activated"
 
-#: class-admin.php:2396
+#: class-admin.php:2566
 msgid "Because your server does not pass a variable with which WordPress can detect SSL, WordPress may create redirect loops on SSL."
 msgstr "Because your server does not pass a variable with which WordPress can detect SSL, WordPress may create redirect loops on SSL."
 
-#: class-admin.php:2390
+#: class-admin.php:2560
 msgid "Or set your wp-config.php to %swritable%s and reload this page."
 msgstr "Or set your wp-config.php to %swritable%s and reload this page."
 
-#: class-admin.php:2374
+#: class-admin.php:2544
 msgid "Because your site is behind a loadbalancer and is_ssl() returns false, you should add the following line of code to your wp-config.php."
 msgstr "Because your site is behind a loadbalancer and is_ssl() returns false, you should add the following line of code to your wp-config.php."
 
-#: class-admin.php:2373
+#: class-admin.php:2543
 msgid "Your wp-config.php has to be edited, but is not writable."
 msgstr "Your wp-config.php has to be edited, but is not writable."
 
-#: class-admin.php:2370 class-admin.php:2397
+#: class-admin.php:2540 class-admin.php:2567
 msgid "Set your wp-config.php to %swritable%s and reload this page."
 msgstr "Set your wp-config.php to %swritable%s and reload this page."
 
-#: class-admin.php:2368
+#: class-admin.php:2538
 msgid "A definition of a siteurl or homeurl was detected in your wp-config.php, but the file is not writable."
 msgstr "A definition of a siteurl or homeurl was detected in your wp-config.php, but the file is not writable."
 
-#: class-admin.php:2403
+#: class-admin.php:2573
 msgid "System detection encountered issues"
 msgstr "System detection encountered issues"
 
-#: class-multisite.php:546 lets-encrypt/wizard/templates/activate.php:20
+#: class-multisite.php:574 lets-encrypt/wizard/templates/activate.php:20
 #: lets-encrypt/wizard/templates/activate.php:49
 msgid "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server."
 msgstr "Images, stylesheets or scripts from a domain without an SSL certificate: remove them or move to your own server."
 
-#: class-admin.php:513 class-multisite.php:545
+#: class-admin.php:555 class-multisite.php:573
 #: lets-encrypt/wizard/templates/activate.php:19
 #: lets-encrypt/wizard/templates/activate.php:48
 msgid "Http references in your .css and .js files: change any http:// into https://"
 msgstr "Http references in your .css and .js files: change any http:// into https://"
 
-#: class-multisite.php:543
+#: class-multisite.php:571
 msgid "Some things can't be done automatically. Before you migrate, please check for: "
 msgstr "Some things can't be done automatically. Before you migrate, please check for: "
 
-#: class-admin.php:503 lets-encrypt/wizard/templates/last-step.php:13
+#: class-admin.php:545 lets-encrypt/wizard/templates/last-step.php:13
 msgid "Almost ready to migrate to SSL!"
 msgstr "Almost ready to migrate to SSL!"
 
-#: class-multisite.php:561
+#: class-multisite.php:589
 msgid "Networkwide activation does not check if a site has an SSL certificate. It just migrates all sites to SSL."
 msgstr "Network-wide activation does not check if a site has an SSL certificate. It just migrates all sites to SSL."
 
-#: class-multisite.php:558
+#: class-multisite.php:586
 msgid "Activate SSL per site"
 msgstr "Activate SSL per site"
 
-#: class-multisite.php:555
+#: class-multisite.php:583
 msgid "Activate SSL networkwide"
 msgstr "Activate SSL network-wide"
 
-#: class-admin.php:49 class-cache.php:10 class-certificate.php:14
+#: class-admin.php:50 class-cache.php:11 class-certificate.php:14
 #: class-front-end.php:18 class-help.php:9 class-mixed-content-fixer.php:13
-#: class-multisite.php:27 class-site-health.php:12
+#: class-multisite.php:28 class-site-health.php:12
 #: lets-encrypt/class-letsencrypt-handler.php:30
 msgid "%s is a singleton class and you cannot create a second instance."
 msgstr "%s is a singleton class and you cannot create a second instance."
 
-#: class-admin.php:4172
+#: class-admin.php:4375
 msgid ".htaccess is currently not %swritable%s."
 msgstr ".htaccess is currently not %swritable%s."
 
-#: class-admin.php:3016
+#: class-admin.php:3186
 msgid "Mixed content fixer was successfully detected on the front-end."
 msgstr "Mixed content fixer was successfully detected on the front-end."
 
-#: class-admin.php:2787 class-multisite.php:441
+#: class-admin.php:2957 class-multisite.php:468
 #: grid/templates/tips-tricks-footer.php:3
 msgid "Documentation"
 msgstr "Documentation"
@@ -1935,7 +1990,7 @@ msgstr "https://really-simple-ssl.com"
 msgid "Really Simple SSL"
 msgstr "Really Simple SSL"
 
-#: class-admin.php:3990
+#: class-admin.php:4184
 msgid "Stop editing the .htaccess file"
 msgstr "Stop editing the .htaccess file"
 
@@ -1944,48 +1999,48 @@ msgstr "Stop editing the .htaccess file"
 msgid "Save"
 msgstr "Save"
 
-#: class-admin.php:2994
+#: class-admin.php:3164
 msgid "An SSL certificate was detected on your site."
 msgstr "An SSL certificate was detected on your site."
 
-#: class-site-health.php:130
+#: class-site-health.php:129
 msgid "No SSL detected."
 msgstr "No SSL detected."
 
-#: class-admin.php:2732 class-admin.php:3591 class-admin.php:3970
-#: class-admin.php:4487 class-multisite.php:224 class-multisite.php:335
-#: class-multisite.php:382
+#: class-admin.php:2902 class-admin.php:3786 class-admin.php:4164
+#: class-admin.php:4720 class-multisite.php:225 class-multisite.php:337
+#: class-multisite.php:409
 msgid "Settings"
 msgstr "Settings"
 
-#: class-admin.php:3973
+#: class-admin.php:4167
 msgid "Mixed content fixer"
 msgstr "Mixed content fixer"
 
-#: class-admin.php:2710
+#: class-admin.php:2880
 msgid "SSL"
 msgstr "SSL"
 
-#: class-admin.php:2709
+#: class-admin.php:2879
 msgid "SSL settings"
 msgstr "SSL settings"
 
-#: class-multisite.php:145
+#: class-multisite.php:146
 msgid "Activate networkwide to fix this."
 msgstr "Activate network-wide to fix this."
 
-#: class-multisite.php:144
+#: class-multisite.php:145
 msgid "Because the $_SERVER[\"HTTPS\"] variable is not set, your website may experience redirect loops."
 msgstr "Because the $_SERVER[\"HTTPS\"] variable is not set, your website may experience redirect loops."
 
-#: class-multisite.php:143
+#: class-multisite.php:144
 msgid "You run a Multisite installation with subfolders, which prevents this plugin from fixing your missing server variable in the wp-config.php."
 msgstr "You run a multisite installation with subfolders, which prevents this plugin from fixing your missing server variable in the wp-config.php."
 
-#: class-admin.php:2879
+#: class-admin.php:3049
 msgid "Check again"
 msgstr "Check again"
 
-#: class-admin.php:2877
+#: class-admin.php:3047
 msgid "Major security issue!"
 msgstr "Major security issue!"

@@ -34,7 +34,7 @@
 
     a {
       text-transform: uppercase;
-      text-shadow: 0 0 $BS * 8 transparentize($ColorDark, 0.5);
+      text-shadow: 0 0 $BS * 8 transparentize($Black, 0.5);
       @include bsFontSize($BS, 24);
       font-weight: 700;
       transition: color 0.2s ease-out;
@@ -162,10 +162,12 @@
       }
 
       &__wrapper {
+        position: relative;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         transform: translateY($BS * -200);
+        z-index: 5;
       }
 
       &__logoWrapper {
@@ -185,10 +187,14 @@
         min-height: 100%;
         min-width: 100%;
 
-        // @supports (object-fit: cover) {
-        //   object-fit: cover;
-        //   height: 100%;
-        // }
+        @supports (object-fit: cover) {
+          object-fit: cover;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          transform: translate(0, 0);
+        }
       }
 
       &__menu {

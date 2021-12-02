@@ -3,8 +3,9 @@
 use NinjaForms\Includes\Contracts\SubmissionHandler;
 use NinjaForms\Includes\Entities\SubmissionFilter;
 use NinjaForms\Includes\Entities\SingleSubmission;
+use NinjaForms\Includes\Entities\SubmissionExtraHandlerResponse;
 use NinjaForms\Includes\Factories\SubmissionAggregateFactory;
-use NinjaForms\Includes\Handlers\SubmissionAggregate;
+
 
 /**
  * Class NF_Routes_SubmissionsActions
@@ -370,7 +371,7 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
                 // construct aggregate within CSV adapter, applying filter to aggregate
                 $submissionAggregateCsvExportAdapter = (new SubmissionAggregateFactory())->SubmissionAggregateCsvExportAdapter();
                 $submissionAggregateCsvExportAdapter->submissionAggregate->filterSubmissions($params);
-                $csvObject = (new NF_Exports_SubmissionCsvExport())
+                $csvObject = (new NF_Exports_SubmissionCsvExport())->setUseAdminLabels(true)
                     ->setSubmissionAggregateCsvExportAdapter($submissionAggregateCsvExportAdapter);
 
                 $csv[$formId] = $csvObject->handle();
@@ -381,7 +382,7 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
             // construct aggregate within CSV adapter, applying filter to aggregate
             $submissionAggregateCsvExportAdapter = (new SubmissionAggregateFactory())->SubmissionAggregateCsvExportAdapter();
             $submissionAggregateCsvExportAdapter->submissionAggregate->requestSingleSubmission($singleSubmission);
-            $csvObject = (new NF_Exports_SubmissionCsvExport())
+            $csvObject = (new NF_Exports_SubmissionCsvExport())->setUseAdminLabels(true)
                 ->setSubmissionAggregateCsvExportAdapter($submissionAggregateCsvExportAdapter);
 
             $csv[$formId] = $csvObject->handle();
@@ -394,7 +395,7 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
 
             $submissionAggregateCsvExportAdapter = (new SubmissionAggregateFactory())->SubmissionAggregateCsvExportAdapter();
             $submissionAggregateCsvExportAdapter->submissionAggregate->filterSubmissions($params);
-            $csvObject = (new NF_Exports_SubmissionCsvExport())->setSubmissionAggregateCsvExportAdapter($submissionAggregateCsvExportAdapter);
+            $csvObject = (new NF_Exports_SubmissionCsvExport())->setUseAdminLabels(true)->setSubmissionAggregateCsvExportAdapter($submissionAggregateCsvExportAdapter);
 
             $csv[$form_ids[0]] = $csvObject->handle();
 
@@ -589,6 +590,7 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
         $updated_option = $option;
         $updated_option[$form_id][$setting] = $new_data;
 
+        $response = (object)[];
         if ( false !== $option ) {
             // option exist
             if ( $current_setting_value === $new_data ) {
@@ -688,11 +690,9 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
      * @return object with string of responseType, blob of PDF download and string of blobType
      */
     public function handle_extra_submission(WP_REST_Request $request){
-        $response = [
-            'responseType'=>'none',
-            'download'=>'',
-            'blobType'=>''
-        ];
+        
+        // set default response
+        $response = [ ];
         
         //Extract required data
         $data = json_decode($request->get_body(),true);  
@@ -711,7 +711,12 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
             $response = $object->handle($populatedSubmission);
         }
 
-        return $response;
+        // Handlers using NinjaForms\Includes\Abstracts\SubmissionHandler
+        // already pass through entity, but it is not guaranteed that all
+        // handlers will use the abstract
+        $arrayFromEntity = (SubmissionExtraHandlerResponse::fromArray($response))->toArray();
+
+        return $arrayFromEntity;
     }
 
 }

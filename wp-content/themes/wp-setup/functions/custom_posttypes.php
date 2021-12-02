@@ -242,7 +242,9 @@ function save_post_handler( $post_id ) {
         $price = floatval(get_field('price', $tourObj));
 
         $wcProductId = get_field('woocommerce_product', $post_id);
-        if(!$wcProductId){
+        $wcProductName = get_the_title($wcProductId);
+
+        if(!$wcProductId || sanitize_title($wcProductName) != sanitize_title($title)){
           /**
             * Create Woocommerce Product here
           */
@@ -281,7 +283,6 @@ function checkChangeMaxRegistrations($value, $post_id, $field) {
   $wcProductId = get_field('woocommerce_product', $post_id);
   $registrations = get_field('registrations', $post_id);
   $registrations = is_array($registrations) ? count($registrations) : 0;
-  write_log($registrations);
   wc_update_product_stock($wcProductId, $value - $registrations, 'set');
   return $value;
 }

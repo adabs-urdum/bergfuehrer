@@ -1,12 +1,14 @@
 "use strict";
 
 import "babel-polyfill";
-import BookingForm from "./components/BookingForm";
+// import BookingForm from "./components/BookingForm";
 import EventFilter from "./components/EventFilter";
 // import Swiper from "swiper";
 import GACE from "./components/googleAnalyticsCustomEvents";
 import Lightbox from "./components/Lightbox";
 import SingleTour from "./components/SingleTour";
+import Swiper, { Pagination, Navigation, Autoplay } from "swiper";
+Swiper.use([Pagination, Navigation, Autoplay]);
 
 Array.prototype.shuffle = function () {
   return this.sort(function () {
@@ -51,4 +53,24 @@ document.addEventListener("DOMContentLoaded", function () {
   if (bookingform) {
     new BookingForm();
   }
+
+  const swipers = [...document.querySelectorAll(".swiper-container")];
+  swipers.forEach((swiper) => {
+    const mySwiper = new Swiper(swiper, {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      // navigation: {
+      //   nextEl: ".next",
+      //   prevEl: ".previous",
+      // },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   type: "bullets",
+      //   clickable: true,
+      // },
+    });
+  });
 });
