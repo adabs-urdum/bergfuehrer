@@ -236,6 +236,14 @@
     .header {
       &__image {
         transform: translate(-60%, -50%);
+        @supports (object-fit: cover) {
+          object-fit: cover;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          transform: translate(0, 0);
+        }
       }
     }
   }
@@ -343,6 +351,14 @@
         min-width: 100%;
         min-height: 100%;
         width: auto;
+        @supports (object-fit: cover) {
+          object-fit: cover;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          transform: translate(0, 0);
+        }
       }
     }
   }
