@@ -54,6 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
     new BookingForm();
   }
 
+  const cartForm = document.querySelector(".woocommerce-cart-form");
+  if (cartForm) {
+    history.pushState(null, "", location.href.split("?")[0]);
+  }
+
   const swipers = [...document.querySelectorAll(".swiper-container")];
   swipers.forEach((swiper) => {
     const mySwiper = new Swiper(swiper, {

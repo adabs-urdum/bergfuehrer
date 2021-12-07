@@ -26,7 +26,8 @@ class SingleTour {
     //   return tour.checked == true;
     // }).value;
     // const tour = this.bookingButton.dataset.tour;
-    const url = this.bookingButton.dataset.url.slice(0, -1);
+    // const url = this.bookingButton.dataset.url.slice(0, -1);
+    const url = this.bookingButton.dataset.url;
     // const href = `${url}?event=${tour}&date=${conduct}`;
     const href = `${url}?add-to-cart=${wcId}&quantity=1`;
     this.bookingButton.href = href;

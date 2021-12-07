@@ -106,16 +106,3 @@
     return $attachments;
   }
   add_filter( 'woocommerce_email_attachments', 'attach_to_wc_emails', 10, 3);
-
-
-// define the woocommerce_add_to_cart callback
-function action_woocommerce_add_to_cart( $cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data ) {
-    $cart = WC()->cart;
-    if(array_key_exists($cart_item_key, $cart->cart_contents)){
-write_log('ABORT!!!!!!!!');
-      return;
-    }
-};
-
-// add the action
-add_action( 'woocommerce_add_to_cart', 'action_woocommerce_add_to_cart', 10, 6 );

@@ -11,6 +11,48 @@
     color: $White;
     // overflow: hidden;
 
+    &__cartWrapper {
+      position: relative;
+      margin-left: $BS * 16;
+
+      &:hover {
+        svg {
+          path {
+            fill: $ColorDark;
+          }
+        }
+      }
+
+      canvas {
+        width: $BS * 36;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(0 0 $BS * 8 transparentize($Black, 0.5));
+        path {
+          fill: $White;
+          transition: fill 0.2s ease-out;
+        }
+      }
+    }
+
+    &__cartAmount {
+      position: absolute;
+      top: 0;
+      right: $BS * -8;
+      transform: translate(100%, -50%);
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+    }
+
     &__logoLink {
       display: flex;
       align-items: flex-end;
@@ -105,6 +147,7 @@
 
     &__menu {
       display: flex;
+      margin-bottom: 0;
 
       ul {
         display: flex;
@@ -113,10 +156,6 @@
       & > li {
         margin: 0 $BS * 16;
         padding: 0;
-
-        &:last-child {
-          margin-right: 0;
-        }
 
         &:hover {
           & > a {
@@ -262,7 +301,9 @@
       &__nav {
         position: fixed;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         top: 0;
         right: 0;
         width: 100%;
@@ -272,6 +313,25 @@
         transform: translateX(100%);
         transition: transform 0.2s ease-out;
         padding: $BS * 32;
+      }
+
+      &__cartWrapper {
+        margin-top: $BS * 16;
+        margin-left: 0;
+        canvas {
+          width: $BS * 64;
+        }
+        svg {
+          path {
+            fill: $Black;
+          }
+        }
+      }
+
+      &__cartAmount {
+        @include bsFontSize($BS, 32);
+        transform: translate(125%, -50%);
+        color: $Black;
       }
 
       &__mobileNavWrapper {
