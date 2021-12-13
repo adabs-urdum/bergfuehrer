@@ -227,6 +227,21 @@ function save_post_handler( $post_id ) {
         $data['ID'] = $post_id;
         $data['post_title'] = $title;
         $data['post_name']  = sanitize_title( $title );
+
+        $price = get_field('price', $post_id);
+        $conducts = array_filter(get_posts([
+          'numberposts'      => -1,
+          'post_type'        => 'conduct',
+        ]), function($conduct) use($post_id){
+          $tour = get_field('tour', $conduct->ID);
+          return $tour->ID === $post_id;
+        });
+        foreach ($conducts as $conduct) {
+          $wcObj = wc_get_product(get_field('woocommerce_product', $conduct->ID));
+          $wcObj->set_regular_price($price);
+          $wcObj->save();
+        }
+
         wp_update_post( $data );
     }
     else if ( get_post_type( $post_id ) == 'conduct' ) {
