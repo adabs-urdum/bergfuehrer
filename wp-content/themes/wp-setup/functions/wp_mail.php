@@ -2,13 +2,13 @@
 
   // define the wp_mail_from callback
   function filter_wp_mail_from( $from_email ){
-      return 'cyrill@adabs.ch';
+      return 'info@alpinschule-praettigau-davos.ch';
   };
   add_filter( 'wp_mail_from', 'filter_wp_mail_from', 10, 1 );
 
   // define the wp_mail_from_name callback
   function filter_wp_mail_from_name( $from_name ){
-      return 'Cyrill Lehmann';
+      return 'info@alpinschule-praettigau-davos.ch';
   };
   add_filter( 'wp_mail_from_name', 'filter_wp_mail_from_name', 10, 1 );
 
@@ -62,7 +62,7 @@
       ';
       return $table;
   };
-  add_filter( 'wp_mail_original_content', 'filter_wp_mail_original_content', 10, 1 );
+  // add_filter( 'wp_mail_original_content', 'filter_wp_mail_original_content', 10, 1 );
 
     // <!-- Example of sending mail through filter -->
     // $to = 'cyrill@adabs.ch';

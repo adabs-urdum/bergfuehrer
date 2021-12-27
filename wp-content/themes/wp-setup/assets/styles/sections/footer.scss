@@ -21,15 +21,39 @@
     &__logos {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-end;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__logoContainer {
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        margin-bottom: $BS * 32;
+      }
     }
 
     &__logoWrapper {
-      max-width: $BS * 128;
-      max-height: $BS * 128;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 0 $BS * 16;
+
+      &:first-child {
+        canvas {
+          width: $BS * 128;
+        }
+
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
 
     &__logoLink {
@@ -39,7 +63,8 @@
     }
 
     &__logo {
-      max-width: 100%;
+      max-width: $BS * 190;
+      max-height: $BS * 40;
     }
 
     &__address {

@@ -1,10 +1,10 @@
 === Duplicate Post Page Menu & Custom Post Type ===
-Contributors: Inqsys
+Contributors: Inqsys, sindhwal
 Tags: duplicate page, copy menu, clone, duplicate custom-post, copy
 Donate link: http://www.inqsys.com/donate/
 Requires at least: 3.5
 Tested up to: 5.8
-Stable tag: 1.8.0
+Stable tag: 1.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

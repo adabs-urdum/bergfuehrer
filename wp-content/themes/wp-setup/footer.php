@@ -12,22 +12,30 @@
     </address>
 
     <div class="footer__logos">
-      <?php foreach($footerLogos as $footerLogo): ?>
-        <?php
-          $img = $footerLogo['logo'];
-          $caption = $img['caption'];
-          $src = $img['sizes']['L'];
-          $alt = $img['alt'] ? $img['alt'] : $img['name'];
-          $imgTitle = $img['title'] ? $img['title'] : $img['name'];
-          $srcset = wp_get_attachment_image_srcset($img['ID']);
-          $link = $footerLogo['link'];
-        ?>
+      <div class="footer__logoContainer">
         <div class="footer__logoWrapper">
-          <a class="footer__logoLink" href="<?= $link ?>">
-            <img class="footer__logo" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
-          </a>
+          <!-- <canvas width="623" height="485"></canvas>
+          <?php include(get_template_directory() . '/includes/logo.svg') ?> -->
         </div>
-      <?php endforeach; ?>
+      </div>
+      <div class="footer__logoContainer">
+        <?php foreach($footerLogos as $footerLogo): ?>
+          <?php
+            $img = $footerLogo['logo'];
+            $caption = $img['caption'];
+            $src = $img['sizes']['L'];
+            $alt = $img['alt'] ? $img['alt'] : $img['name'];
+            $imgTitle = $img['title'] ? $img['title'] : $img['name'];
+            $srcset = wp_get_attachment_image_srcset($img['ID']);
+            $link = $footerLogo['link'];
+          ?>
+          <div class="footer__logoWrapper">
+            <a class="footer__logoLink" href="<?= $link ?>">
+              <img class="footer__logo" loading="lazy" src="<?= $src ?>" title="<?= $imgTitle ?>" alt="<?= $alt ?>" srcset="<?= $srcset ?>">
+            </a>
+          </div>
+        <?php endforeach; ?>
+      </div>
     </div>
 
     <div class="footer__nav">

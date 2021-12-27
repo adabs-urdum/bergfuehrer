@@ -8,7 +8,7 @@
 
 *	Author: Inqsys Technology
 
-*	Version: 1.8.0
+*	Version: 1.9.2
 
 *	Text Domain: duplicate-ppmc
 
@@ -21,6 +21,7 @@
 /* Check for wordpress installation */
 
 define( 'PPMC_URL', plugin_dir_url( __FILE__ ) );
+define( 'PPMC_V', '1.9.2' );
 
 if ( ! function_exists( 'add_action' ) ) {
 
@@ -106,7 +107,7 @@ if ( ! class_exists( 'Duplicate_PPMC_Init' ) ) {
 		}
 
 		function ppmc_remove_discount_notice(){
-			set_transient( 'ppmc_remove_discount_notice_xmas', true, DAY_IN_SECONDS * 30 );
+			set_transient( 'ppmc_remove_discount_notice_xmas_'.PPMC_V , true, DAY_IN_SECONDS * 30 );
 		}
 
 		function duplicate_ppmc_admin_notice(){
@@ -169,10 +170,10 @@ if ( ! class_exists( 'Duplicate_PPMC_Init' ) ) {
 
 		function duplicate_ppmc_discount_notice(){
 
-			$should_display = get_transient( 'ppmc_remove_discount_notice_xmas' );
+			$should_display = get_transient( 'ppmc_remove_discount_notice_xmas_'.PPMC_V );
 			$display_date = date( 'd M Y' );
-			$dateFrom = strtotime("15 December 2020");
-			$dateTo =  strtotime("1 January 2021");
+			$dateFrom = strtotime("15 December 2021");
+			$dateTo =  strtotime("1 January 2022");
 
 			$compare = $dateTo > strtotime($display_date);
 			if( false != $should_display || strtotime($display_date) > $dateTo || strtotime($display_date) < $dateFrom ){
@@ -182,10 +183,10 @@ if ( ! class_exists( 'Duplicate_PPMC_Init' ) ) {
 				$html = "<div class='notice notice-info important' style='padding: 10px;position:relative;line-height:30px;'>";
 				$html .= "<button id='ppmc-dismiss-sale' type='button' style='top:0;right:0;position:absolute;background:#72777c;border: 0;color: white;font-size:16px;border-radius:50px;cursor:pointer'>X</button>";
 				$html .= "<a href='https://www.inqsys.com/duplicate-post-page-menu-custom-post-type-pro-wordpress-plugin/' target='_new'>";
-				$html .= "<img src='".PPMC_URL."/assets/pro-discount.jpeg' style='padding-right:10px;width:100%;height:200px'></a>";
+				$html .= "<img src='".PPMC_URL."assets/xmas-discount.jpg' style='padding-right:10px;width:100%;height:200px'></a>";
 				$html .= "<div>
-				Hurry!! We are offering <strong>25% off</strong> on our premium plugins. The offer is valid until midnight of ".date('d F Y', $dateTo).".
-				To use this offer, use coupon code- “<strong>XMAS20</strong>”. 
+				Hurry!! We are offering <strong>50% off</strong> on our premium plugins. The offer is valid until midnight of ".date('d F Y', $dateTo).".
+				To use this offer, use coupon code- “<strong>SAVE50</strong>”. 
 				<a class='button button-primary' href='https://www.inqsys.com/duplicate-post-page-menu-custom-post-type-pro-wordpress-plugin/' target='_new'>Get your deals now!</a>
 				<div id='ppmc-not-interested' class='button button-secondry'>Not Interested</div>
 				</div>";

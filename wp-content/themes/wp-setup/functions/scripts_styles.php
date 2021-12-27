@@ -2,7 +2,7 @@
 
 //----------------------------------------------------------
 function my_theme_styles() {
-  wp_enqueue_style('styles', get_template_directory_uri() . '/dist/css/styles.min.css', false, '35');
+  wp_enqueue_style('styles', get_template_directory_uri() . '/dist/css/styles.min.css', false, '42');
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_styles' );
 //----------------------------------------------------------

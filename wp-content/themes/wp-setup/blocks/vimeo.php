@@ -6,6 +6,6 @@
 <section class="vimeo text vimeo--<?= $layout ?>">
   <div class="vimeo__wrapper text__wrapper">
     <canvas width="640" height="360"></canvas>
-    <iframe src="https://player.vimeo.com/video/<?= $vimeoID ?>?h=c285d7a5fe" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/<?= $vimeoID ?>?h=c285d7a5fe&autoplay=1&loop=1&muted=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Ninja Forms Contact Form &#8211; The Drag and Drop Form Builder for WordPress - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-05 12:29:39+0000\n"
+"PO-Revision-Date: 2021-12-20 17:24:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,116 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Ninja Forms Contact Form &#8211; The Drag and Drop Form Builder for WordPress - Stable (latest release)\n"
+
+#: includes/Routes/Submissions.php:157
+msgid "Form ID of the setting saved"
+msgstr "Form ID of the setting saved"
+
+#: includes/Routes/Submissions.php:151
+msgid "Settings data"
+msgstr "Settings data"
+
+#: includes/Admin/Processes/ExportSubmissions.php:116
+#: includes/Admin/Processes/ExportSubmissions.php:163
+msgid "Unable to write file."
+msgstr "Unable to write file."
+
+#: includes/Actions/Recaptcha.php:366 includes/Actions/Recaptcha.php:375
+msgid "Recaptcha validation failed. Please try again later"
+msgstr "ReCAPTCHA validation failed. Please try again later"
+
+#: includes/Actions/Recaptcha.php:63
+msgid "reCAPTCHA v3"
+msgstr "reCAPTCHA v3"
+
+#: includes/Routes/Submissions.php:359 includes/Routes/Submissions.php:425
+#: includes/Routes/Submissions.php:455 includes/Routes/Submissions.php:521
+msgid "This request is missing data"
+msgstr "This request is missing data"
+
+#: includes/Routes/Submissions.php:177 build/submissions.js:1
+msgid "Submission ID"
+msgstr "Submission ID"
+
+#: includes/Routes/Submissions.php:105
+msgid "strtotime($date) that represents the end date we will retrieve submssions at."
+msgstr "strtotime($date) that represents the end date we will retrieve submssions at."
+
+#: includes/Routes/Submissions.php:99
+msgid "strtotime($date) that represents the start date we will retrieve submssions at."
+msgstr "strtotime($date) that represents the start date we will retrieve submssions at."
+
+#: includes/Config/ActionRecaptchaV3Settings.php:18
+msgid "reCAPTCHA v3 returns a score (1.0 is very likely a good interaction, 0.0 is very likely a bot). Configure the score threshold for your form submission."
+msgstr "reCAPTCHA v3 returns a score (1.0 is very likely a good interaction, 0.0 is very likely a bot). Configure the score threshold for your form submission."
+
+#: includes/Config/ActionRecaptchaV3Settings.php:15
+msgid "Score"
+msgstr "Score"
+
+#: includes/AJAX/Controllers/Submission.php:104
+msgid "This form is currently undergoing maintenance. Please %sclick here%s to reload the form and try again."
+msgstr "This form is currently undergoing maintenance. Please %sclick here%s to reload the form and try again."
+
+#: blocks/bootstrap.php:142 blocks/bootstrap.php:161
+msgid "Unique identifier for the object."
+msgstr "Unique identifier for the object."
+
+#: blocks/bootstrap.php:22 build/form-block.js:1
+msgid "Ninja Form"
+msgstr "Ninja Form"
+
+#: includes/Admin/Menus/Addons.php:114
+msgid "Don’t See Your Favorite Service Above? We Can Likely Still Help."
+msgstr "Don’t see your favourite service above? We can likely still help."
+
+#: includes/Admin/Menus/Addons.php:110
+msgid "Never Miss an Important Submission or Lead Again!"
+msgstr "Never miss an important submission or lead again!"
+
+#: includes/Admin/Menus/Addons.php:106
+msgid "Generate More Leads Than You Ever Thought Possible"
+msgstr "Generate more leads than you ever thought possible"
+
+#: includes/Admin/Menus/Addons.php:98
+msgid "Want to Attract More Subscribers to Your Mailing Lists?"
+msgstr "Want to attract more subscribers to your mailing lists?"
+
+#: includes/Admin/Menus/Addons.php:94
+msgid "Accept Payments & Donations Without Breaking the Bank"
+msgstr "Accept payments and donations without breaking the bank"
+
+#: includes/Admin/Menus/Addons.php:90
+msgid "Better Document Sharing will Take Your Business Further"
+msgstr "Better document sharing will take your business further"
+
+#: includes/Admin/Menus/Addons.php:86
+msgid "You Can Build Smart, Beautiful WordPress Forms!"
+msgstr "You can build smart, beautiful WordPress forms!"
+
+#: includes/Config/i18nBuilder.php:90
+msgid "Integrate with 1000+ More Services"
+msgstr "Integrate with 1000+ more services"
+
+#: includes/Config/i18nBuilder.php:89
+msgid "Send SMS Form Notifications"
+msgstr "Send SMS form notifications"
+
+#: includes/Config/i18nBuilder.php:88
+msgid "Document & Workflow Management"
+msgstr "Document and workflow management"
+
+#: includes/Config/i18nBuilder.php:87
+msgid "Manage Your Users Better"
+msgstr "Manage your users better"
+
+#: includes/Config/i18nBuilder.php:86
+msgid "Connect to Your Email Marketing or CRM Account"
+msgstr "Connect to your email marketing or CRM account"
+
+#: includes/Templates/admin-menu-system-status.html.php:25
+msgid "For your security, do not post this information in public places, such as the WordPress.org support forums."
+msgstr "For your security, do not post this information in public places, such as the WordPress.org support forums."
 
 #: includes/Abstracts/Field.php:158
 msgid "This field is required."
@@ -126,7 +236,7 @@ msgstr "Vertical"
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: includes/Config/MergeTagsForm.php:14
+#: includes/Config/MergeTagsForm.php:14 build/submissions.js:1
 msgid "Form ID"
 msgstr "Form ID"
 
@@ -312,12 +422,12 @@ msgstr "Update Forms Tables"
 msgid "Update Actions Tables"
 msgstr "Update Actions Tables"
 
-#: includes/Config/PluginSettingsAdvanced.php:127
+#: includes/Config/PluginSettingsAdvanced.php:134
 msgid "Click this button if any of your forms are still in 'Maintenance Mode' after performing any required updates."
 msgstr "Click this button if any of your forms are still in 'Maintenance Mode' after performing any required updates."
 
-#: includes/Config/PluginSettingsAdvanced.php:125
-#: includes/Config/PluginSettingsAdvanced.php:126
+#: includes/Config/PluginSettingsAdvanced.php:132
+#: includes/Config/PluginSettingsAdvanced.php:133
 msgid "Remove Maintenance Mode"
 msgstr "Remove Maintenance Mode"
 
@@ -333,12 +443,12 @@ msgstr "In order to prevent errors, values may only contain a specific subset of
 msgid "Once per week"
 msgstr "Once per week"
 
-#: includes/Config/PluginSettingsAdvanced.php:109
+#: includes/Config/PluginSettingsAdvanced.php:116
 msgid "Downgrade to v2.9.x"
 msgstr "Downgrade to v2.9.x"
 
 #: includes/Admin/Menus/Settings.php:192 includes/Admin/Menus/Settings.php:218
-#: includes/Config/PluginSettingsAdvanced.php:108
+#: includes/Config/PluginSettingsAdvanced.php:115
 msgid "Downgrade"
 msgstr "Downgrade"
 
@@ -378,15 +488,15 @@ msgstr "Min Value"
 msgid "%sThis will also DELETE all submission data associated with this field.%sYou will not be able to retrieve this data later!%s"
 msgstr "%sThis will also DELETE all submission data associated with this field.%sYou will not be able to retrieve this data later!%s"
 
-#: includes/Config/PluginSettingsAdvanced.php:118
+#: includes/Config/PluginSettingsAdvanced.php:125
 msgid "This setting maybe helpful if your WordPress installation is not moving expired submissions to the trash properly."
 msgstr "This setting maybe helpful if your WordPress installation is not moving expired submissions to the trash properly."
 
-#: includes/Config/PluginSettingsAdvanced.php:117
+#: includes/Config/PluginSettingsAdvanced.php:124
 msgid "Trash Expired Submissions"
 msgstr "Bin Expired Submissions"
 
-#: includes/Config/PluginSettingsAdvanced.php:116
+#: includes/Config/PluginSettingsAdvanced.php:123
 msgid "Move To Trash"
 msgstr "Move To Bin"
 
@@ -511,19 +621,19 @@ msgstr "Yes, please send me occasional emails about Ninja Forms."
 msgid "%sWe would like to collect data about how Ninja Forms is used so that we can improve the experience for everyone. This data will not include ANY submission data or personally identifiable information.%sPlease check out our %sprivacy policy%s for additional clarification.%s"
 msgstr "%sWe would like to collect data about how Ninja Forms is used so that we can improve the experience for everyone. This data will not include ANY submission data or personally identifiable information.%sPlease check out our %sprivacy policy%s for additional clarification.%s"
 
-#: includes/Config/PluginSettingsAdvanced.php:68
+#: includes/Config/PluginSettingsAdvanced.php:75
 msgid "Opt-in to allow Ninja Forms to collect anonymous usage statistics from your site, such as PHP version, installed plugins, and other non-personally idetifiable informations."
 msgstr "Opt-in to allow Ninja Forms to collect anonymous usage statistics from your site, such as PHP version, installed plugins, and other non-personally idetifiable informations."
 
-#: includes/Config/PluginSettingsAdvanced.php:67
+#: includes/Config/PluginSettingsAdvanced.php:74
 msgid "Allow Telemetry"
 msgstr "Allow Telemetry"
 
-#: includes/Config/PluginSettingsAdvanced.php:66
+#: includes/Config/PluginSettingsAdvanced.php:73
 msgid "Opt-out"
 msgstr "Opt-out"
 
-#: includes/Config/PluginSettingsAdvanced.php:66
+#: includes/Config/PluginSettingsAdvanced.php:73
 msgid "Opt-in"
 msgstr "Opt-in"
 
@@ -726,7 +836,7 @@ msgstr "There was an error trying to send your message. Please try again later"
 msgid "Akismet Anti-Spam"
 msgstr "Akismet Anti-Spam"
 
-#: includes/Templates/admin-metabox-sub-info.html.php:34
+#: includes/Templates/admin-metabox-sub-info.html.php:34 build/submissions.js:1
 msgid "Move to Trash"
 msgstr "Move to Bin"
 
@@ -738,13 +848,13 @@ msgstr "ALL Ninja Forms data will be removed from the database and the Ninja For
 msgid "Delete All Data"
 msgstr "Delete All Data"
 
-#: includes/Admin/Menus/Submissions.php:124
-#: includes/Admin/Menus/Submissions.php:132
+#: includes/Admin/Menus/Submissions.php:150
+#: includes/Admin/Menus/Submissions.php:158
 msgid "Trashed"
 msgstr "Binned"
 
-#: includes/Admin/Menus/Submissions.php:121
-#: includes/Admin/Menus/Submissions.php:130
+#: includes/Admin/Menus/Submissions.php:147
+#: includes/Admin/Menus/Submissions.php:156
 msgid "Completed"
 msgstr "Completed"
 
@@ -1315,10 +1425,6 @@ msgstr "Contact Form 7 is currently activated."
 msgid "Created"
 msgstr "Created"
 
-#: includes/Actions/Save.php:35 includes/Config/FormActionDefaults.php:24
-msgid "Store Submission"
-msgstr "Store Submission"
-
 #: includes/Actions/Custom.php:35
 msgid "WP Hook"
 msgstr "WP Hook"
@@ -1415,11 +1521,11 @@ msgstr "The server encountered an error during processing."
 msgid "Every %d Minutes"
 msgstr "Every %d Minutes"
 
-#: includes/Config/PluginSettingsAdvanced.php:110
+#: includes/Config/PluginSettingsAdvanced.php:117
 msgid "Please export any forms or submissions you do not want to be lost during this process."
 msgstr "Please export any forms or submissions you do not want to be lost during this process."
 
-#: includes/Config/PluginSettingsAdvanced.php:110
+#: includes/Config/PluginSettingsAdvanced.php:117
 msgid "IMPORTANT: All 3.0 data will be removed."
 msgstr "IMPORTANT: All 3.0 data will be removed."
 
@@ -2256,7 +2362,7 @@ msgstr "Sub Sequence"
 msgid "Invalid form id"
 msgstr "Invalid form id"
 
-#: includes/Admin/Processes/ImportForm.php:872
+#: includes/Admin/Processes/ImportForm.php:877
 #: includes/Config/FieldSettings.php:999 includes/Database/Models/Form.php:936
 #: includes/Fields/Confirm.php:26
 msgid "Confirm"
@@ -2266,7 +2372,7 @@ msgstr "Confirm"
 msgid "No taxonomy selected."
 msgstr "No taxonomy selected."
 
-#: includes/Config/PluginSettingsAdvanced.php:80
+#: includes/Config/PluginSettingsAdvanced.php:87
 msgid "Opinionated Styles"
 msgstr "Opinionated Styles"
 
@@ -2428,7 +2534,7 @@ msgstr "Radio List"
 msgid "Checkbox List"
 msgstr "Checkbox List"
 
-#: includes/Admin/Processes/ImportForm.php:896
+#: includes/Admin/Processes/ImportForm.php:901
 #: includes/Database/Models/Form.php:960 includes/Fields/CreditCardZip.php:23
 msgid "Credit Card Zip"
 msgstr "Credit Card Zip"
@@ -2693,12 +2799,12 @@ msgstr "Rich Text Editor (RTE)"
 msgid "reCAPTCHA Theme"
 msgstr "reCAPTCHA Theme"
 
-#: includes/Config/PluginSettingsAdvanced.php:91
+#: includes/Config/PluginSettingsAdvanced.php:98
 #: includes/Config/PluginSettingsReCaptcha.php:42
 msgid "Dark"
 msgstr "Dark"
 
-#: includes/Config/PluginSettingsAdvanced.php:87
+#: includes/Config/PluginSettingsAdvanced.php:94
 #: includes/Config/PluginSettingsReCaptcha.php:41
 msgid "Light"
 msgstr "Light"
@@ -2707,11 +2813,11 @@ msgstr "Light"
 msgid "reCaptcha Settings"
 msgstr "reCaptcha Settings"
 
-#: includes/Config/PluginSettingsAdvanced.php:110
+#: includes/Config/PluginSettingsAdvanced.php:117
 msgid "Downgrade to the most recent 2.9.x release."
 msgstr "Downgrade to the most recent 2.9.x release."
 
-#: includes/Config/PluginSettingsAdvanced.php:95
+#: includes/Config/PluginSettingsAdvanced.php:102
 msgid "Use default Ninja Forms styling conventions."
 msgstr "Use default Ninja Forms styling conventions."
 
@@ -2745,7 +2851,7 @@ msgid "Post Title"
 msgstr "Post title"
 
 #: includes/Config/MergeTagsDeprecated.php:14
-#: includes/Config/MergeTagsWP.php:14
+#: includes/Config/MergeTagsWP.php:14 build/submissions.js:1
 msgid "Post ID"
 msgstr "Post ID"
 
@@ -2753,7 +2859,8 @@ msgstr "Post ID"
 msgid "All Fields"
 msgstr "All Fields"
 
-#: includes/Admin/Metaboxes/Calculations.php:12
+#: includes/Admin/Metaboxes/Calculations.php:14
+#: includes/Admin/Metaboxes/CalculationsReact.php:55
 #: includes/Config/FormSettingsTypes.php:17 includes/MergeTags/Calcs.php:15
 msgid "Calculations"
 msgstr "Calculations"
@@ -4770,7 +4877,7 @@ msgid "Help Text"
 msgstr "Help Text"
 
 #: includes/Admin/Metaboxes/AppendAForm.php:62
-#: includes/Config/PluginSettingsAdvanced.php:83 includes/Widget.php:89
+#: includes/Config/PluginSettingsAdvanced.php:90 includes/Widget.php:89
 msgid "None"
 msgstr "None"
 
@@ -4813,11 +4920,11 @@ msgid "You do not have permission to install plugin updates"
 msgstr "You do not have permission to install plugin updates."
 
 #: includes/Database/Models/Submission.php:388
-#: includes/Exports/SubmissionCsvExport.php:173
+#: includes/Exports/SubmissionCsvExport.php:289
 msgid "Date Submitted"
 msgstr "Date Submitted"
 
-#: includes/Templates/admin-metabox-sub-info.html.php:35
+#: includes/Templates/admin-metabox-sub-info.html.php:35 build/submissions.js:1
 msgid "Update"
 msgstr "Update"
 
@@ -4835,6 +4942,7 @@ msgstr "Value"
 #: includes/Config/ActionCollectPaymentSettings.php:42
 #: includes/Templates/admin-menu-forms.html.php:7
 #: includes/Templates/admin-metabox-sub-fields.html.php:7
+#: build/submissions.js:1
 msgid "Field"
 msgstr "Field"
 
@@ -4843,7 +4951,7 @@ msgid "User Submitted Values"
 msgstr "User Submitted Values"
 
 #: includes/Admin/CPT/DownloadAllSubmissions.php:163
-#: includes/Admin/Menus/Submissions.php:458
+#: includes/Admin/Menus/Submissions.php:394 build/submissions.js:1
 msgid "Download All Submissions"
 msgstr "Download All Submissions"
 
@@ -4861,18 +4969,19 @@ msgstr "Select a form"
 
 #: includes/Admin/Menus/ImportExport.php:175
 #: includes/Admin/Menus/Settings.php:195 includes/Admin/Menus/Settings.php:221
+#: build/submissions.js:1
 msgid "Trash"
 msgstr "Bin"
 
 #: includes/Admin/CPT/Submission.php:142
-#: includes/Admin/Menus/Submissions.php:440
-#: includes/Admin/Menus/Submissions.php:441 build/submissions.js:1
+#: includes/Admin/Menus/Submissions.php:376
+#: includes/Admin/Menus/Submissions.php:377 build/submissions.js:1
 #: src/components/displayBulkExport.js:225
 msgid "Export"
 msgstr "Export"
 
 #: includes/Admin/CPT/Submission.php:192
-#: includes/Admin/Menus/Submissions.php:268
+#: includes/Admin/Menus/Submissions.php:204
 #: includes/Config/FieldSettings.php:344
 #: includes/Config/MergeTagsDeprecated.php:183
 #: includes/Config/MergeTagsOther.php:25 includes/Database/MockData.php:620
@@ -4880,12 +4989,13 @@ msgid "Date"
 msgstr "Date"
 
 #: includes/Admin/CPT/Submission.php:160
-#: includes/Admin/Menus/Submissions.php:247
+#: includes/Admin/Menus/Submissions.php:183
 msgid "#"
 msgstr "#"
 
 #: includes/Admin/CPT/Submission.php:56 includes/Admin/CPT/Submission.php:57
-#: includes/Admin/Menus/Submissions.php:141
+#: includes/Admin/Menus/Submissions.php:641 includes/Routes/Submissions.php:45
+#: build/submissions.js:1
 msgid "Submissions"
 msgstr "Submissions"
 
@@ -4893,7 +5003,7 @@ msgstr "Submissions"
 msgid "No Submissions Found"
 msgstr "No Submissions Found"
 
-#: includes/Admin/CPT/Submission.php:478
+#: includes/Admin/CPT/Submission.php:478 build/submissions.js:1
 msgid "Please select a form to view submissions"
 msgstr "Please select a form to view submissions"
 
@@ -4933,14 +5043,14 @@ msgstr "Duplicate"
 #: includes/Templates/admin-menu-all-forms-column-title.html.php:15
 #: includes/Templates/admin-menu-dashboard.html.php:217
 #: includes/Templates/ui-item-controls.html.php:2
-#: includes/Templates/ui-nf-drawer-buttons.html.php:2
+#: includes/Templates/ui-nf-drawer-buttons.html.php:2 build/submissions.js:1
 msgid "Delete"
 msgstr "Delete"
 
 #: includes/Templates/admin-menu-all-forms-column-title.html.php:10
 #: includes/Templates/admin-menu-dashboard.html.php:203
 #: includes/Templates/admin-menu-new-form.html.php:245
-#: includes/Templates/ui-item-controls.html.php:4
+#: includes/Templates/ui-item-controls.html.php:4 build/submissions.js:1
 msgid "Edit"
 msgstr "Edit"
 
