@@ -36,38 +36,42 @@
       }
 
       $order = wc_get_order( $order_id );
-      $order->update_status( 'completed' );
 
-      $orderId = $order_id;
-      $order = new WC_Order($orderId);
-      $address = $order->get_address();
-      $items = array_map(function($item){
-        $id = $item->get_product_id();
-        $quantity = $item->get_quantity();
-        return [
-          'id' => $id,
-          'quantity' => $quantity,
-        ];
-      }, $order->get_items());
+      if(!$order->has_status( 'completed' )){
+        $order->update_status( 'completed' );
 
-      foreach($items as $item){
-        $id = $item['id'];
-        $quantity = $item['quantity'];
-        $conductId = get_field('conduct', $id)->ID;
-        $registration = [
-          'firstname' => $address['first_name'],
-          'lastname' => $address['last_name'],
-          'email' => $address['email'],
-          'telephone' => $address['phone'],
-          'street' => "{$address['address_1']} {$address['address_2']}",
-          'zip' => $address['postcode'],
-          'city' => $address['city'],
-          'people' => $quantity,
-          'paid' => true,
-        ];
+        $orderId = $order_id;
+        $order = new WC_Order($orderId);
+        $address = $order->get_address();
+        $items = array_map(function($item){
+          $id = $item->get_product_id();
+          $quantity = $item->get_quantity();
+          return [
+            'id' => $id,
+            'quantity' => $quantity,
+          ];
+        }, $order->get_items());
 
-        add_row('registrations', $registration, $conductId);
+        foreach($items as $item){
+          $id = $item['id'];
+          $quantity = $item['quantity'];
+          $conductId = get_field('conduct', $id)->ID;
+          $registration = [
+            'firstname' => $address['first_name'],
+            'lastname' => $address['last_name'],
+            'email' => $address['email'],
+            'telephone' => $address['phone'],
+            'street' => "{$address['address_1']} {$address['address_2']}",
+            'zip' => $address['postcode'],
+            'city' => $address['city'],
+            'people' => $quantity,
+            'paid' => true,
+          ];
+
+          add_row('registrations', $registration, $conductId);
+        }
       }
+
   }
 
 
