@@ -20,8 +20,9 @@ $zahls = new \Zahls\Zahls($instanceName, $secret);
 
 $transaction = new \Zahls\Models\Request\Transaction();
 $transaction->setFilterDatetimeUtcGreaterThan(new \DateTime('2019-12-01 00:00:00'));
-$transaction->setFilterDatetimeUtcLessThan(new \DateTime('2021-10-01 00:00:00'));
-$transaction->setOffset(0);
+$transaction->setFilterDatetimeUtcLessThan(new \DateTime('2020-10-01 00:00:00'));
+$transaction->getFilterMyTransactionsOnly(true);
+$transaction->setOffset(40);
 $transaction->setLimit(20);
 
 try {

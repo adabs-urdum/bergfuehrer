@@ -68,7 +68,9 @@ $settings = array(
       'mastercard' => 'Mastercard',
       'visa' => 'Visa',
       'apple_pay' => 'Apple Pay',
-    'google_pay' => 'Google Pay',    
+    'google_pay' => 'Google Pay',
+		      'postfinance_card' => 'PostFinance Card',
+      'postfinance_efinance' => 'PostFinance E-Finance',
       'maestro' => 'Maestro',
       'jcb' => 'JCB',
       'american_express' => 'American Express',
@@ -89,8 +91,6 @@ $settings = array(
       'invoice' => 'Invoice',
       'myone' => 'My One',
       'paysafecard' => 'Paysafe Card',
-      'postfinance_card' => 'PostFinance Card',
-      'postfinance_efinance' => 'PostFinance E-Finance',
       'swissbilling' => 'SwissBilling',
       'barzahlen' => 'Barzahlen/Viacash',
       'bancontact' => 'Bancontact',
@@ -104,6 +104,7 @@ $settings = array(
       'klarna_paynow' => 'Klarna Pay now',
       'klarna_paylater' => 'Klarna Pay Later',
       'oney' => 'Oney',
+	  'gecko-card' => 'Gecko Card',
     )
   )
 );
@@ -116,11 +117,18 @@ if (class_exists('\WC_Subscriptions')) {
       'label' => __('Enable recurring payments for customers when subscriptions are purchased', 'zahls-ch-payment-gateway'),
       'default' => 'no',
     ),
+  'subscriptions_title' => array(
+		'title' => __('Payment Method Change Title', 'zahls-ch-payment-gateway'),
+		'type' => 'text',
+		'description' => __('This controls the title which the user sees if he want to change the payment method for his existing subscription', 'zahls-ch-payment-gateway'),
+		'default' => __(get_option("woocommerce_zahls_subscriptions_title"), 'zahls-ch-payment-gateway'),
+		'desc_tip' => true,
+	),
     'subscriptions_user_desc' => array(
-      'title' => __('Description Checkbox', 'woocommerce'),
+      'title' => __('Description Checkbox', 'zahls-ch-payment-gateway'),
       'type' => 'textarea',
       'css'  => 'width:400px;',
-      'description' => __('This controls the description which the user sees besides the checkbox to activate recurring payments for a subscription. Checkbox shows only if the feature is active and a subscription is purchased.', 'woocommerce'),
+      'description' => __('This controls the description which the user sees besides the checkbox to activate recurring payments for a subscription. Checkbox shows only if the feature is active and a subscription is purchased.', 'zahls-ch-payment-gateway'),
       'default' =>  __(get_option("woocommerce_zahls_subscriptions_user_desc"), 'zahls-ch-payment-gateway'),
       'desc_tip' => true,
     ),

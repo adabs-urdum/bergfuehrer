@@ -8,7 +8,7 @@
 
 *	Author: Inqsys Technology
 
-*	Version: 1.9.2
+*	Version: 2.2.0
 
 *	Text Domain: duplicate-ppmc
 
@@ -21,7 +21,7 @@
 /* Check for wordpress installation */
 
 define( 'PPMC_URL', plugin_dir_url( __FILE__ ) );
-define( 'PPMC_V', '1.9.2' );
+define( 'PPMC_V', '2.2.0' );
 
 if ( ! function_exists( 'add_action' ) ) {
 
@@ -503,8 +503,7 @@ if ( ! class_exists( 'Duplicate_PPMC_Init' ) ) {
 
 									$meta_value = addslashes($meta_data->meta_value );
 
-									$sql_query_sel[]= "SELECT '$new_post_id', '$meta_key', '$meta_value'";
-
+									$sql_query_sel[]= $wpdb->prepare( "SELECT %d,%s,%s", array( $new_post_id, $meta_key, $meta_value ));
 							}
 
 							$sql_query.= implode(' UNION ALL ', $sql_query_sel );

@@ -1,10 +1,5 @@
 <?php
-/**
- * The signatureCheck request model
- * @author    Remo Siegenthaler <remo.siegenthaler@zahls.ch>
- * @copyright 2017 Zahls AG
- * @since     v1.0
- */
+
 namespace Zahls\Models\Request;
 
 /**

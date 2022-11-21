@@ -3,8 +3,8 @@ Contributors: Inqsys, sindhwal
 Tags: duplicate page, copy menu, clone, duplicate custom-post, copy
 Donate link: http://www.inqsys.com/donate/
 Requires at least: 3.5
-Tested up to: 5.8
-Stable tag: 1.9.1
+Tested up to: 6.0
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,15 @@ If you find this useful, <a href='https://www.inqsys.com/donate/' target='_new'>
 </ol>
 
 == Changelog ==
+<ul><li>2.2.0</li><ul>
+<li>Optimization: PHP optimized for WP 6.0.</li>
+</ul></ul>
+<ul><li>2.1.0</li><ul>
+<li>Fixed: Potential SQL injection vulnerability.</li>
+</ul></ul>
+<ul><li>2.0.0</li><ul>
+<li>Optimization: JS optimized for WP 5.9.</li>
+</ul></ul>
 <ul><li>1.7.0</li><ul>
 <li>Optimized: jQuery code for WP jquery migration.</li>
 <li>Optimized: PHP code optimize for PHP version 8.0.</li>

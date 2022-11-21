@@ -1,5 +1,91 @@
 *** Changelog ***
 
+= 7.0.1 - 2022-11-11 =
+* Fix - Issue where subscription renewal payments were being charged twice no longer present.
+
+= 7.0.0 - 2022-11-10 =
+* Add - Update Express Checkout section UI.
+* Add - Auto-complete first and last name on checkout form when using Link payment method.
+* Add - Allow subscription orders to be paid with Link payment method.
+* Add - Add inbox notification for Link payment method.
+* Tweak - Adjust texts and links in WC admin advanced settings.
+* Add - Restrict the Link payment method only for US merchants.
+
+= 6.9.0 - 2022-10-19 =
+* Tweak - Remove remaining traces of old Stripe settings.
+* Add - Add Boleto expiration setting.
+* Add - Declare incompatibility with HPOS.
+
+= 6.8.0 - 2022-09-28 =
+* Fix - Minor adjustments for Custom Order Tables compatibility.
+* Fix - Upgrade from Payment Element beta.
+
+= 6.7.0 - 2022-09-06 =
+* Fix - Check payment method before updating payment method title.
+* Fix - Use the eslint config at the root of the repo.
+
+= 6.6.0 - 2022-08-17 =
+* Fix - Fix "Pending" text instead of numeric amount on Payment Request button on iOS.
+
+= 6.5.1 - 2022-08-01 =
+* Fix - Stripe Link missing styles and logo for email trigger button.
+* Fix - Stripe Link fatal error on `get_upe_enabled_payment_method_ids` method.
+* Fix - Remove Link beta headers on checkout.
+
+= 6.5.0 - 2022-07-28 =
+* Add - Stripe Link: Add beta headers for Stripe server requests
+* Add - Stripe Link payment method option in admin
+* Add - Stripe Link payment method on checkout form
+* Add - Stripe Link payment method on blocks checkout form
+
+= 6.4.3 - 2022-06-30 =
+* Fix - Replace unnecessary throws with empty string when keys are invalid.
+
+= 6.4.2 - 2022-06-29 =
+* Fix - Fix terminal location creation if site title is missing.
+* Fix - Add compatibility with WooCommerce 6.6.
+
+= 6.4.1 - 2022-06-01 =
+* Fix - Ensure proper URL formatting.
+
+= 6.4.0 - 2022-05-20 =
+* Fix - Changed logic for how 'Enabled/Disabled' statuses are shown for payments and payouts capabilities in settings.
+* Tweak - Updated the minimum supported versions of WordPress and WooCommerce.
+
+= 6.3.0 - 2022-03-10 =
+* Tweak - Remove html from translatable strings.
+* Tweak - Revert the deprecation of the 'wc_stripe_hide_payment_request_on_product_page', 'wc_stripe_show_payment_request_on_checkout', and 'wc_stripe_show_payment_request_on_cart' filters.
+* Tweak - Address minor styling issues in settings.
+
+= 6.2.0 - 2022-02-17 =
+* Add - Add onboarding payment gateway setup methods.
+* Fix - Enable Stripe payment method after connecting account.
+* Fix - Missing statement descriptor in account summary API when not set in Stripe.
+
+= 6.1.0 - 2022-01-26 =
+* Tweak - Use the newly exposed LoadableMask component provided by WooCommerce Blocks to trigger the loading state for Payment Request Buttons.
+* Fix - Response type for account summary API.
+* Fix - Invalid response in account summary API when missing account data.
+* Add - Live and test mode information in account summary API.
+* Add - Add filter call when updating an existent intent (wc_stripe_update_existing_intent_request).
+* Add - Add ability to test Stripe account keys' validity.
+* Fix - Fixed full bank statement field description.
+* Fix - Notification messages are placed on top of the account keys modal.
+* Fix - Express checkout with 3DS card on product page when new checkout experience is enabled.
+* Fix - Remove duplicate call to `payment_scripts`.
+* Fix - Send bank statement descriptors to payment intents.
+
+= 6.0.0 - 2022-01-05 =
+* Fix - Fixed capitalization for payment method names: iDEAL, giropay, and Sofort.
+* Add - Text to explain how to enable webhooks when manually entering your API keys in the new Stripe settings.
+* Tweak - Redirect to the settings tab after an account is connected.
+* Tweak - Prompt message when navigating out Stripe settings with unsaved changes
+* Tweak - Show toast when payment methods list is updated with new payment methods.
+* Fix - JS error on checkout when Boleto method was not active.
+* Fix - Fixed bug that show "Use new payment method" on pay order page when there were no saved card was.
+* Tweak - Autocomplete for account keys and webhooks fields were disabled.
+* Fix - The settings page is not reloaded when the user enters invalid account keys.
+
 = 5.9.0 - 2021-12-09 =
 * Add - Add Stripe API to generate connection tokens, manage terminal locations, create customers, get account summary, capture payment.
 * Tweak - Remove `_wcstripe_feature_upe` flag and all traces of old settings.

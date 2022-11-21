@@ -3,6 +3,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+use Automattic\WooCommerce\Utilities\OrderUtil;
+
 /**
  * Provides static methods as helpers.
  *
@@ -210,7 +212,7 @@ class WC_Stripe_Helper {
 				'card_declined'            => __( 'The card was declined.', 'woocommerce-gateway-stripe' ),
 				'missing'                  => __( 'There is no card on a customer that is being charged.', 'woocommerce-gateway-stripe' ),
 				'processing_error'         => __( 'An error occurred while processing the card.', 'woocommerce-gateway-stripe' ),
-				'invalid_sofort_country'   => __( 'The billing country is not accepted by SOFORT. Please try another country.', 'woocommerce-gateway-stripe' ),
+				'invalid_sofort_country'   => __( 'The billing country is not accepted by Sofort. Please try another country.', 'woocommerce-gateway-stripe' ),
 				'email_invalid'            => __( 'Invalid email address, please correct and try again.', 'woocommerce-gateway-stripe' ),
 				'invalid_request_error'    => is_add_payment_method_page()
 					? __( 'Unable to save this payment method, please try again or use alternative method.', 'woocommerce-gateway-stripe' )
@@ -373,7 +375,20 @@ class WC_Stripe_Helper {
 	public static function get_order_by_source_id( $source_id ) {
 		global $wpdb;
 
-		$order_id = $wpdb->get_var( $wpdb->prepare( "SELECT DISTINCT ID FROM $wpdb->posts as posts LEFT JOIN $wpdb->postmeta as meta ON posts.ID = meta.post_id WHERE meta.meta_value = %s AND meta.meta_key = %s", $source_id, '_stripe_source_id' ) );
+		if ( class_exists( 'Automattic\WooCommerce\Utilities\OrderUtil' ) && OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			$orders   = wc_get_orders(
+				[
+					'limit'      => 1,
+					'meta_query' => [
+						'key'   => '_stripe_source_id',
+						'value' => $source_id,
+					],
+				]
+			);
+			$order_id = current( $orders ) ? current( $orders )->get_id() : false;
+		} else {
+			$order_id = $wpdb->get_var( $wpdb->prepare( "SELECT DISTINCT ID FROM $wpdb->posts as posts LEFT JOIN $wpdb->postmeta as meta ON posts.ID = meta.post_id WHERE meta.meta_value = %s AND meta.meta_key = %s", $source_id, '_stripe_source_id' ) );
+		}
 
 		if ( ! empty( $order_id ) ) {
 			return wc_get_order( $order_id );
@@ -396,7 +411,17 @@ class WC_Stripe_Helper {
 			return false;
 		}
 
-		$order_id = $wpdb->get_var( $wpdb->prepare( "SELECT DISTINCT ID FROM $wpdb->posts as posts LEFT JOIN $wpdb->postmeta as meta ON posts.ID = meta.post_id WHERE meta.meta_value = %s AND meta.meta_key = %s", $charge_id, '_transaction_id' ) );
+		if ( class_exists( 'Automattic\WooCommerce\Utilities\OrderUtil' ) && OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			$orders   = wc_get_orders(
+				[
+					'transaction_id' => $charge_id,
+					'limit'          => 1,
+				]
+			);
+			$order_id = current( $orders ) ? current( $orders )->get_id() : false;
+		} else {
+			$order_id = $wpdb->get_var( $wpdb->prepare( "SELECT DISTINCT ID FROM $wpdb->posts as posts LEFT JOIN $wpdb->postmeta as meta ON posts.ID = meta.post_id WHERE meta.meta_value = %s AND meta.meta_key = %s", $charge_id, '_transaction_id' ) );
+		}
 
 		if ( ! empty( $order_id ) ) {
 			return wc_get_order( $order_id );
@@ -415,7 +440,20 @@ class WC_Stripe_Helper {
 	public static function get_order_by_intent_id( $intent_id ) {
 		global $wpdb;
 
-		$order_id = $wpdb->get_var( $wpdb->prepare( "SELECT DISTINCT ID FROM $wpdb->posts as posts LEFT JOIN $wpdb->postmeta as meta ON posts.ID = meta.post_id WHERE meta.meta_value = %s AND meta.meta_key = %s", $intent_id, '_stripe_intent_id' ) );
+		if ( class_exists( 'Automattic\WooCommerce\Utilities\OrderUtil' ) && OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			$orders   = wc_get_orders(
+				[
+					'limit'      => 1,
+					'meta_query' => [
+						'key'   => '_stripe_intent_id',
+						'value' => $intent_id,
+					],
+				]
+			);
+			$order_id = current( $orders ) ? current( $orders )->get_id() : false;
+		} else {
+			$order_id = $wpdb->get_var( $wpdb->prepare( "SELECT DISTINCT ID FROM $wpdb->posts as posts LEFT JOIN $wpdb->postmeta as meta ON posts.ID = meta.post_id WHERE meta.meta_value = %s AND meta.meta_key = %s", $intent_id, '_stripe_intent_id' ) );
+		}
 
 		if ( ! empty( $order_id ) ) {
 			return wc_get_order( $order_id );
@@ -434,7 +472,20 @@ class WC_Stripe_Helper {
 	public static function get_order_by_setup_intent_id( $intent_id ) {
 		global $wpdb;
 
-		$order_id = $wpdb->get_var( $wpdb->prepare( "SELECT DISTINCT ID FROM $wpdb->posts as posts LEFT JOIN $wpdb->postmeta as meta ON posts.ID = meta.post_id WHERE meta.meta_value = %s AND meta.meta_key = %s", $intent_id, '_stripe_setup_intent' ) );
+		if ( class_exists( 'Automattic\WooCommerce\Utilities\OrderUtil' ) && OrderUtil::custom_orders_table_usage_is_enabled() ) {
+			$orders   = wc_get_orders(
+				[
+					'limit'      => 1,
+					'meta_query' => [
+						'key'   => '_stripe_setup_intent',
+						'value' => $intent_id,
+					],
+				]
+			);
+			$order_id = current( $orders ) ? current( $orders )->get_id() : false;
+		} else {
+			$order_id = $wpdb->get_var( $wpdb->prepare( "SELECT DISTINCT ID FROM $wpdb->posts as posts LEFT JOIN $wpdb->postmeta as meta ON posts.ID = meta.post_id WHERE meta.meta_value = %s AND meta.meta_key = %s", $intent_id, '_stripe_setup_intent' ) );
+		}
 
 		if ( ! empty( $order_id ) ) {
 			return wc_get_order( $order_id );
@@ -444,13 +495,40 @@ class WC_Stripe_Helper {
 	}
 
 	/**
+	 * Sanitize and retrieve the shortened statement descriptor concatenated with the order number.
+	 *
+	 * @param string   $statement_descriptor Shortened statement descriptor.
+	 * @param WC_Order $order Order.
+	 * @param string   $fallback_descriptor (optional) Fallback of the shortened statement descriptor in case it's blank.
+	 * @return string $statement_descriptor Final shortened statement descriptor.
+	 */
+	public static function get_dynamic_statement_descriptor( $statement_descriptor = '', $order = null, $fallback_descriptor = '' ) {
+		$actual_descriptor = ! empty( $statement_descriptor ) ? $statement_descriptor : $fallback_descriptor;
+		$prefix            = self::clean_statement_descriptor( $actual_descriptor );
+		$suffix            = '';
+
+		if ( empty( $prefix ) ) {
+			return '';
+		}
+
+		if ( method_exists( $order, 'get_order_number' ) && ! empty( $order->get_order_number() ) ) {
+			$suffix = '* #' . $order->get_order_number();
+		}
+
+		// Make sure it is limited at 22 characters.
+		$statement_descriptor = substr( $prefix . $suffix, 0, 22 );
+
+		return $statement_descriptor;
+	}
+
+	/**
 	 * Sanitize statement descriptor text.
 	 *
 	 * Stripe requires max of 22 characters and no special characters.
 	 *
 	 * @since 4.0.0
-	 * @param string $statement_descriptor
-	 * @return string $statement_descriptor Sanitized statement descriptor
+	 * @param string $statement_descriptor Statement descriptor.
+	 * @return string $statement_descriptor Sanitized statement descriptor.
 	 */
 	public static function clean_statement_descriptor( $statement_descriptor = '' ) {
 		$disallowed_characters = [ '<', '>', '\\', '*', '"', "'", '/', '(', ')', '{', '}' ];

@@ -1,10 +1,12 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit;
 
+use NinjaForms\Includes\Admin\Processes\DeleteBatchFile;
 use NinjaForms\Includes\Contracts\SubmissionHandler;
-use NinjaForms\Includes\Entities\SubmissionFilter;
+
 use NinjaForms\Includes\Entities\SingleSubmission;
 use NinjaForms\Includes\Entities\SubmissionExtraHandlerResponse;
 use NinjaForms\Includes\Factories\SubmissionAggregateFactory;
+use NinjaForms\Includes\Factories\SubmissionFilterFactory;
 
 
 /**
@@ -56,12 +58,32 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
             'args' => [
                 'singleSubmission' => [
                     'required' => true,
-                    'description' => esc_attr__('Update Submission', 'ninja-forms'),
+                    'description' => esc_attr__('Update single Submission', 'ninja-forms'),
                     'type' => 'JSON encoded array',
                     'validate_callback' => 'rest_validate_request_arg',
                 ]
             ],
             'callback' => [ $this, 'update_submission' ],
+            'permission_callback' => [ $this, 'update_submission_permission_callback' ]
+        ));
+
+        register_rest_route('ninja-forms-submissions', 'submissions/restore', array(
+            'methods' => 'POST',
+            'args' => [
+                'restore' => [
+                    'required' => true,
+                    'description' => esc_attr__('Update Submission', 'ninja-forms'),
+                    'type' => 'boolean',
+                    'validate_callback' => 'rest_validate_request_arg',
+                ],
+                'submissions' => [
+                    'required' => true,
+                    'description' => esc_attr__('Array of Submissions', 'ninja-forms'),
+                    'type' => 'array',
+                    'validate_callback' => 'rest_validate_request_arg',
+                ]
+            ],
+            'callback' => [ $this, 'restore_submissions' ],
             'permission_callback' => [ $this, 'update_submission_permission_callback' ]
         ));
 
@@ -134,6 +156,24 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
                 ],           
             ],
             'callback' => [ $this, 'download_all_submissions' ],
+            'permission_callback' => [ $this, 'get_submissions_permission_callback' ],
+        ));
+
+        /**
+         * Delete the temp file created from the `download-all` request
+         */
+        register_rest_route('ninja-forms-submissions', 'delete-download-file', array(
+            'methods' => 'POST',
+            'args' => [
+                'file_path' => [
+                    'required' => true,
+                    'description' => esc_attr__('File path of the file to delete', 'ninja-forms'),
+                    'type' => 'string',
+                    'validate_callback' => 'rest_validate_request_arg',
+                ],           
+            ],
+            'callback' => [ $this, 'delete_download_file' ],
+            // Uses the same permissions as the `download-all` request
             'permission_callback' => [ $this, 'get_submissions_permission_callback' ],
         ));
 
@@ -362,7 +402,7 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
         if ('filterByDates' === $requestType) {
 
             foreach ($form_ids as $formId) {
-                $params = (new SubmissionFilter())
+                $params = (new SubmissionFilterFactory())->maybeLimitByLoggedInUser()
                     ->setStartDate($start_date)
                     ->setEndDate($end_date)
                     ->setNfFormIds([$formId])
@@ -387,7 +427,7 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
 
             $csv[$formId] = $csvObject->handle();
         } elseif ('getSubmissions' === $requestType) {
-            $params = (new SubmissionFilter())
+            $params = (new SubmissionFilterFactory())->maybeLimitByLoggedInUser()
                 ->setNfFormIds($form_ids)
                 ->setStartDate(0)
                 ->setEndDate(time())
@@ -427,14 +467,46 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
 
         $export = (new NF_Admin_Processes_ExportSubmissions($formId));
         $downloadUrl = $export->getFileUrl();
-
+        $filePath = $export->getFilePath();
         $response =[
             'formId'=>$formId,
-            'downloadUrl'=>$downloadUrl
+            'downloadUrl'=>$downloadUrl,
+            'filePath'=>$filePath
         ];
         
         return $response;
     }
+
+
+    /**
+     * Delete a file when provided valid file path
+     *
+     * @param WP_REST_Request $request Object with `file_path` property
+     * @return void
+     */
+    public function delete_download_file(WP_REST_Request $request)
+    {
+        //Gather data from the request
+        $data = json_decode($request->get_body());
+
+        if(!empty($data->file_path)){
+            
+            $filePath = (string)$data->file_path;
+
+            $deleteFile = (new DeleteBatchFile())->delete($filePath);
+            
+            $response=[
+                'result'=>$deleteFile
+            ];
+
+            return $response;
+
+        }else{
+            return new WP_Error('malformed_request', __('This request is missing data for method delete_download_file', 'ninja-forms'));
+        }
+
+    }
+
 
     /**
      * Trigger Email Action endpoint callback
@@ -532,10 +604,12 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
             // to ensure it goes beyond all time zones
             $end_date = $_GET["end_date"] != 0 ? $_GET["end_date"] : time()+(60*60*24);
             $search_term = !empty($_GET["search_term"]) ? $_GET["search_term"] : null;
+            $status = !empty($_GET["status"]) && $_GET["status"] === "trash" ? ["trash"] : ['active', 'publish'];
         }
 
         //Get aggregated submissions
-        $params = (new SubmissionFilter())->setNfFormIds([$form_ids]);
+        $params = (new SubmissionFilterFactory())->maybeLimitByLoggedInUser()->setNfFormIds([$form_ids]);
+
         if(!empty($start_date) && !empty($end_date)){
             $params->setStartDate($start_date);
             $params->setEndDate($end_date);
@@ -543,7 +617,7 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
         if($search_term){
             $params->setSearchString( $search_term );
         }
-        $params->setStatus( ['active', 'publish'] );
+        $params->setStatus( $status );
         $submissionAggregate = (new SubmissionAggregateFactory())->submissionAggregate();
         $filteredSubmissions = $submissionAggregate->filterSubmissions( $params );
         
@@ -583,10 +657,9 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
         $setting = $data['settingName'];
         $new_data = $data['data'];
         $form_id = $data['formID'];
-        //Get data stored and create the new vamue for the correct setting
+        //Get data stored and create the new value for the correct setting
         $option = get_option( 'ninja_forms_submissions_settings' );
-        $current_form_option = $current_form_option[$form_id];
-        $current_setting_value = $current_form_option[$setting];
+        $current_setting_value = $option[$form_id][$setting];
         $updated_option = $option;
         $updated_option[$form_id][$setting] = $new_data;
 
@@ -651,6 +724,35 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
     }
 
     /**
+     * Request restoration of a collection of submissions
+     *
+     * Data passes as a collection of single submission entities keyed
+     * under submissions
+     * 
+     * {"submissions": SingleSubmission[]}
+     *
+     * @param WP_REST_Request $request
+     * @return void
+     */
+    public function restore_submissions(WP_REST_Request $request){
+        //Extract required data
+        $data = json_decode($request->get_body());  
+        
+        $submissions = $data->submissions;
+        
+        $submissionAggregate = (new SubmissionAggregateFactory())->submissionAggregate();
+        
+        foreach($submissions as $obj){
+            
+            $singleSubmission = SingleSubmission::fromArray((array)$obj);
+            
+            $submissionAggregate->restoreSingleSubmission($singleSubmission);
+        }
+
+        return 'ok';
+    }
+
+    /**
      * Request update of a single submission
      *
      * Data passes as a single submission entity keyed under submission
@@ -667,7 +769,7 @@ final class NF_Routes_Submissions extends NF_Abstracts_Routes
         $singleSubmissionArray = $data['singleSubmission'];
 
         $singleSubmission = SingleSubmission::fromArray($singleSubmissionArray);
- 
+
         $submissionAggregate = (new SubmissionAggregateFactory())->submissionAggregate();
                     
         $submissionAggregate->updateSingleSubmission($singleSubmission);

@@ -5,14 +5,16 @@
  */
 namespace Zahls;
 
+use Zahls\Models\Request\PaymentMethod;
+
 /**
  * This object handles the communication with the API server
  * @package Zahls
  */
 class Communicator
 {
-    const VERSION = 'v1';
-    const API_URL_FORMAT = 'https://api.%s/%s/%s/%d/%s';
+    const VERSIONS = [1.0, 1.1];
+    const API_URL_FORMAT = 'https://api.%s/%s/%s/%s/%s';
     const API_URL_BASE_DOMAIN = 'zahls.ch';
     const DEFAULT_COMMUNICATION_HANDLER = '\Zahls\CommunicationAdapter\CurlCommunication';
 
@@ -46,6 +48,10 @@ class Communicator
      * @var string The communication handler which handles the HTTP requests. Default cURL Communication handler
      */
     protected $communicationHandler;
+    /**
+     * @var string The version to use
+     */
+    protected $version;
 
     /**
      * Generates a communicator object with a communication handler like cURL.
@@ -54,14 +60,21 @@ class Communicator
      * @param string $apiSecret            The API secret which is the key to hash all the parameters passed to the API server.
      * @param string $communicationHandler The preferred communication handler. Default is cURL.
      * @param string $apiBaseDomain        The base domain of the API URL.
+     * @param float $version               The version of the API to query.
      *
      * @throws ZahlsException
      */
-    public function __construct($instance, $apiSecret, $communicationHandler, $apiBaseDomain)
+    public function __construct($instance, $apiSecret, $communicationHandler, $apiBaseDomain, $version = null)
     {
         $this->instance = $instance;
         $this->apiSecret = $apiSecret;
         $this->apiBaseDomain = $apiBaseDomain;
+
+        if ($version && in_array($version, self::VERSIONS)) {
+            $this->version = $version;
+        } else {
+            $this->version = current(self::VERSIONS);
+        }
 
         if (!class_exists($communicationHandler)) {
             throw new ZahlsException('Communication handler class ' . $communicationHandler . ' not found');
@@ -76,7 +89,7 @@ class Communicator
      */
     public function getVersion()
     {
-        return self::VERSION;
+        return $this->version;
     }
 
     /**
@@ -100,7 +113,7 @@ class Communicator
 
         $id = isset($params['id']) ? $params['id'] : 0;
         $act = in_array($method, ['refund', 'capture']) ? $method : '';
-        $apiUrl = sprintf(self::API_URL_FORMAT, $this->apiBaseDomain, self::VERSION, $params['model'], $id, $act);
+        $apiUrl = sprintf(self::API_URL_FORMAT, $this->apiBaseDomain, 'v' . $this->version, $params['model'], $id, $act);
 
         $httpMethod = $this->getHttpMethod($method) === 'PUT' && $params['model'] === 'Design'
             ? 'POST'
@@ -119,7 +132,12 @@ class Communicator
             throw new \Zahls\ZahlsException($response['body']['message'], $response['info']['http_code']);
         }
 
-        foreach ($response['body']['data'] as $object) {
+        $data = $response['body']['data'];
+        if ($model instanceof PaymentMethod && $method === 'getOne') {
+            $data = [$data];
+        }
+
+        foreach ($data as $object) {
             $responseModel = $model->getResponseModel();
             $convertedResponse[] = $responseModel->fromArray($object);
         }

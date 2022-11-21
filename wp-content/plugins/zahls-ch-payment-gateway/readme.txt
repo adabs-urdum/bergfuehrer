@@ -1,10 +1,10 @@
-=== zahls.ch Credit Cards and TWINT for WooCommerce  ===
+=== zahls.ch Credit Cards, PostFinance and TWINT for WooCommerce  ===
 Contributors: ivanlouis
-Donate link: https://www.zahls.ch
-Tags: twint, kreditkarten, postfinance, payment, e-commerce, zahls, gateway, payrexx, payrexx direct, wir, giropay, concardis, paymill, braintree, stripe, ogone, ingenico, viveum, reka, datatrans, six, saferpay, onepage, shop, payment link, invoices, virtual terminal, vpos
+Donate link: https://billing.zahls.ch/de/vpos
+Tags: twint, kreditkarten, postfinance, postfinance card, postcard, zahls, gateway, payrexx, payrexx direct, wir, giropay, concardis, paymill, braintree, stripe, ogone, ingenico, viveum, reka, datatrans, six, saferpay, onepage, shop, payment link, invoices, virtual terminal, vpos, payrexx swiss collecting, post e-finance, payment, e-commerce 
 Requires at least: 4.6
-Tested up to: 5.9
-Stable tag: 1.1.4
+Tested up to: 6.1
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ With zahls.ch you accept various payment methods such as credit cards and TWINT 
 == Description ==
 Website: [www.zahls.ch](https://www.zahls.ch)
 
-With this plugin for [zahls.ch](https://www.zahls.ch) you can easily integrate different payment methods into WooCommerce. Accept credit cards and TWINT with just one plugin. The plugin is and remains free of charge.
+With this plugin for [zahls.ch](https://www.zahls.ch) you can easily integrate different payment methods into WooCommerce. Accept credit cards, TWINT and PostFinance Card with just one plugin. The plugin is and remains free of charge.
 
 zahls.ch has attractive conditions. For testing and for beginners with low volumes, we recommend the starter package, which has no fixed costs. For credit card and TWINT transactions you pay 2.9% plus CHF 0.30. Our support team offers you a free installation service at info@zahls.ch.
 
@@ -21,13 +21,13 @@ More about the conditions of zahls.ch at [www.zahls.ch](https://www.zahls.ch).
 
 = Payment options =
 * TWINT
+* PostFinance Card
+* PostFinance E-Finance
 * Mastercard
 * VISA
 * AMEX
 * Apple Pay
 * Google Pay
-* PostFinance Card
-* PostFinance E-Finance
 * Masterpass
 * PayPal
 * Stripe
@@ -51,6 +51,7 @@ More about the conditions of zahls.ch at [www.zahls.ch](https://www.zahls.ch).
 * bob invoice
 
 = Supported payment providers =
+* TWINT
 * Ogone / Ingenico
 * PostFinance
 * Concardis
@@ -77,10 +78,13 @@ More about the conditions of zahls.ch at [www.zahls.ch](https://www.zahls.ch).
 * bob invoice
 
 == Installation ==
+
+https://www.youtube.com/watch?v=Kw9ne-kT2Jk
+
 * Download plugin
 * Upload and install the ZIP archive.
 * Activate the plugin in WordPress
-* Configure your payment methods in the backend of zahls.ch. We recommend that you activate at least TWINT and credit cards. For TWINT you need a business account with TWINT. Credit cards can be set up directly in the backend of zahls.ch. For this, the payment provider Payrexx Direct should be activated.
+* Configure your payment methods in the backend of zahls.ch. We recommend that you activate TWINT, MasterCard, Visa, Apple Pay, Google Pay, PostFinance Card and PostFinance E-Finance. All those payment methods can be set up directly in the backend of zahls.ch. For this, the payment provider Payrexx Direct and Payrexx Swiss Collecting should be activated.
 * Enter the details of your zahls.ch user in WooCommerce. The instance name is derived from your zahls.ch address (e.g. example.zahls.ch => example). You can find the API key in the backend of zahls.ch under "API & Integrations".
 * Important: To ensure that payments in WooCommerce receive the correct status, please enter the following URL in the backend of zahls.ch ([login.zahls.ch](https://login.zahls.ch)) under "Webhooks". Replace ihredomain.ch with your domain: https://www.ihredomain.ch/?wc-api=wc_zahls_gateway.
 
@@ -138,7 +142,31 @@ The zahls.ch support team will be happy to assist you with the installation.
 = 1.1.4 =
 * Minor changes, no backup necessary
 
+= 1.2.0 =
+* Major update, make sure to create a backup
+
+= 1.2.1 =
+* Minor changes, no backup necessary
+
+= 1.2.2 =
+* Minor changes, no backup necessary
+
+= 1.2.3 =
+* Minor changes, no backup necessary
+
 == Changelog ==
+
+= 1.2.3 =
+* Fix Webhook error if no prefix is set
+
+= 1.2.2 =
+* Fix Webhook error
+
+= 1.2.1 =
+* More Subscription Features
+
+= 1.2.0 =
+* Subscription Features, Update PHP SDK
 
 = 1.1.4 =
 * Changed for Compatibility with Elementor E-Commerce Features

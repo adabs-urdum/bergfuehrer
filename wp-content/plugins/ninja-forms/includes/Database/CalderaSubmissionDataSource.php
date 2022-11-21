@@ -6,6 +6,9 @@ use NinjaForms\Includes\Contracts\SubmissionDataSource as ContractsSubmissionDat
 use NinjaForms\Includes\Entities\SingleSubmission;
 use NinjaForms\Includes\Entities\SubmissionFilter;
 
+use Caldera_Forms_Entry_Update;
+use Caldera_Forms_Entry_Bulk;
+use Caldera_Forms;
 
 /**
  * Retrieves a single Caldera Forms submission by its entry id 
@@ -202,7 +205,24 @@ class CalderaSubmissionDataSource implements ContractsSubmissionDataSource
     /** @inheritDoc */
     public function deleteSubmission(SingleSubmission $singleSubmission): ContractsSubmissionDataSource
     {
-        // @TODO: Use CF API to delete submission
+        $submissionId = $singleSubmission->getSubmissionRecordId();
+        $entry = Caldera_Forms::get_entry_detail( $submissionId );
+        if($entry['status'] === "active"){
+            Caldera_Forms_Entry_Update::update_entry_status( "trash", $submissionId);
+        } else {
+            Caldera_Forms_Entry_Bulk::delete_entries([$submissionId]);
+        }
+
+        return $this;
+    }
+
+    /** @inheritDoc */
+    public function restoreSubmission(SingleSubmission $singleSubmission): ContractsSubmissionDataSource
+    {
+        $submissionId = $singleSubmission->getSubmissionRecordId();
+
+        Caldera_Forms_Entry_Update::update_entry_status( "active", $submissionId);
+ 
         return $this;
     }
 
@@ -222,15 +242,27 @@ class CalderaSubmissionDataSource implements ContractsSubmissionDataSource
         global $wpdb;
         
         $submissionRecordIdQuery = "select * from " . $wpdb->prefix . "cf_form_entries posts where form_id=%s";
+        $args[] = $formId;
+        
+        $userId = $this->submissionFilter->getUserId();
 
-        $recordCollection = $wpdb->get_results($wpdb->prepare($submissionRecordIdQuery, $formId));
+        // Filter on post author as submitter's user id
+        if (!\is_null($userId)) {
+
+            $submissionRecordIdQuery .= " AND user_id = %d";
+            $args[]=$userId;
+        }
+        
+        $recordCollection = $wpdb->get_results($wpdb->prepare($submissionRecordIdQuery, $args));
         $statuses = $this->submissionFilter->getStatus();
+
         foreach ($recordCollection as $queryObject) {
             //filter by status
             if( empty($statuses) || in_array( $queryObject->status, $statuses ) ){
                 $submissionRecordId = $queryObject->id;
                 $subDate = $queryObject->datestamp;
                 $status = $queryObject->status;
+                $submitterId = $queryObject->user_id;
 
                 $include = $this->includeByDateFilter($subDate);
 
@@ -243,7 +275,8 @@ class CalderaSubmissionDataSource implements ContractsSubmissionDataSource
                     'timestamp' => $subDate,
                     'formId' => $formId,
                     'dataSource' => $this->dataSource,
-                    'status'    =>  $status
+                    'status'    =>  $status,
+                    'submitterId'   => $submitterId
                 ]);
             }
         }

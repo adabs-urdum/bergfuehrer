@@ -2,14 +2,212 @@
 # This file is distributed under the same license as the Plugins - Ninja Forms Contact Form &#8211; The Drag and Drop Form Builder for WordPress - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-24 08:15:47+0000\n"
+"PO-Revision-Date: 2022-08-26 07:04:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
 "Language: de_CH\n"
 "Project-Id-Version: Plugins - Ninja Forms Contact Form &#8211; The Drag and Drop Form Builder for WordPress - Stable (latest release)\n"
+
+#: includes/Routes/Submissions.php:504
+msgid "This request is missing data for method delete_download_file"
+msgstr "Bei dieser Anfrage fehlen Daten für die Methode delete_download_file"
+
+#: includes/Routes/Submissions.php:169
+msgid "File path of the file to delete"
+msgstr "Pfad der zu löschenden Datei"
+
+#: includes/Admin/Processes/DeleteBatchFile.php:32
+msgid "File could not be deleted"
+msgstr "Datei konnte nicht gelöscht werden"
+
+#: includes/Admin/Processes/DeleteBatchFile.php:28
+msgid "File was deleted"
+msgstr "Datei wurde gelöscht"
+
+#: includes/Admin/Processes/DeleteBatchFile.php:22
+msgid "File could not be found for deletion"
+msgstr "Zu löschende Datei wurde nicht gefunden"
+
+#: includes/Routes/Submissions.php:80
+msgid "Array of Submissions"
+msgstr "Array mit Einsendungen"
+
+#: includes/Routes/Submissions.php:60
+msgid "Update single Submission"
+msgstr "Einzelne Einsendung aktualisieren"
+
+#: includes/Actions/Save.php:35 includes/Config/FormActionDefaults.php:24
+msgid "Record Submission"
+msgstr "Einsendung aufzeichnen"
+
+#: includes/Routes/Submissions.php:196
+msgid "Form ID of the setting saved"
+msgstr "Formular-ID der gespeicherten Einstellung"
+
+#: includes/Routes/Submissions.php:190
+msgid "Settings data"
+msgstr "Einstellungsdaten"
+
+#: includes/Routes/Submissions.php:184
+msgid "Setting name in the submissionsSettings array"
+msgstr "Name der Einstellung im Array submissionsSettings"
+
+#: includes/Config/PluginSettingsAdvanced.php:61
+msgid "This setting is used to see the \"old\" submissions page. If you are experiencing issues with your submissions page, please notify us at %s.%sPlease refresh your settings page after saving this setting before navigating to the submissions page."
+msgstr "Diese Einstellung wird genutzt, um die \"alte\" Seite mit den Einsendungen zu sehen. Falls du Probleme mit deiner Einsendungenseite hast, benachrichtige uns bitte unter %s.%s Bitte aktualisiere deine Einstellungsseite, nachdem du diese Einstellung gespeichert hast, bevor du zur Seite mit den Einsendungen wechselst."
+
+#: includes/Config/PluginSettingsAdvanced.php:60
+msgid "Show Legacy Submissions Page"
+msgstr "Alte Seite für Einsendungen anzeigen"
+
+#: includes/Admin/Metaboxes/CalculationsReact.php:97
+msgid " - Parsed"
+msgstr "– Geparst"
+
+#: includes/Admin/Metaboxes/CalculationsReact.php:90
+msgid " - Raw"
+msgstr "– Unbearbeitet"
+
+#: includes/Routes/Submissions.php:138
+msgid "Export submissions based on array of submissions IDs"
+msgstr "Einsendungen basierend auf einem Array mit Einsendungs-IDs exportieren"
+
+#: includes/Routes/Submissions.php:132
+msgid "Export single submission if a JSON encoded submission is passed"
+msgstr "Einzelne Einsendung exportieren, falls eine JSON-encodierte Einsendung übergeben wird"
+
+#: includes/Routes/Submissions.php:100
+msgid "Extra Handler of Submission"
+msgstr "Extra Handler of Submission"
+
+#: includes/Routes/Submissions.php:74 includes/Routes/Submissions.php:94
+msgid "Update Submission"
+msgstr "Einsendung aktualisieren"
+
+#: includes/Routes/Submissions.php:32
+msgid "Form IDs"
+msgstr "Formular-IDs"
+
+#: includes/Admin/Processes/ExportSubmissions.php:116
+#: includes/Admin/Processes/ExportSubmissions.php:172
+msgid "Unable to write file."
+msgstr "Datei kann nicht geschrieben werden."
+
+#: includes/Admin/Processes/ExportSubmissions.php:108
+msgid "No Submissions to export."
+msgstr "Keine Einsendungen zum Exportieren."
+
+#: includes/Config/PluginSettingsReCaptcha.php:27
+msgid "reCAPTCHA v2 Secret Key"
+msgstr "reCAPTCHA v2 Geheimer Schlüssel (Secret Key)"
+
+#: includes/Config/PluginSettingsReCaptcha.php:14
+msgid "reCAPTCHA v2 Site Key"
+msgstr "reCAPTCHA v2 Website-Schüssel (Site Key)"
+
+#: includes/Actions/Recaptcha.php:366 includes/Actions/Recaptcha.php:375
+msgid "Recaptcha validation failed. Please try again later"
+msgstr "reCAPTCHA-Prüfung fehlgeschlagen. Bitte versuche es später nochmals."
+
+#: includes/Actions/Recaptcha.php:63
+msgid "reCAPTCHA v3"
+msgstr "reCAPTCHA v3"
+
+#: includes/Admin/Menus/Submissions.php:101 build/submissions.js:1
+msgid "Trigger Email Action"
+msgstr "E-Mail-Aktion auslösen"
+
+#: includes/Routes/Submissions.php:398 includes/Routes/Submissions.php:464
+#: includes/Routes/Submissions.php:526 includes/Routes/Submissions.php:592
+msgid "This request is missing data"
+msgstr "Für diese Anfrage fehlen Daten"
+
+#: includes/Routes/Submissions.php:222
+msgid "Email Action Settings"
+msgstr "Einstellungen für E-Mail-Aktion"
+
+#: includes/Routes/Submissions.php:216 build/submissions.js:1
+msgid "Submission ID"
+msgstr "Einsendungs-ID"
+
+#: includes/Routes/Submissions.php:126
+msgid "strtotime($date) that represents the end date we will retrieve submssions at."
+msgstr "strtotime($date) entsprechend dem Enddatum der Einsendungen, die wir abrufen."
+
+#: includes/Routes/Submissions.php:120
+msgid "strtotime($date) that represents the start date we will retrieve submssions at."
+msgstr "strtotime($date) entsprechend dem Anfangsdatum der Einsendungen, die wir abrufen."
+
+#: includes/Routes/Submissions.php:114 includes/Routes/Submissions.php:152
+msgid "Array of Form IDs we want to get the submissions from."
+msgstr "Array mit Formular-IDs, von denen wir die Einsendungen erhalten wollen."
+
+#: includes/Config/ActionRecaptchaV3Settings.php:18
+msgid "reCAPTCHA v3 returns a score (1.0 is very likely a good interaction, 0.0 is very likely a bot). Configure the score threshold for your form submission."
+msgstr "reCAPTCHA v3 gibt einen Wert zurück (1.0 ist sehr wahrscheinlich eine zulässige Interaktion, 0.0 ist sehr wahrscheinlich ein Bot). Konfiguriere den Schwellwert für deine Formulareinsendungen."
+
+#: includes/Config/ActionRecaptchaV3Settings.php:15
+msgid "Score"
+msgstr "Wert"
+
+#: includes/Config/ActionRecaptchaV3Settings.php:14
+msgid "Score Threshold"
+msgstr "Schwellwert"
+
+#: includes/Fields/Date.php:30
+msgid "Date/Time"
+msgstr "Datum/Zeit"
+
+#: includes/AJAX/Controllers/Submission.php:104
+msgid "This form is currently undergoing maintenance. Please %sclick here%s to reload the form and try again."
+msgstr "Dieses Formular wird gerade bearbeitet. Bitte %sklicke hier%s, um das Formular neu zu laden und es erneut zu versuchen."
+
+#: includes/Config/FieldSettings.php:566
+msgid "Minute Increment"
+msgstr "Erhöhung in Minuten"
+
+#: includes/Config/FieldSettings.php:556
+msgid "24 Hour Input"
+msgstr "Eingabe im 24-Stunden-Format"
+
+#: includes/Config/FieldSettings.php:549
+msgid "Time Settings"
+msgstr "Zeiteinstellungen"
+
+#: includes/Config/FieldSettings.php:537
+msgid "Both Date & Time"
+msgstr "Datum & Zeit"
+
+#: includes/Config/FieldSettings.php:533
+msgid "Time Only"
+msgstr "Nur Zeit"
+
+#: includes/Config/FieldSettings.php:529
+msgid "Date Only"
+msgstr "Nur Datum"
+
+#: includes/Config/FieldSettings.php:524
+msgid "Date/Time Mode"
+msgstr "Datum/Zeit-Modus"
+
+#: includes/Fields/Repeater.php:28
+msgid "Repeatable Fieldset"
+msgstr "Wiederholbare Feldgruppe"
+
+#: includes/Admin/Menus/Forms.php:364 includes/Display/Render.php:664
+msgid "Add "
+msgstr "Hinzufügen "
+
+#: includes/Config/FormDisplaySettings.php:287
+msgid "Repeatable fieldsets"
+msgstr "Wiederholbare Feldgruppen"
+
+#: includes/Templates/admin-menu-new-form.html.php:204
+msgid "Drag and drop new fields from the right to create a repeatable set of fields."
+msgstr "Ziehe neue Felder von rechts hierher, um eine Gruppe mit sich wiederholenden Feldern zu erstellen."
 
 #: services/bootstrap.php:42
 msgid "SendWP - Transactional Email"
@@ -258,7 +456,7 @@ msgstr "Vertikal"
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: includes/Config/MergeTagsForm.php:14
+#: includes/Config/MergeTagsForm.php:14 build/submissions.js:1
 msgid "Form ID"
 msgstr "Formular-ID"
 
@@ -444,12 +642,12 @@ msgstr "Formulartabellen aktualisieren "
 msgid "Update Actions Tables"
 msgstr "Aktionstabellen aktualisieren "
 
-#: includes/Config/PluginSettingsAdvanced.php:127
+#: includes/Config/PluginSettingsAdvanced.php:134
 msgid "Click this button if any of your forms are still in 'Maintenance Mode' after performing any required updates."
 msgstr "Klicke diesen Button, falls sich eines deiner Formulare nach Durchführung der erforderlichen Updates immer noch im Wartungsmodus befindet."
 
-#: includes/Config/PluginSettingsAdvanced.php:125
-#: includes/Config/PluginSettingsAdvanced.php:126
+#: includes/Config/PluginSettingsAdvanced.php:132
+#: includes/Config/PluginSettingsAdvanced.php:133
 msgid "Remove Maintenance Mode"
 msgstr "Wartungsmodus aufheben"
 
@@ -465,12 +663,12 @@ msgstr "Um Fehler zu vermeiden dürfen die Werte nur bestimmte Zeichen enthalten
 msgid "Once per week"
 msgstr "Einmal pro Woche"
 
-#: includes/Config/PluginSettingsAdvanced.php:109
+#: includes/Config/PluginSettingsAdvanced.php:116
 msgid "Downgrade to v2.9.x"
 msgstr "Downgrade auf v2.9.x"
 
 #: includes/Admin/Menus/Settings.php:192 includes/Admin/Menus/Settings.php:218
-#: includes/Config/PluginSettingsAdvanced.php:108
+#: includes/Config/PluginSettingsAdvanced.php:115
 msgid "Downgrade"
 msgstr "Downgrade"
 
@@ -510,15 +708,15 @@ msgstr "Minimaler Wert"
 msgid "%sThis will also DELETE all submission data associated with this field.%sYou will not be able to retrieve this data later!%s"
 msgstr "%sDadurch werden auch alle über dieses Feld erfassten Daten GELÖSCHT.%sDu kannst diese Daten nicht mehr wiederherstellen!%s"
 
-#: includes/Config/PluginSettingsAdvanced.php:118
+#: includes/Config/PluginSettingsAdvanced.php:125
 msgid "This setting maybe helpful if your WordPress installation is not moving expired submissions to the trash properly."
 msgstr "Diese Einstellung kann hilfreich sein, wenn deine WordPress-Installation abgelaufene Einsendungen nicht ordnungsgemäss in den Papierkorb verschiebt."
 
-#: includes/Config/PluginSettingsAdvanced.php:117
+#: includes/Config/PluginSettingsAdvanced.php:124
 msgid "Trash Expired Submissions"
 msgstr "Abgelaufene Einsendungen in den Papierkorb verschieben"
 
-#: includes/Config/PluginSettingsAdvanced.php:116
+#: includes/Config/PluginSettingsAdvanced.php:123
 msgid "Move To Trash"
 msgstr "In den Papierkorb verschieben"
 
@@ -643,19 +841,19 @@ msgstr "Ja, bitte sendet mir gelegentlich E-Mails über Ninja Forms."
 msgid "%sWe would like to collect data about how Ninja Forms is used so that we can improve the experience for everyone. This data will not include ANY submission data or personally identifiable information.%sPlease check out our %sprivacy policy%s for additional clarification.%s"
 msgstr "%sWir möchten gerne Daten über die Nutzung von Ninja Forms sammeln, um das Erlebnis für alle Anwender zu verbessern. Diese Daten enthalten KEINE Informationen aus den Formular-Einsendungen und auch KEINE personenbezogenen Informationen.%sBitte lies unsere %sDatenschutzerklärung%s für weitere Informationen.%s"
 
-#: includes/Config/PluginSettingsAdvanced.php:68
+#: includes/Config/PluginSettingsAdvanced.php:75
 msgid "Opt-in to allow Ninja Forms to collect anonymous usage statistics from your site, such as PHP version, installed plugins, and other non-personally idetifiable informations."
 msgstr "Erlauben, dass Ninja Forms anonyme Nutzungsdaten von deiner Website sammelt (z.B. PHP-Version, installierte Plug-ins und weitere nicht personenbezogene Daten)."
 
-#: includes/Config/PluginSettingsAdvanced.php:67
+#: includes/Config/PluginSettingsAdvanced.php:74
 msgid "Allow Telemetry"
 msgstr "Telemetrie erlauben"
 
-#: includes/Config/PluginSettingsAdvanced.php:66
+#: includes/Config/PluginSettingsAdvanced.php:73
 msgid "Opt-out"
 msgstr "Ablehnen"
 
-#: includes/Config/PluginSettingsAdvanced.php:66
+#: includes/Config/PluginSettingsAdvanced.php:73
 msgid "Opt-in"
 msgstr "Zustimmen"
 
@@ -858,7 +1056,7 @@ msgstr "Beim Versuch, deine Nachricht zu senden, ist ein Fehler aufgetreten. Bit
 msgid "Akismet Anti-Spam"
 msgstr "Akismet Anti-Spam"
 
-#: includes/Templates/admin-metabox-sub-info.html.php:34
+#: includes/Templates/admin-metabox-sub-info.html.php:34 build/submissions.js:1
 msgid "Move to Trash"
 msgstr "In den Papierkorb verschieben"
 
@@ -870,13 +1068,13 @@ msgstr "Wenn Du diese Option wählst, dann werden ALLE Daten von Ninja Forms aus
 msgid "Delete All Data"
 msgstr "Alle Daten löschen"
 
-#: includes/Admin/Menus/Submissions.php:124
-#: includes/Admin/Menus/Submissions.php:132
+#: includes/Admin/Menus/Submissions.php:150
+#: includes/Admin/Menus/Submissions.php:158
 msgid "Trashed"
 msgstr "Im Papierkorb"
 
-#: includes/Admin/Menus/Submissions.php:121
-#: includes/Admin/Menus/Submissions.php:130
+#: includes/Admin/Menus/Submissions.php:147
+#: includes/Admin/Menus/Submissions.php:156
 msgid "Completed"
 msgstr "Abgeschlossen"
 
@@ -1447,10 +1645,6 @@ msgstr "Contact Form 7 ist derzeit aktiviert."
 msgid "Created"
 msgstr "Erstellt"
 
-#: includes/Actions/Save.php:35 includes/Config/FormActionDefaults.php:24
-msgid "Store Submission"
-msgstr "Einsendung speichern"
-
 #: includes/Actions/Custom.php:35
 msgid "WP Hook"
 msgstr "WP Hook"
@@ -1547,11 +1741,11 @@ msgstr "Bei der Verarbeitung auf dem Server ist ein Fehler aufgetreten."
 msgid "Every %d Minutes"
 msgstr "Alle %d Minuten"
 
-#: includes/Config/PluginSettingsAdvanced.php:110
+#: includes/Config/PluginSettingsAdvanced.php:117
 msgid "Please export any forms or submissions you do not want to be lost during this process."
 msgstr "Bitte exportiere alle Formulare und Einsendungen, welche bei diesem Vorgang nicht verloren gehen sollen."
 
-#: includes/Config/PluginSettingsAdvanced.php:110
+#: includes/Config/PluginSettingsAdvanced.php:117
 msgid "IMPORTANT: All 3.0 data will be removed."
 msgstr "WICHTIG: Alle Daten der Version 3.0 werden gelöscht."
 
@@ -2388,7 +2582,7 @@ msgstr "Sub Sequence"
 msgid "Invalid form id"
 msgstr "Ungültige Formular-ID"
 
-#: includes/Admin/Processes/ImportForm.php:872
+#: includes/Admin/Processes/ImportForm.php:877
 #: includes/Config/FieldSettings.php:999 includes/Database/Models/Form.php:936
 #: includes/Fields/Confirm.php:26
 msgid "Confirm"
@@ -2398,7 +2592,7 @@ msgstr "Bestätigen"
 msgid "No taxonomy selected."
 msgstr "Es ist keine Taxonomie ausgewählt."
 
-#: includes/Config/PluginSettingsAdvanced.php:80
+#: includes/Config/PluginSettingsAdvanced.php:87
 msgid "Opinionated Styles"
 msgstr "Styles"
 
@@ -2560,7 +2754,7 @@ msgstr "Radiobuttons"
 msgid "Checkbox List"
 msgstr "Checkbox-Gruppe"
 
-#: includes/Admin/Processes/ImportForm.php:896
+#: includes/Admin/Processes/ImportForm.php:901
 #: includes/Database/Models/Form.php:960 includes/Fields/CreditCardZip.php:23
 msgid "Credit Card Zip"
 msgstr "Kreditkarte PLZ"
@@ -2825,12 +3019,12 @@ msgstr "Rich Text Editor (RTE)"
 msgid "reCAPTCHA Theme"
 msgstr "reCAPTCHA Theme"
 
-#: includes/Config/PluginSettingsAdvanced.php:91
+#: includes/Config/PluginSettingsAdvanced.php:98
 #: includes/Config/PluginSettingsReCaptcha.php:42
 msgid "Dark"
 msgstr "Dunkel"
 
-#: includes/Config/PluginSettingsAdvanced.php:87
+#: includes/Config/PluginSettingsAdvanced.php:94
 #: includes/Config/PluginSettingsReCaptcha.php:41
 msgid "Light"
 msgstr "Hell"
@@ -2839,11 +3033,11 @@ msgstr "Hell"
 msgid "reCaptcha Settings"
 msgstr "reCAPTCHA Einstellungen"
 
-#: includes/Config/PluginSettingsAdvanced.php:110
+#: includes/Config/PluginSettingsAdvanced.php:117
 msgid "Downgrade to the most recent 2.9.x release."
 msgstr "Downgrade auf das letzte Release 2.9.x."
 
-#: includes/Config/PluginSettingsAdvanced.php:95
+#: includes/Config/PluginSettingsAdvanced.php:102
 msgid "Use default Ninja Forms styling conventions."
 msgstr "Standard-Styles von Ninja Forms benutzen."
 
@@ -2877,7 +3071,7 @@ msgid "Post Title"
 msgstr "Beitragstitel"
 
 #: includes/Config/MergeTagsDeprecated.php:14
-#: includes/Config/MergeTagsWP.php:14
+#: includes/Config/MergeTagsWP.php:14 build/submissions.js:1
 msgid "Post ID"
 msgstr "Beitrags-ID"
 
@@ -2885,7 +3079,8 @@ msgstr "Beitrags-ID"
 msgid "All Fields"
 msgstr "Alle Felder"
 
-#: includes/Admin/Metaboxes/Calculations.php:12
+#: includes/Admin/Metaboxes/Calculations.php:14
+#: includes/Admin/Metaboxes/CalculationsReact.php:55
 #: includes/Config/FormSettingsTypes.php:17 includes/MergeTags/Calcs.php:15
 msgid "Calculations"
 msgstr "Berechnungen"
@@ -4683,6 +4878,14 @@ msgstr "Sprache, welche von reCAPTCHA verwendet wird. Um den Code für deine Spr
 msgid "reCAPTCHA Language"
 msgstr "reCAPTCHA Sprache"
 
+#: includes/Config/PluginSettingsReCaptcha.php:83
+msgid "reCAPTCHA v3 Secret Key"
+msgstr "reCAPTCHA v3 Geheimer Schlüssel (Secret Key)"
+
+#: includes/Config/PluginSettingsReCaptcha.php:70
+msgid "reCAPTCHA v3 Site Key"
+msgstr "reCAPTCHA v3 Website-Schlüssel (Site Key)"
+
 #: includes/Config/PluginSettingsGeneral.php:28
 msgid "Tries to follow the %sPHP date() function%s specifications, but not every format is supported."
 msgstr "Gemäss der Spezifikation der %sPHP-Funktion date()%s, allerdings wird nicht jedes Format unterstützt."
@@ -4902,7 +5105,7 @@ msgid "Help Text"
 msgstr "Hilfetext"
 
 #: includes/Admin/Metaboxes/AppendAForm.php:62
-#: includes/Config/PluginSettingsAdvanced.php:83 includes/Widget.php:89
+#: includes/Config/PluginSettingsAdvanced.php:90 includes/Widget.php:89
 msgid "None"
 msgstr "Keiner"
 
@@ -4944,12 +5147,12 @@ msgstr "Fehler"
 msgid "You do not have permission to install plugin updates"
 msgstr "Du bist nicht berechtigt, Plugin-Updates zu installieren."
 
-#: includes/Database/Models/Submission.php:388
-#: includes/Exports/SubmissionCsvExport.php:173
+#: includes/Database/Models/Submission.php:398
+#: includes/Exports/SubmissionCsvExport.php:257
 msgid "Date Submitted"
 msgstr "Eingangsdatum"
 
-#: includes/Templates/admin-metabox-sub-info.html.php:35
+#: includes/Templates/admin-metabox-sub-info.html.php:35 build/submissions.js:1
 msgid "Update"
 msgstr "Aktualisieren "
 
@@ -4967,6 +5170,7 @@ msgstr "Wert"
 #: includes/Config/ActionCollectPaymentSettings.php:42
 #: includes/Templates/admin-menu-forms.html.php:7
 #: includes/Templates/admin-metabox-sub-fields.html.php:7
+#: build/submissions.js:1
 msgid "Field"
 msgstr "Feld"
 
@@ -4975,7 +5179,7 @@ msgid "User Submitted Values"
 msgstr "Vom Benutzer eingegebene Daten"
 
 #: includes/Admin/CPT/DownloadAllSubmissions.php:163
-#: includes/Admin/Menus/Submissions.php:458
+#: includes/Admin/Menus/Submissions.php:394 build/submissions.js:1
 msgid "Download All Submissions"
 msgstr "Alle Einsendungen herunterladen"
 
@@ -4993,18 +5197,19 @@ msgstr "Formular auswählen"
 
 #: includes/Admin/Menus/ImportExport.php:175
 #: includes/Admin/Menus/Settings.php:195 includes/Admin/Menus/Settings.php:221
+#: build/submissions.js:1
 msgid "Trash"
 msgstr "Papierkorb"
 
 #: includes/Admin/CPT/Submission.php:142
-#: includes/Admin/Menus/Submissions.php:440
-#: includes/Admin/Menus/Submissions.php:441 build/submissions.js:1
+#: includes/Admin/Menus/Submissions.php:376
+#: includes/Admin/Menus/Submissions.php:377 build/submissions.js:1
 #: src/components/displayBulkExport.js:225
 msgid "Export"
 msgstr "Exportieren"
 
 #: includes/Admin/CPT/Submission.php:192
-#: includes/Admin/Menus/Submissions.php:268
+#: includes/Admin/Menus/Submissions.php:204
 #: includes/Config/FieldSettings.php:344
 #: includes/Config/MergeTagsDeprecated.php:183
 #: includes/Config/MergeTagsOther.php:25 includes/Database/MockData.php:620
@@ -5012,12 +5217,13 @@ msgid "Date"
 msgstr "Datum"
 
 #: includes/Admin/CPT/Submission.php:160
-#: includes/Admin/Menus/Submissions.php:247
+#: includes/Admin/Menus/Submissions.php:183
 msgid "#"
 msgstr "#"
 
 #: includes/Admin/CPT/Submission.php:56 includes/Admin/CPT/Submission.php:57
-#: includes/Admin/Menus/Submissions.php:141
+#: includes/Admin/Menus/Submissions.php:641 includes/Routes/Submissions.php:46
+#: build/submissions.js:1
 msgid "Submissions"
 msgstr "Einsendungen"
 
@@ -5025,7 +5231,7 @@ msgstr "Einsendungen"
 msgid "No Submissions Found"
 msgstr "Keine Einsendungen gefunden"
 
-#: includes/Admin/CPT/Submission.php:478
+#: includes/Admin/CPT/Submission.php:478 build/submissions.js:1
 msgid "Please select a form to view submissions"
 msgstr "Bitte wähle das Formular, dessen Einsendungen du sehen möchtest."
 
@@ -5065,14 +5271,14 @@ msgstr "Duplizieren"
 #: includes/Templates/admin-menu-all-forms-column-title.html.php:15
 #: includes/Templates/admin-menu-dashboard.html.php:217
 #: includes/Templates/ui-item-controls.html.php:2
-#: includes/Templates/ui-nf-drawer-buttons.html.php:2
+#: includes/Templates/ui-nf-drawer-buttons.html.php:2 build/submissions.js:1
 msgid "Delete"
 msgstr "Löschen"
 
 #: includes/Templates/admin-menu-all-forms-column-title.html.php:10
 #: includes/Templates/admin-menu-dashboard.html.php:203
 #: includes/Templates/admin-menu-new-form.html.php:245
-#: includes/Templates/ui-item-controls.html.php:4
+#: includes/Templates/ui-item-controls.html.php:4 build/submissions.js:1
 msgid "Edit"
 msgstr "Bearbeiten"
 

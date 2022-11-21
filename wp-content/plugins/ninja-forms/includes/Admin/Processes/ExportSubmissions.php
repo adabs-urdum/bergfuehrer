@@ -2,7 +2,7 @@
 
 
 use NinjaForms\Includes\Factories\SubmissionAggregateFactory;
-use NinjaForms\Includes\Entities\SubmissionFilter;
+use NinjaForms\Includes\Factories\SubmissionFilterFactory;
 
 /**
  * Class NF_Abstracts_Batch_Process
@@ -87,7 +87,7 @@ class NF_Admin_Processes_ExportSubmissions extends NF_Abstracts_BatchProcess
         $this->terminator = apply_filters('nf_sub_csv_terminator', $this->terminator);
 
         // Construct a new submission aggregate.
-        $params = (new SubmissionFilter())->setNfFormIds([$this->form]);
+        $params = (new SubmissionFilterFactory())->maybeLimitByLoggedInUser()->setNfFormIds([$this->form]);
         $params->setEndDate(time());
         $params->setStartDate(0);
         $params->setStatus(["active", "publish"]);
@@ -155,6 +155,15 @@ class NF_Admin_Processes_ExportSubmissions extends NF_Abstracts_BatchProcess
         // Continue looping until end
         $this->process();
 
+    }
+
+    /** 
+     * Delete temp file before calling parent method
+     * @inheritDoc 
+     */
+    public function batch_complete( ): void
+    {
+        parent::batch_complete();
     }
 
     public function writeBatch( ): void
@@ -235,7 +244,7 @@ class NF_Admin_Processes_ExportSubmissions extends NF_Abstracts_BatchProcess
      */
     protected function constructFilepath()
     {
-        $filename = 'form-' . $this->form . '-all-subs';
+        $filename = time() . base64_encode( 'form-' . $this->form . '-all-subs' );
         $upload_dir = wp_upload_dir();
         $file_path = trailingslashit($upload_dir['path']) . $filename . '.' . $this->format;
 
@@ -271,5 +280,13 @@ class NF_Admin_Processes_ExportSubmissions extends NF_Abstracts_BatchProcess
     public function getFileUrl(): string
     {
         return $this->fileUrl;
+    }
+
+    /**
+     * Get filepath of downloaded file in default directory
+     */
+    public function getFilePath(): string
+    {
+        return $this->file_path;
     }
 }
